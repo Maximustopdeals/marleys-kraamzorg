@@ -5,8 +5,14 @@ import "./contact.css";
 
 export default function ContactClient() {
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
     const form = e.currentTarget;
     const data = new FormData(form);
     const newErrors: Record<string, string> = {};
@@ -35,8 +41,42 @@ export default function ContactClient() {
     }
 
     if (Object.keys(newErrors).length > 0) {
-      e.preventDefault();
       setErrors(newErrors);
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Verzenden naar Web3Forms
+    try {
+      const object = Object.fromEntries(data);
+      
+      // Jouw Web3Forms Access Key
+      const accessKey = "a37d17ef-0f29-4702-b698-cf67a1b612ce";
+      object.access_key = accessKey;
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(object),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitMessage("Bedankt! Je bericht is succesvol verzonden.");
+        form.reset();
+        setErrors({});
+      } else {
+        setSubmitMessage(result.message || "Er is iets misgegaan. Probeer het later opnieuw.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitMessage("Er is een netwerkfout opgetreden. Probeer het later opnieuw.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -48,6 +88,7 @@ export default function ContactClient() {
         return next;
       });
     }
+    setSubmitMessage(null);
   };
 
   // Fade-in animation
@@ -212,15 +253,11 @@ export default function ContactClient() {
           </div>
 
           <div className="ct-form-card ct-fade">
-            <form
-              action="https://formspree.io/f/xojbjdev"
-              method="POST"
-              onSubmit={handleSubmit}
-            >
+            <form onSubmit={handleSubmit}>
               {/* Honeypot */}
               <input type="text" name="_gotcha" className="ct-hp" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="_subject" value="Nieuwe aanmelding via Marley's Kraamzorg website" />
-              <input type="hidden" name="_next" value="https://www.marleyskraamzorg.nl/bedankt/" />
+              <input type="hidden" name="from_name" value="Marley's Kraamzorg Website" />
 
               {/* Naam */}
               <div className="ct-field">
@@ -386,13 +423,26 @@ export default function ContactClient() {
               </div>
 
               {/* Submit */}
-              <button type="submit" className="ct-submit">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="22" y1="2" x2="11" y2="13" />
-                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                </svg>
-                Bericht verzenden
+              <button type="submit" className="ct-submit" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  "Bezig met verzenden..."
+                ) : (
+                  <>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="22" y1="2" x2="11" y2="13" />
+                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                    Bericht verzenden
+                  </>
+                )}
               </button>
+
+              {/* Succes- of foutmelding */}
+              {submitMessage && (
+                <p className={`ct-submit-message ${submitMessage.includes("Bedankt") ? "ct-success" : "ct-error-text"}`}>
+                  {submitMessage}
+                </p>
+              )}
             </form>
           </div>
         </div>
