@@ -1,0 +1,22 @@
+{
+  "name": "Marley's Kraamzorg",
+  "short_name": "Marley's Kraamzorg",
+  "description": "Persoonlijke kraamzorg in Rotterdam en omgeving met één vast gezicht.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#9A1E61",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "nl",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/images/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "medical", "lifestyle"]
+}

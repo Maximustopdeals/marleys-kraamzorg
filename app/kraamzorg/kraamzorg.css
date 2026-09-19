@@ -1,0 +1,1620 @@
+/* =========================================================
+   KRAAMZORG PAGINA - PREMIUM CUSTOM CSS
+   ========================================================= */
+
+/* ---- Keyframes ---- */
+@keyframes gentleGradientLoop {
+  0% { background: linear-gradient(135deg, #500f33 0%, #500f33 100%); }
+  50% { background: linear-gradient(135deg, #500f33 0%, #9d1e62 100%); }
+  100% { background: linear-gradient(135deg, #500f33 0%, #500f33 100%); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* ---- Hero ---- */
+.mk-hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 5% 80px;
+  overflow: hidden;
+  background: #500f33;
+  animation: gentleGradientLoop 12s ease-in-out infinite;
+}
+
+.mk-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.mk-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.mk-hero-h1 {
+  font-family: 'Cinzel', Georgia, serif;
+  color: #ffffff;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+.mk-hero-sub {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  color: #e9c7a2;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mk-hero-text {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mk-hero-text strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.mk-hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.mk-btn-white {
+  background: #ffffff;
+  color: #9a1e61;
+  padding: 1rem 2.2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Cinzel', Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.mk-btn-white:hover {
+  background: #e9c7a2;
+  color: #7a174d;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.mk-btn-outline-white {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+  padding: 1rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Cinzel', Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.mk-btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  border-color: #e9c7a2;
+}
+
+.mk-hero-trust {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 1rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Sectie 2: Bijzondere Situaties ---- */
+.mk-special-section {
+  padding: 4rem 0;
+  background-color: #faf8f9;
+}
+
+.mk-special-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.mk-special-h2 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: #9a1e61;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.mk-special-h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #9a1e61, #e9c7a2);
+  border-radius: 3px;
+}
+
+.mk-special-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: #4a4a5e;
+  line-height: 1.7;
+}
+
+.mk-highlight-box {
+  background: linear-gradient(135deg, #f8f0f5 0%, #f5d0e4 100%);
+  border-left: 5px solid #9a1e61;
+  padding: 2rem 2.5rem;
+  margin: 2rem 0;
+  border-radius: 28px;
+  position: relative;
+}
+
+.mk-highlight-box::before {
+  content: "\201C";
+  position: absolute;
+  top: 0.5rem;
+  left: 1.5rem;
+  font-size: 5rem;
+  color: #9a1e61;
+  opacity: 0.15;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.mk-highlight-box p {
+  font-size: 1.1rem;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  color: #7a174d;
+  line-height: 1.7;
+}
+
+.mk-special-h3 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  color: #7a174d;
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mk-special-list {
+  list-style: none;
+  margin: 1.5rem 0 2rem;
+  padding: 0;
+}
+
+.mk-special-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.8rem;
+  position: relative;
+  color: #4a4a5e;
+  line-height: 1.7;
+}
+
+.mk-special-list li::before {
+  content: "\2726";
+  color: #9a1e61;
+  position: absolute;
+  left: 0;
+}
+
+.mk-special-list li strong {
+  color: #7a174d;
+}
+
+/* Benefits grid */
+.mk-benefits-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+  margin: 2.5rem 0;
+}
+
+.mk-benefit-card-2 {
+  background: #ffffff;
+  padding: 2rem 1.8rem;
+  border-radius: 28px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  border: 1px solid rgba(154, 30, 97, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.mk-benefit-card-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #9a1e61, #e9c7a2);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.mk-benefit-card-2:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 45px rgba(154, 30, 97, 0.15);
+}
+
+.mk-benefit-card-2:hover::before {
+  transform: scaleX(1);
+}
+
+.mk-benefit-card-2 h4 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', Georgia, serif;
+  color: #9a1e61;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.mk-benefit-icon-wrap {
+  background: linear-gradient(135deg, #9a1e61 0%, #b52a78 100%);
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.mk-benefit-card-2 p {
+  margin-bottom: 0;
+  color: #4a4a5e;
+  line-height: 1.7;
+}
+
+/* CTA section */
+.mk-cta-section {
+  background: linear-gradient(135deg, #9a1e61 0%, #7a174d 100%);
+  border-radius: 28px;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  margin: 3rem 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.mk-cta-section h3 {
+  font-family: 'Cinzel', Georgia, serif;
+  color: #ffffff;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.mk-cta-section p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 650px;
+  margin: 0 auto 1.8rem;
+  line-height: 1.7;
+}
+
+.mk-cta-section p strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.mk-btn-premium {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #ffffff;
+  color: #9a1e61;
+  padding: 1rem 2.8rem;
+  border-radius: 60px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Cinzel', Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  border: 2px solid transparent;
+}
+
+.mk-btn-premium:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ---- Sectie 3: Voordelen ---- */
+.mk-voordelen {
+  padding: 100px 5%;
+  background: linear-gradient(180deg, #fefcfd 0%, #f9f7fa 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.mk-voordelen-deco-top {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(154, 30, 97, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.mk-voordelen-deco-bottom {
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(154, 30, 97, 0.08) 0%, rgba(255, 255, 255, 0) 75%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.mk-voordelen-line-left {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(154, 30, 97, 0.2), transparent);
+  pointer-events: none;
+}
+
+.mk-voordelen-line-right {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(154, 30, 97, 0.2), transparent);
+  pointer-events: none;
+}
+
+.mk-voordelen-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.mk-voordelen-header {
+  text-align: center;
+  margin-bottom: 80px;
+  padding: 0 20px;
+}
+
+.mk-section-tag {
+  display: inline-block;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #9a1e61;
+  background: rgba(154, 30, 97, 0.08);
+  padding: 6px 18px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.mk-section-h2 {
+  font-family: 'Cinzel', Georgia, serif;
+  color: #991d5f;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.mk-section-sub {
+  font-family: 'Open Sans', sans-serif;
+  color: #5a5a6e;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.mk-voordelen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+  padding: 0 20px;
+}
+
+.mk-voordeel-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 38px 32px 32px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(154, 30, 97, 0.08);
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.mk-voordeel-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #9a1e61, #e9c7a2);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.mk-voordeel-card:hover::before {
+  transform: scaleX(1);
+}
+
+.mk-voordeel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(154, 30, 97, 0.12);
+  border-color: rgba(154, 30, 97, 0.2);
+}
+
+.mk-voordeel-card.mk-featured {
+  background: linear-gradient(135deg, #ffffff 0%, #fef8fb 100%);
+  border-left: 4px solid #9a1e61;
+}
+
+.mk-voordeel-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  background: linear-gradient(135deg, rgba(154, 30, 97, 0.12) 0%, rgba(154, 30, 97, 0.05) 100%);
+  color: #9a1e61;
+  transition: all 0.4s ease;
+}
+
+.mk-voordeel-card:hover .mk-voordeel-icon {
+  background: linear-gradient(135deg, #9a1e61 0%, #b52a78 100%);
+  color: #ffffff;
+  transform: scale(1.05) rotate(2deg);
+}
+
+.mk-voordeel-card h3 {
+  font-family: 'Cinzel', Georgia, serif;
+  color: #991d5f;
+  font-size: 1.65rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.mk-voordeel-card p {
+  color: #5a5a6e;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.mk-voordeel-card ul {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+.mk-voordeel-card ul li {
+  color: #5a5a6e;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mk-voordeel-card ul li strong {
+  color: #9a1e61;
+  font-weight: 600;
+}
+
+.mk-voordeel-hover-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #9a1e61, #e9c7a2);
+  transition: width 0.4s ease;
+  border-radius: 3px;
+}
+
+.mk-voordeel-card:hover .mk-voordeel-hover-line {
+  width: 100%;
+}
+
+.mk-voordelen-cta {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.mk-voordelen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #9a1e61 0%, #7a174d 100%);
+  color: white;
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  padding: 16px 40px;
+  border-radius: 60px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: none;
+  box-shadow: 0 12px 28px rgba(154, 30, 97, 0.35);
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mk-voordelen-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px rgba(154, 30, 97, 0.45);
+}
+
+.mk-voordelen-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.mk-voordelen-btn:hover svg {
+  transform: translateX(5px);
+}
+
+/* ---- Sectie 4: Two Column / Hoe regel je kraamzorg ---- */
+.mk-arrange {
+  position: relative;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #fff9fc 0%, #faf2f7 100%);
+  overflow: hidden;
+}
+
+.mk-arrange-deco-1 {
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(154, 30, 97, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mk-arrange-deco-2 {
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(233, 199, 162, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mk-arrange-deco-3 {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+  background: rgba(154, 30, 97, 0.03);
+  filter: blur(80px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mk-arrange-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.mk-arrange-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
+  border-radius: 48px;
+  padding: 50px 60px;
+  box-shadow: 0 25px 60px rgba(154, 30, 97, 0.08);
+  border: 1px solid rgba(154, 30, 97, 0.1);
+}
+
+.mk-arrange-image {
+  flex: 1 1 45%;
+  max-width: 550px;
+}
+
+.mk-arrange-frame {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.12);
+  transition: all 0.5s cubic-bezier(0.2, 0.95, 0.4, 1.05);
+}
+
+.mk-arrange-frame:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 60px rgba(154, 30, 97, 0.2);
+}
+
+.mk-arrange-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.mk-arrange-frame:hover img {
+  transform: scale(1.03);
+}
+
+.mk-arrange-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(154, 30, 97, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.mk-arrange-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 8px 18px;
+  border-radius: 40px;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #9a1e61;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(154, 30, 97, 0.2);
+}
+
+.mk-arrange-text {
+  flex: 1 1 45%;
+  max-width: 550px;
+}
+
+.mk-arrange-content-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(154, 30, 97, 0.08);
+  padding: 6px 16px;
+  border-radius: 40px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #9a1e61;
+  margin-bottom: 24px;
+}
+
+.mk-badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #9a1e61;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.mk-arrange-h2 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #1a1a2e;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.mk-heading-highlight {
+  color: #9a1e61;
+  position: relative;
+  display: inline-block;
+}
+
+.mk-heading-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(154, 30, 97, 0.2);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.mk-heading-accent {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #9a1e61, #e9c7a2);
+  margin: 20px 0 25px;
+  border-radius: 3px;
+}
+
+.mk-lead-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  color: #4a4a5e;
+}
+
+.mk-strong {
+  color: #9a1e61;
+  font-weight: 700;
+}
+
+.mk-highlight-number {
+  display: inline-block;
+  background: linear-gradient(135deg, #9a1e61, #b52a78);
+  color: white;
+  padding: 2px 12px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0 2px;
+}
+
+.mk-quote-block {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+  background: rgba(154, 30, 97, 0.03);
+  padding: 16px 20px;
+  border-radius: 24px;
+  border-left: 3px solid #9a1e61;
+}
+
+.mk-quote-icon {
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.mk-highlight-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #4a4a5e;
+  margin: 0;
+}
+
+.mk-highlight-text strong {
+  color: #9a1e61;
+  font-weight: 700;
+}
+
+.mk-checklist {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 28px;
+}
+
+.mk-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a5e;
+}
+
+.mk-check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #9a1e61, #b52a78);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+  box-shadow: 0 2px 8px rgba(154, 30, 97, 0.3);
+}
+
+.mk-check-text strong {
+  color: #9a1e61;
+  font-weight: 700;
+}
+
+.mk-extra-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(233, 199, 162, 0.2);
+  padding: 14px 20px;
+  border-radius: 20px;
+  margin-bottom: 32px;
+  border: 1px solid rgba(154, 30, 97, 0.1);
+}
+
+.mk-info-icon {
+  flex-shrink: 0;
+  background: rgba(154, 30, 97, 0.1);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.mk-extra-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9a1e61;
+}
+
+.mk-arrange-cta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.mk-btn-primary-2 {
+  flex: 1 1 auto;
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 60px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.4s cubic-bezier(0.2, 0.95, 0.4, 1.05);
+  background: linear-gradient(135deg, #9a1e61 0%, #7a174d 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 12px 25px rgba(154, 30, 97, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mk-btn-primary-2:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px rgba(154, 30, 97, 0.4);
+}
+
+.mk-btn-secondary-2 {
+  flex: 1 1 auto;
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 60px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.4s cubic-bezier(0.2, 0.95, 0.4, 1.05);
+  background: transparent;
+  color: #9a1e61;
+  border: 2px solid #9a1e61;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mk-btn-secondary-2:hover {
+  background: rgba(154, 30, 97, 0.05);
+  transform: translateY(-2px);
+  border-color: #b52a78;
+}
+
+.mk-trust-badge-2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(154, 30, 97, 0.1);
+}
+
+.mk-trust-stars {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: #f5b042;
+}
+
+.mk-trust-text-2 {
+  font-size: 0.8rem;
+  color: #8a8a9e;
+}
+
+/* ---- Sectie 5: FAQ ---- */
+.mk-faq {
+  position: relative;
+  padding: 80px 20px 100px;
+  background: linear-gradient(180deg, #fefcfd 0%, #faf5f8 100%);
+  overflow: hidden;
+}
+
+.mk-faq-deco-1 {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(154, 30, 97, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mk-faq-deco-2 {
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(233, 199, 162, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mk-faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.mk-faq-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mk-faq-header-badge {
+  margin-bottom: 20px;
+}
+
+.mk-faq-header-badge span {
+  display: inline-block;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #9a1e61;
+  background: rgba(154, 30, 97, 0.08);
+  padding: 6px 18px;
+  border-radius: 40px;
+}
+
+.mk-faq-h2 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.mk-faq-heading-accent {
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #9a1e61, #e9c7a2);
+  margin: 20px auto 25px;
+  border-radius: 3px;
+}
+
+.mk-faq-sub {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #6a6a7e;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mk-faq-accordion {
+  margin-bottom: 50px;
+}
+
+.mk-faq-item {
+  background: #ffffff;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(154, 30, 97, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.mk-faq-item:hover {
+  box-shadow: 0 12px 30px rgba(154, 30, 97, 0.08);
+  border-color: rgba(154, 30, 97, 0.15);
+}
+
+.mk-faq-item.mk-featured {
+  border-left: 3px solid #9a1e61;
+  background: linear-gradient(135deg, #ffffff 0%, #fefafc 100%);
+}
+
+.mk-faq-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 28px;
+  cursor: pointer;
+  list-style: none;
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1a1a2e;
+  transition: all 0.3s ease;
+}
+
+.mk-faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.mk-faq-summary:hover {
+  color: #9a1e61;
+}
+
+.mk-faq-icon-wrap {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(154, 30, 97, 0.08);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.mk-faq-item[open] .mk-faq-icon-wrap {
+  background: rgba(154, 30, 97, 0.15);
+}
+
+.mk-faq-icon-wrap svg {
+  transition: transform 0.3s ease;
+}
+
+.mk-faq-item[open] .mk-faq-icon-wrap svg:first-child {
+  opacity: 0;
+  position: absolute;
+}
+
+.mk-faq-item:not([open]) .mk-faq-icon-wrap svg:last-child {
+  opacity: 0;
+  position: absolute;
+}
+
+.mk-faq-question {
+  flex: 1;
+}
+
+.mk-faq-answer {
+  padding: 0 28px 28px 76px;
+  color: #5a5a6e;
+  line-height: 1.7;
+  border-top: 1px solid rgba(154, 30, 97, 0.08);
+  margin-top: 8px;
+}
+
+.mk-faq-answer p {
+  margin-bottom: 16px;
+}
+
+.mk-faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.mk-faq-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0;
+}
+
+.mk-faq-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.mk-faq-list-icon {
+  color: #9a1e61;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.mk-faq-note {
+  background: rgba(154, 30, 97, 0.05);
+  padding: 16px 20px;
+  border-radius: 16px;
+  margin-top: 16px;
+  font-style: italic;
+}
+
+.mk-faq-highlight {
+  color: #9a1e61;
+  font-weight: 700;
+}
+
+/* FAQ CTA */
+.mk-faq-cta-bottom {
+  margin-top: 40px;
+}
+
+.mk-faq-cta-card {
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 32px 40px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(154, 30, 97, 0.08);
+  border: 1px solid rgba(154, 30, 97, 0.1);
+  margin-bottom: 25px;
+}
+
+.mk-faq-cta-title {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.4rem;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.mk-faq-cta-text {
+  color: #6a6a7e;
+  margin-bottom: 25px;
+}
+
+.mk-faq-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mk-faq-cta-phone,
+.mk-faq-cta-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.mk-faq-cta-phone {
+  background: linear-gradient(135deg, #9a1e61, #7a174d);
+  color: white;
+  box-shadow: 0 4px 12px rgba(154, 30, 97, 0.25);
+}
+
+.mk-faq-cta-phone:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(154, 30, 97, 0.35);
+}
+
+.mk-faq-cta-email {
+  background: rgba(154, 30, 97, 0.08);
+  color: #9a1e61;
+  border: 1px solid rgba(154, 30, 97, 0.2);
+}
+
+.mk-faq-cta-email:hover {
+  background: rgba(154, 30, 97, 0.15);
+  transform: translateY(-2px);
+}
+
+.mk-faq-bottom-button {
+  text-align: center;
+}
+
+.mk-faq-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #9a1e61 0%, #7a174d 100%);
+  color: white;
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 16px 40px;
+  border-radius: 60px;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(154, 30, 97, 0.3);
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mk-faq-primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 35px rgba(154, 30, 97, 0.4);
+}
+
+.mk-faq-primary-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.mk-faq-primary-btn:hover svg {
+  transform: translateX(5px);
+}
+
+/* ---- Animations ---- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+.fade-in-up.visible {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1100px) {
+  .mk-arrange-flex {
+    padding: 40px 40px;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .mk-voordelen {
+    padding: 80px 4%;
+  }
+  .mk-voordelen-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+  }
+  .mk-voordeel-card {
+    padding: 32px 28px 28px;
+  }
+  .mk-voordeel-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .mk-arrange {
+    padding: 60px 0;
+  }
+  .mk-arrange-flex {
+    flex-direction: column;
+    padding: 40px 30px;
+    gap: 40px;
+  }
+  .mk-arrange-image,
+  .mk-arrange-text {
+    max-width: 100%;
+  }
+  .mk-arrange-text {
+    text-align: center;
+  }
+  .mk-heading-accent {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mk-quote-block,
+  .mk-checklist li,
+  .mk-extra-info {
+    text-align: left;
+  }
+  .mk-arrange-cta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .mk-hero {
+    padding: 100px 1rem 60px;
+    min-height: 85vh;
+  }
+  .mk-hero-h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+  .mk-hero-text {
+    font-size: 1rem;
+  }
+  .mk-special-container {
+    padding: 0 20px;
+  }
+  .mk-voordelen {
+    padding: 70px 4%;
+  }
+  .mk-voordelen-header {
+    margin-bottom: 50px;
+  }
+  .mk-section-tag {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+  .mk-section-sub {
+    font-size: 1.05rem;
+  }
+  .mk-voordelen-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .mk-voordeel-card {
+    padding: 28px 24px 24px;
+  }
+  .mk-voordeel-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .mk-voordeel-card h3 {
+    font-size: 1.4rem;
+  }
+  .mk-voordelen-btn {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+  .mk-voordelen-line-left,
+  .mk-voordelen-line-right {
+    display: none;
+  }
+  .mk-benefit-card-2 h4 {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  .mk-benefit-icon-wrap {
+    margin: 0 auto;
+  }
+  .mk-benefit-card-2 p {
+    text-align: center;
+  }
+  .mk-faq {
+    padding: 60px 20px 80px;
+  }
+  .mk-faq-summary {
+    padding: 18px 20px;
+    font-size: 1rem;
+  }
+  .mk-faq-answer {
+    padding: 0 20px 20px 68px;
+  }
+  .mk-faq-cta-card {
+    padding: 28px 24px;
+  }
+  .mk-faq-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mk-faq-cta-phone,
+  .mk-faq-cta-email {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .mk-container {
+    padding: 0 20px;
+  }
+  .mk-arrange-container {
+    padding: 0 20px;
+  }
+  .mk-arrange-flex {
+    padding: 30px 20px;
+    gap: 30px;
+  }
+  .mk-btn-primary-2,
+  .mk-btn-secondary-2 {
+    width: 100%;
+  }
+  .mk-arrange-cta {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .mk-arrange-h2 {
+    font-size: 1.8rem;
+  }
+  .mk-trust-badge-2 {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .mk-faq-summary {
+    gap: 12px;
+  }
+  .mk-faq-question {
+    font-size: 0.95rem;
+  }
+  .mk-faq-answer {
+    padding: 0 16px 16px 60px;
+  }
+  .mk-faq-cta-title {
+    font-size: 1.2rem;
+  }
+  .mk-hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mk-btn-white,
+  .mk-btn-outline-white {
+    width: 85%;
+    justify-content: center;
+  }
+  .mk-cta-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mk-voordelen {
+    padding: 60px 3%;
+  }
+  .mk-voordeel-card {
+    padding: 24px 20px 20px;
+  }
+  .mk-voordeel-card h3 {
+    font-size: 1.3rem;
+  }
+  .mk-voordelen-btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .mk-benefits-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .mk-hero {
+    animation: none;
+    background: linear-gradient(135deg, #500f33 0%, #9a1e61 100%);
+  }
+  .mk-benefit-card-2,
+  .mk-voordeel-card,
+  .mk-voordeel-icon,
+  .mk-voordelen-btn,
+  .mk-arrange-frame,
+  .mk-arrange-frame img,
+  .mk-btn-primary-2,
+  .mk-btn-secondary-2,
+  .mk-faq-primary-btn,
+  .mk-faq-item,
+  .mk-btn-premium {
+    transition: none;
+  }
+  .mk-benefit-card-2:hover,
+  .mk-voordeel-card:hover,
+  .mk-arrange-frame:hover {
+    transform: none;
+  }
+  .mk-arrange-frame:hover img {
+    transform: none;
+  }
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
+  }
+}
