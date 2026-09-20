@@ -6,7 +6,7 @@ export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookieConsent");
+    const consent = localStorage.getItem("cookie-consent");
     if (!consent) {
       const timer = setTimeout(() => setVisible(true), 2000);
       return () => clearTimeout(timer);
@@ -14,8 +14,12 @@ export default function CookieConsent() {
   }, []);
 
   const handleConsent = (value: "accepted" | "declined") => {
-    localStorage.setItem("cookieConsent", value);
+    localStorage.setItem("cookie-consent", value);
     setVisible(false);
+    // Herlaad de pagina zodat Google Analytics/Tag Manager nu wel laden
+    if (value === "accepted") {
+      window.location.reload();
+    }
   };
 
   return (
