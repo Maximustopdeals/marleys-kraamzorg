@@ -12,7 +12,7 @@ const sitemapLinks = [
 ];
 
 const samenwerkingen = [
-  { label: "Verloskundigen aan de Schie", href: "https://verloskundigen-aandeschie.nl/" },
+  { label: "Verloskundigen Zuidplas", href: "https://verloskundigenpraktijkzuidplas.nl/" },
   { label: "IVE Verloskundigen", href: "https://www.ive-verloskundigen.nl/" },
   { label: "VIVE Verloskundigen", href: "https://www.viveverloskundigen.nl/" },
   { label: "Cindy's Kraamzorg", href: "https://cindyskraamzorg.nl/" },
