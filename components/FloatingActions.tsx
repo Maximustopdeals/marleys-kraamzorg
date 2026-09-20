@@ -97,7 +97,11 @@ export default function FloatingActions() {
                   </p>
                 </div>
               </div>
-              <button onClick={() => setWaOpen(false)} style={{ background: "none", border: "none", cursor: "pointer" }}>
+              <button
+                onClick={() => setWaOpen(false)}
+                aria-label="Sluit WhatsApp chat"
+                style={{ background: "none", border: "none", cursor: "pointer" }}
+              >
                 <X size={18} strokeWidth={2.5} />
               </button>
             </div>
@@ -128,9 +132,10 @@ export default function FloatingActions() {
           </div>
         )}
 
-        {/* Toggle Button */}
+        {/* Toggle Button — MET ARIA-LABEL */}
         <button
           onClick={() => setWaOpen(!waOpen)}
+          aria-label={waOpen ? "Sluit WhatsApp chat" : "Open WhatsApp chat"}
           style={{
             width: "56px",
             height: "56px",
