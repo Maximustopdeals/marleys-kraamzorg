@@ -1,15 +1,15 @@
 "use client";
 
+import Script from "next/script";
 import { StarIcon } from "@/components/StarIcon";
 
 export default function ReviewsClient() {
   return (
     <>
-      {/* Elfsight Google Reviews script */}
-      <script
+      {/* Elfsight Google Reviews script - correct geladen via next/script */}
+      <Script
         src="https://static.elfsight.com/platform/platform.js"
-        data-use-service-core
-        defer
+        strategy="afterInteractive"
       />
 
       {/* ═══════ HERO ═══════ */}
