@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-[900] bg-white/95 backdrop-blur-xl shadow-[0_1px_0_rgba(74,26,61,0.08)]">
+      <nav className="fixed top-0 left-0 right-0 z-[900] bg-white shadow-[0_1px_0_rgba(74,26,61,0.08)]">
         <div className="max-w-[1440px] mx-auto flex items-center justify-between h-[72px] px-4 md:px-6 lg:px-8">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 z-10 relative h-10 md:h-12 w-[120px] md:w-[145px]">
@@ -95,7 +95,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-[850] bg-[#F5EDE3] transition-transform duration-400 md:hidden ${
+        className={`fixed inset-0 z-[850] bg-white transition-transform duration-400 md:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
