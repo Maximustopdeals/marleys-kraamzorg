@@ -426,7 +426,7 @@ export default function KraamzorgClient() {
               <div className="mk-arrange-frame">
                 <div className="mk-arrange-img-overlay" />
                 <img
-                  src="https://www.marleyskraamzorg.nl/wp-content/uploads/2024/11/Pasgeboren-baby-in-het-ziekenhuis.webp"
+                  src="/images/baby-ziekenhuis.webp"
                   alt="Pasgeboren baby in het ziekenhuis met zorgzame handen - Marley's Kraamzorg Rotterdam"
                   loading="lazy"
                   decoding="async"
