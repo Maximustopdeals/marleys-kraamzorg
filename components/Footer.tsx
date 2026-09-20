@@ -196,24 +196,33 @@ export default function Footer() {
                 &copy; {currentYear} Marley&apos;s Kraamzorg
               </p>
 
-              {/* Midden */}
-              <div className="flex items-center gap-3">
+              {/* Midden — 3 links */}
+              <div className="flex items-center gap-3 text-xs">
                 <a
-                  href="/privacy-policy"
+                  href="/privacy-policy/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cream/50 text-xs hover:text-cream transition-colors"
+                  className="text-cream/50 hover:text-cream transition-colors"
                 >
                   Privacy Policy
                 </a>
                 <span className="text-cream/25">|</span>
                 <a
-                  href="/cookie-policy"
+                  href="/cookie-policy/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cream/50 text-xs hover:text-cream transition-colors"
+                  className="text-cream/50 hover:text-cream transition-colors"
                 >
                   Cookie Policy
+                </a>
+                <span className="text-cream/25">|</span>
+                <a
+                  href="/algemene-voorwaarden/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cream/50 hover:text-cream transition-colors"
+                >
+                  Algemene Voorwaarden
                 </a>
               </div>
 
