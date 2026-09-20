@@ -129,13 +129,13 @@ export default function OverMijClient() {
                   <div className="om-img-overlay-top" />
                   <div className="om-img-overlay-bottom" />
                   <Image
-  src="/images/lisa.jpg"
-  alt="Lisa - Oprichter van Marley's Kraamzorg"
-  loading="lazy"
-  width={480}
-  height={640}
-  className="w-full h-auto"
-/>
+                    src="/images/lisa.jpg"
+                    alt="Lisa - Oprichter van Marley's Kraamzorg"
+                    loading="lazy"
+                    width={600}
+                    height={800}
+                    className="om-image"
+                  />
                   {/* Corner accents */}
                   <div className="om-corner om-corner-tl" />
                   <div className="om-corner om-corner-tr" />
