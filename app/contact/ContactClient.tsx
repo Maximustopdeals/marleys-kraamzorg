@@ -28,7 +28,6 @@ export default function ContactClient() {
       }
     });
 
-    // Email validation
     const email = data.get("email") as string;
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       newErrors.email = "Voer een geldig e-mailadres in";
@@ -50,7 +49,6 @@ export default function ContactClient() {
     }
   };
 
-  // Fade-in animation
   useEffect(() => {
     const fadeEls = document.querySelectorAll(".ct-fade");
     fadeEls.forEach((el) => {
@@ -87,27 +85,49 @@ export default function ContactClient() {
 
   return (
     <>
-      {/* ═══════ HERO ═══════ */}
-      <section className="ct-hero" aria-label="Contact Marley's Kraamzorg">
-        <div className="ct-hero-deco1" aria-hidden="true" />
-        <div className="ct-hero-deco2" aria-hidden="true" />
-
-        <div className="ct-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.86 19.86 0 012.11 4.1 2 2 0 014.11 2h3a2 2 0 012 1.72 12.13 12.13 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.13 12.13 0 002.81.7A2 2 0 0122 16.92z" />
-          </svg>
-          Neem contact op
+      {/* ═══════ HERO — Magenta Cinzel-stijl ═══════ */}
+      <section className="relative w-full overflow-hidden bg-primary pt-32 pb-20 md:pt-40 md:pb-24">
+        {/* Decoratieve overlay */}
+        <div className="absolute inset-0 z-0">
+          <div
+            className="absolute inset-0 opacity-[0.05]"
+            style={{
+              backgroundImage: `radial-gradient(circle, #FDF9F4 1px, transparent 1px)`,
+              backgroundSize: "32px 32px",
+            }}
+          />
+          <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-cream/5" />
+          <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-cream/5" />
         </div>
 
-        <h1>
-          Contact met{" "}
-          <span className="ct-highlight">Marley&apos;s Kraamzorg</span>
-        </h1>
-        <p className="ct-subtitle">
-          Ik geloof in persoonlijk contact. Bel, app of mail mij direct. Ik help
-          je graag verder met kraamzorg die &eacute;cht bij jullie past.
-        </p>
-        <div className="ct-accent-line" />
+        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2 mb-6 backdrop-blur-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8D5C4" strokeWidth="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.86 19.86 0 012.11 4.1 2 2 0 014.11 2h3a2 2 0 012 1.72 12.13 12.13 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.13 12.13 0 002.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            <span className="font-cinzel text-xs uppercase tracking-[0.12em] text-cream/90">
+              Neem contact op
+            </span>
+          </div>
+
+          {/* H1 in Cinzel */}
+          <h1 className="font-cinzel text-2xl md:text-4xl lg:text-5xl uppercase text-cream leading-tight tracking-tight mb-4">
+            Contact met Marley&apos;s Kraamzorg
+          </h1>
+
+          {/* Goudkleurige ondertitel */}
+          <p className="font-cinzel text-sm md:text-base uppercase tracking-[0.15em] text-starlight mb-6">
+            Persoonlijk contact voor een zorgeloze kraamtijd
+          </p>
+
+          <div className="w-16 h-0.5 bg-starlight/50 mx-auto mb-6" />
+
+          <p className="font-body text-base md:text-lg text-cream/90 max-w-2xl mx-auto leading-relaxed">
+            Ik geloof in persoonlijk contact. Bel, app of mail mij direct. Ik help
+            je graag verder met kraamzorg die écht bij jullie past.
+          </p>
+        </div>
       </section>
 
       {/* ═══════ CONTACT CARDS ═══════ */}
