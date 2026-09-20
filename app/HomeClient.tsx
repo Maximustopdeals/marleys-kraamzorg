@@ -106,7 +106,7 @@ function HomeHero() {
           alt="Pasgeboren baby - Marley's Kraamzorg"
           fill
           priority
-          className="object-cover blur-[7px] scale-105"
+          className="object-cover blur-[12px] scale-105"
           sizes="100vw"
         />
         {/* Warme beige overlay — iets sterker voor een subtieler effect */}
