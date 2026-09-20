@@ -6,7 +6,7 @@ export default function WhatsAppFAB() {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 z-[600]">
+    <div className="fixed bottom-20 right-6 z-[600]">
       {hovered && (
         <div className="absolute right-0 bottom-16 mb-2 whitespace-nowrap px-3 py-2 rounded-lg bg-berry-dark/90 text-cream text-xs font-body pointer-events-none">
           Stel je vraag via WhatsApp
