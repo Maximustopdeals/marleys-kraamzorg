@@ -1143,7 +1143,7 @@
   margin-bottom: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   border: 1px solid rgba(154, 30, 97, 0.08);
-  border-left: 3px solid #9a1e61;   /* ← NU ALLE items paarse rand */
+  border-left: 3px solid #9a1e61;
   transition: all 0.3s ease;
   overflow: hidden;
 }
@@ -1151,13 +1151,11 @@
 .mk-faq-item:hover {
   box-shadow: 0 12px 30px rgba(154, 30, 97, 0.08);
   border-color: rgba(154, 30, 97, 0.15);
-  border-left-color: #b52a78; /* Iets donkerdere paarse rand bij hover */
+  border-left-color: #b52a78;
 }
 
-/* AANGEPAST: featured items behouden hun achtergrond, maar zonder de linkerrand (die zit nu in .mk-faq-item) */
 .mk-faq-item.mk-featured {
   background: linear-gradient(135deg, #ffffff 0%, #fefafc 100%);
-  /* De border-left is hier weggehaald, want die staat nu in .mk-faq-item */
 }
 
 .mk-faq-summary {
@@ -1413,11 +1411,25 @@
     padding: 40px 30px;
     gap: 40px;
   }
-  .mk-arrange-image,
-  .mk-arrange-text {
+  .mk-arrange-image {
     max-width: 100%;
+    width: 100%;
+    display: block;
+    min-height: 300px;
+  }
+  .mk-arrange-frame {
+    width: 100%;
+    display: block;
+  }
+  .mk-arrange-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-height: 300px;
+    object-fit: cover;
   }
   .mk-arrange-text {
+    max-width: 100%;
     text-align: center;
   }
   .mk-heading-accent {
