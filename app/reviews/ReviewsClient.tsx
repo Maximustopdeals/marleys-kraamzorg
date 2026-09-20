@@ -103,14 +103,27 @@ export default function ReviewsClient() {
         </div>
       </section>
 
-      {/* ═══════ CTA ═══════ */}
-      <section className="relative py-20 md:py-28 overflow-hidden bg-[#F5EDE3]">
-        <div className="container-main relative z-10 text-center text-berry-dark">
-          <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl uppercase text-berry-dark mb-4">
+      {/* ═══════ CTA — Magenta huisstijl ═══════ */}
+      <section className="relative py-20 md:py-28 overflow-hidden bg-primary">
+        {/* Decoratieve overlay */}
+        <div className="absolute inset-0 z-0">
+          <div
+            className="absolute inset-0 opacity-[0.05]"
+            style={{
+              backgroundImage: `radial-gradient(circle, #FDF9F4 1px, transparent 1px)`,
+              backgroundSize: "32px 32px",
+            }}
+          />
+          <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-cream/5" />
+          <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-cream/5" />
+        </div>
+
+        <div className="container-main relative z-10 text-center">
+          <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl uppercase text-cream mb-4">
             Ook tevreden over mijn zorg?
           </h2>
-          <div className="w-16 h-0.5 bg-berry-dark/20 mx-auto mb-6" />
-          <p className="font-body text-base md:text-lg text-berry-dark/90 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <div className="w-16 h-0.5 bg-starlight/50 mx-auto mb-6" />
+          <p className="font-body text-base md:text-lg text-cream/90 max-w-2xl mx-auto mb-10 leading-relaxed">
             Deel jouw ervaring en help andere ouders bij het vinden van de juiste kraamzorg.
             Jouw review betekent veel voor mij!
           </p>
@@ -119,14 +132,17 @@ export default function ReviewsClient() {
               href="https://g.page/r/CZ7m3zZ9t5ZvEB0/review"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="inline-flex items-center justify-center gap-2 font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 bg-cream text-primary shadow-glow hover:bg-blush hover:-translate-y-0.5"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
               </svg>
               Schrijf een review
             </a>
-            <Link href="/contact/" className="btn-outline border-berry-dark/30 text-berry-dark hover:bg-berry-dark hover:text-cream">
+            <Link
+              href="/contact/"
+              className="inline-flex items-center justify-center font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 border border-cream/50 text-cream hover:bg-cream hover:text-primary"
+            >
               Neem contact op
             </Link>
           </div>
