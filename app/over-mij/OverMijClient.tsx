@@ -129,13 +129,13 @@ export default function OverMijClient() {
                   <div className="om-img-overlay-top" />
                   <div className="om-img-overlay-bottom" />
                   <Image
-                    src="https://www.marleyskraamzorg.nl/wp-content/uploads/2025/05/Foto_Lisa-kraamerzorgende-Marleyskraamzorg.webp"
-                    alt="Lisa - Oprichter van Marley's Kraamzorg"
-                    loading="lazy"
-                    width={400}
-                    height={533}
-                    className="w-full h-auto"
-                  />
+  src="/images/lisa.jpg"
+  alt="Lisa - Oprichter van Marley's Kraamzorg"
+  loading="lazy"
+  width={480}
+  height={640}
+  className="w-full h-auto"
+/>
                   {/* Corner accents */}
                   <div className="om-corner om-corner-tl" />
                   <div className="om-corner om-corner-tr" />
