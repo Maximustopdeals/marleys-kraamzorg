@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const sitemapLinks = [
   { label: "Home", href: "/" },
@@ -79,9 +80,11 @@ export default function Footer() {
             {/* Blok 1: Logo & bedrijfsgegevens */}
             <div>
               <Link href="/" className="inline-block mb-6">
-                <img
-                  src="https://www.marleyskraamzorg.nl/wp-content/uploads/2026/05/Transparant-logo-MarleysKraamzorg.webp"
+                <Image
+                  src="/images/logo-new.webp"
                   alt="Marley's Kraamzorg"
+                  width={200}
+                  height={80}
                   className="h-16 w-auto"
                 />
               </Link>
@@ -198,32 +201,26 @@ export default function Footer() {
 
               {/* Midden — 3 links */}
               <div className="flex items-center gap-3 text-xs">
-                <a
+                <Link
                   href="/privacy-policy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-cream/50 hover:text-cream transition-colors"
                 >
                   Privacy Policy
-                </a>
+                </Link>
                 <span className="text-cream/25">|</span>
-                <a
+                <Link
                   href="/cookie-policy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-cream/50 hover:text-cream transition-colors"
                 >
                   Cookie Policy
-                </a>
+                </Link>
                 <span className="text-cream/25">|</span>
-                <a
+                <Link
                   href="/algemene-voorwaarden/"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-cream/50 hover:text-cream transition-colors"
                 >
                   Algemene Voorwaarden
-                </a>
+                </Link>
               </div>
 
               {/* Rechts */}
