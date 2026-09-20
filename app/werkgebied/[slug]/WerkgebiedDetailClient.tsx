@@ -48,10 +48,8 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Hero — Licht beige hero */}
-      <section
-        className="relative w-full min-h-[55vh] md:min-h-[50vh] overflow-hidden flex items-center justify-center bg-[#F5EDE3]"
-      >
+      {/* ═══════ HERO ═══════ */}
+      <section className="relative w-full min-h-[55vh] md:min-h-[50vh] overflow-hidden flex items-center justify-center bg-[#F5EDE3]">
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20 md:pt-24 pb-12 text-berry-dark">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/70 border border-berry-dark/10 rounded-full px-5 py-2 mb-6">
@@ -106,11 +104,11 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         </div>
       </section>
 
-      {/* Intro sectie */}
-      <section className="bg-white py-20 md:py-32">
+      {/* ═══════ INTRO ═══════ */}
+      <section className="bg-white py-16 md:py-20">
         <div className="container-main">
           <div className="max-w-3xl mx-auto">
-            <div className="space-y-6">
+            <div className="space-y-5">
               {area.intro.map((paragraph, i) => (
                 <p
                   key={i}
@@ -124,15 +122,15 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         </div>
       </section>
 
-      {/* Waarom kraamzorg in [plaats] */}
-      <section className="bg-white py-20 md:py-32">
+      {/* ═══════ WAAROM KRAAMZORG ═══════ */}
+      <section className="bg-[#FAF4EE] py-16 md:py-20">
         <div className="container-main">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-cinzel text-2xl md:text-3xl uppercase text-primary mb-6">
+            <h2 className="font-cinzel text-2xl md:text-3xl uppercase text-primary mb-4">
               {area.whyTitle}
             </h2>
             <div className="w-16 h-0.5 bg-primary mb-8" />
-            <div className="space-y-6">
+            <div className="space-y-5">
               {area.whyText.map((paragraph, i) => (
                 <p
                   key={i}
@@ -146,15 +144,15 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         </div>
       </section>
 
-      {/* Over Marley's */}
-      <section className="bg-white py-20 md:py-32">
+      {/* ═══════ OVER MARLEY'S ═══════ */}
+      <section className="bg-white py-16 md:py-20">
         <div className="container-main">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-cinzel text-2xl md:text-3xl uppercase text-primary mb-6">
+            <h2 className="font-cinzel text-2xl md:text-3xl uppercase text-primary mb-4">
               {area.aboutTitle}
             </h2>
             <div className="w-16 h-0.5 bg-primary mb-8" />
-            <div className="space-y-6">
+            <div className="space-y-5">
               {area.aboutText.map((paragraph, i) => (
                 <p
                   key={i}
@@ -168,11 +166,11 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         </div>
       </section>
 
-      {/* Wijken en bereikbaarheid */}
-      <section className="bg-white py-20 md:py-32">
+      {/* ═══════ WIJKEN ═══════ */}
+      <section className="bg-[#FAF4EE] py-16 md:py-20">
         <div className="container-main">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-cinzel text-2xl md:text-3xl uppercase text-primary mb-6">
+            <h2 className="font-cinzel text-2xl md:text-3xl uppercase text-primary mb-4">
               {area.wijkenTitle}
             </h2>
             <div className="w-16 h-0.5 bg-primary mb-6" />
@@ -183,7 +181,7 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
               {area.wijken.map((wijk, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-3 bg-primary/[0.04] rounded-xl px-5 py-4"
+                  className="flex items-start gap-3 bg-white rounded-xl px-5 py-4 shadow-card"
                 >
                   <svg
                     width="20"
@@ -207,14 +205,14 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="bg-white py-20 md:py-32">
+      {/* ═══════ FAQ ═══════ */}
+      <section className="bg-white py-16 md:py-20">
         <div className="container-main">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-cinzel text-2xl md:text-3xl uppercase text-primary text-center mb-4">
               Veelgestelde vragen
             </h2>
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-12" />
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-10" />
             <Accordion
               items={area.faq.map((f) => ({
                 question: f.question,
@@ -225,15 +223,15 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         </div>
       </section>
 
-      {/* Andere werkgebieden */}
-      <section className="bg-white py-20 md:py-32">
+      {/* ═══════ ANDERE WERKGEBIEDEN ═══════ */}
+      <section className="bg-[#FAF4EE] py-16 md:py-20">
         <div className="container-main">
           <div className="max-w-5xl mx-auto">
             <h2 className="font-cinzel text-2xl md:text-3xl uppercase text-primary text-center mb-4">
               Kraamzorg in de regio
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-6" />
-            <p className="font-body text-base text-berry-dark/70 text-center max-w-xl mx-auto mb-12">
+            <p className="font-body text-base text-berry-dark/70 text-center max-w-xl mx-auto mb-10">
               Naast {area.naam} ben ik ook actief in de volgende gemeenten:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -241,7 +239,7 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
                 <Link
                   key={other.slug}
                   href={`/werkgebied/${other.slug}/`}
-                  className="group bg-primary/[0.04] hover:bg-primary/[0.08] rounded-xl px-5 py-4 flex items-center gap-3 transition-colors duration-150"
+                  className="group bg-white hover:bg-primary/[0.04] rounded-xl px-5 py-4 flex items-center gap-3 transition-all duration-200 shadow-card hover:shadow-card-hover hover:-translate-y-0.5"
                 >
                   <svg
                     width="18"
@@ -267,15 +265,28 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-primary py-20 md:py-32">
-        <div className="container-main text-center">
+      {/* ═══════ CTA ═══════ */}
+      <section className="relative bg-primary py-20 md:py-24 overflow-hidden">
+        {/* Decoratieve achtergrond */}
+        <div className="absolute inset-0 opacity-[0.06]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle, #FDF9F4 1px, transparent 1px)`,
+              backgroundSize: "32px 32px",
+            }}
+          />
+        </div>
+        <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-cream/5" />
+        <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-cream/5" />
+
+        <div className="container-main text-center relative z-10">
           <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl uppercase text-cream mb-6">
             Klaar voor jouw kraamzorg in {area.naam}?
           </h2>
           <div className="w-16 h-0.5 bg-cream/50 mx-auto mb-8" />
           <p className="font-body text-base md:text-lg text-cream/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Neem vandaag nog contact op voor een vrijblijvende kennismaking. Samen 
+            Neem vandaag nog contact op voor een vrijblijvende kennismaking. Samen
             bespreken we jouw wensen en kijken we hoe ik jouw kraamperiode in{" "}
             {area.naam} zo mooi mogelijk kan maken.
           </p>
@@ -284,13 +295,13 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
               href="/contact/"
               className="inline-flex items-center justify-center font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 bg-cream text-primary shadow-glow hover:bg-blush hover:-translate-y-0.5"
             >
-              📝 Check beschikbaarheid
+              Check beschikbaarheid
             </Link>
             <a
               href="tel:+31645041484"
               className="inline-flex items-center justify-center font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 border border-cream/50 text-cream hover:bg-cream hover:text-primary"
             >
-              📞 Bel direct
+              Bel direct
             </a>
           </div>
         </div>
