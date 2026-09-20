@@ -227,7 +227,7 @@ export default function ContactClient() {
       <section className="ct-form-section" aria-label="Contactformulier">
         <div className="ct-form-container">
           <div className="ct-form-header ct-fade">
-            <h2>Aanmeldformulier</h2>
+            <h2>Contactformulier</h2>
             <p>Vul het formulier in en ik neem zo snel mogelijk contact met je op.</p>
           </div>
 
