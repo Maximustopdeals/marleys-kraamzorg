@@ -30,13 +30,13 @@ export const werkgebieden: WerkgebiedData[] = [
     intro: [
       "Welkom bij Marley's Kraamzorg in Rotterdam. Als ervaren kraamverzorgende ben ik dé keuze voor aanstaande ouders die op zoek zijn naar persoonlijke, betrokken kraamzorg in de stad. In Rotterdam wonen en werken betekent voor mij dat ik altijd dichtbij ben, flexibel inzetbaar en snel ter plaatse.",
       "Mijn naam is Lisa en met trots draag ik de naam van mijn dochtertje Marley in mijn bedrijf. Haar naam herinnert me er elke dag aan hoe kostbaar en bijzonder de eerste dagen met een newborn zijn. Die warmte en liefde geef ik door aan elk gezin waar ik mag komen kraamzorgen.",
-      "In Rotterdam bied ik kraamzorg aan huis, volledig afgestemd op jouw wensen en behoeften. Of je nu in een appartement in het centrum woont of een gezinswoning in Kralingen — ik pas me aan en zorg voor een rustige, vertrouwde kraamperiode.",
+      "In Rotterdam bied ik kraamzorg aan huis, volledig afgestemd op jouw wensen en behoeften. Of je nu in een appartement in het centrum woont of een gezinswoning in Kralingen, ik pas me aan en zorg voor een rustige, vertrouwde kraamperiode.",
     ],
     whyTitle: "Waarom kraamzorg in Rotterdam?",
     whyText: [
       "Rotterdam is een bruisende stad met een grote diversiteit aan gezinnen. Als kraamverzorgende ken ik de stad als mijn broekzak. Ik weet hoe het is om te navigeren tussen de verschillende wijken, rekening te houden met parkeeropties en de unieke sfeer van elk stadsdeel.",
-      "In een grote stad als Rotterdam is het des te belangrijker om iemand te hebben die bekend is met de lokale verloskundigenpraktijken, het Erasmus MC, het Franciscus Gasthuis en de andere zorgverleners in de regio. Ik werk samen met Verloskundigen aan de Schie, IVE Verloskundigen en VIVE Verloskundigen, zodat jij zorgeloos kunt genieten van je kraamtijd.",
-      "Bovendien ken ik de specifieke behoeften van Rotterdamse gezinnen. Of je nu in een klein appartement in het Oude Westen woont of een ruime woning in Hillegersberg hebt — ik zorg dat de kraamzorg naadloos aansluit op jouw situatie.",
+      "In een grote stad als Rotterdam is het des te belangrijker om iemand te hebben die bekend is met de lokale verloskundigenpraktijken, het Erasmus MC, het Franciscus Gasthuis en de andere zorgverleners in de regio. Ik werk samen met Verloskundigen Zuidplas, IVE Verloskundigen en VIVE Verloskundigen, zodat jij zorgeloos kunt genieten van je kraamtijd.",
+      "Bovendien ken ik de specifieke behoeften van Rotterdamse gezinnen. Of je nu in een klein appartement in het Oude Westen woont of een ruime woning in Hillegersberg hebt, ik zorg dat de kraamzorg naadloos aansluit op jouw situatie.",
     ],
     aboutTitle: "Over Marley's Kraamzorg in Rotterdam",
     aboutText: [
@@ -51,16 +51,14 @@ export const werkgebieden: WerkgebiedData[] = [
       "Kralingen-Crooswijk — Populair bij jonge gezinnen, nabij het Kralingse Bos",
       "Rotterdam-Centrum — Voor ouders in de binnenstad met appartementen",
       "Rotterdam-Noord — Inclusief Blijdorp, Oude Noorden en Agniesebuurt",
-      "Rotterdam-Zuid — Van Katendrecht tot Charlois en Feijenoord",
       "Hillegersberg-Schiebroek — Rustige woonwijk met veel groen",
       "Overschie — Dorpse sfeer aan de rand van de stad",
-      "IJsselmonde — Gezinsvriendelijke wijk met ruime woningen",
       "Prins Alexander — Inclusijk Oosterflank en Zevenkamp",
     ],
     faq: [
       {
         question: "In welke wijken van Rotterdam werk je?",
-        answer: "Ik werk in alle wijken van Rotterdam: van Kralingen en Centrum tot Noord, Zuid, Hillegersberg, Overschie en IJsselmonde. Woont u net buiten Rotterdam? Neem gerust contact op, want ook in omliggende gemeenten ben ik actief.",
+        answer: "Ik werk in bijna alle wijken van Rotterdam: van Kralingen en Centrum, Noord tot Hillegersberg. Woont u net buiten Rotterdam? Neem gerust contact op, want ook in omliggende gemeenten ben ik actief.",
       },
       {
         question: "Hoe snel ben je in Rotterdam ter plaatse?",
@@ -68,7 +66,7 @@ export const werkgebieden: WerkgebiedData[] = [
       },
       {
         question: "Werk je samen met verloskundigen in Rotterdam?",
-        answer: "Ja, ik werk samen met verschillende verloskundigenpraktijken in Rotterdam, waaronder Verloskundigen aan de Schie, IVE Verloskundigen en VIVE Verloskundigen. Deze samenwerking zorgt voor een soepele overdracht en goede afstemming tijdens je kraamperiode.",
+        answer: "Ja, ik werk samen met verschillende verloskundigenpraktijken in Rotterdam, waaronder Verloskundigen Zuidplas, IVE Verloskundigen en VIVE Verloskundigen. Deze samenwerking zorgt voor een soepele overdracht en goede afstemming tijdens je kraamperiode.",
       },
       {
         question: "Is er parkeergelegenheid in Rotterdam?",
