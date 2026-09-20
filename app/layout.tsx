@@ -3,7 +3,8 @@ import { Cinzel, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import BottomWidgets from "@/components/BottomWidgets";
+import FloatingActions from "@/components/FloatingActions";
+import CookieBanner from "@/components/CookieBanner";
 import JsonLd from "@/components/JsonLd";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
@@ -116,7 +117,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <BottomWidgets />
+        <FloatingActions />
+        <CookieBanner />
         <GoogleTagManager gtmId="GTM-NPFPBCNH" />
         <GoogleAnalytics gaId="G-7E6L5PXENM" />
       </body>
