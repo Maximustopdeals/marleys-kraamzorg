@@ -506,31 +506,6 @@
   display: none !important;
 }
 
-/* =========================================================
-   NIEUW: Submit message (succes/error)
-   ========================================================= */
-.ct-submit-message {
-  margin-top: 1.2rem;
-  text-align: center;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.8rem 1rem;
-  border-radius: 12px;
-}
-
-.ct-success {
-  color: #15803d;
-  background: rgba(21, 128, 61, 0.08);
-  border: 1px solid rgba(21, 128, 61, 0.2);
-}
-
-.ct-submit-message.ct-error-text {
-  background: rgba(229, 62, 62, 0.06);
-  border: 1px solid rgba(229, 62, 62, 0.2);
-  padding: 0.8rem 1rem;
-  border-radius: 12px;
-}
-
 /* ═══════ RESPONSIVE ═══════ */
 @media (max-width: 768px) {
   .ct-hero {
