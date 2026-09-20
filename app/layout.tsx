@@ -4,9 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
-import CookieBanner from "@/components/CookieBanner";
+import CookieConsent from "@/components/CookieConsent";
+import Analytics from "@/components/Analytics";
 import JsonLd from "@/components/JsonLd";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -118,9 +118,8 @@ export default function RootLayout({
         </main>
         <Footer />
         <FloatingActions />
-        <CookieBanner />
-        <GoogleTagManager gtmId="GTM-NPFPBCNH" />
-        <GoogleAnalytics gaId="G-7E6L5PXENM" />
+        <CookieConsent />
+        <Analytics />
       </body>
     </html>
   );
