@@ -100,9 +100,19 @@ function HomeHero() {
   return (
     <section ref={sectionRef} className="relative w-full min-h-[90dvh] md:min-h-[85dvh] overflow-hidden flex items-center justify-center pb-8">
       <div className="absolute inset-0 z-0">
-        <Image src="/images/baby-banner.webp" alt="Pasgeboren baby - Marley's Kraamzorg" fill priority className="object-cover" sizes="100vw" />
-        {/* Light warm beige overlay — effen, geen gradient */}
-        <div className="absolute inset-0 bg-[#F5EDE3]/88" />
+        {/* Baby-afbeelding met blur voor een zachter effect */}
+        <Image
+          src="/images/baby-banner.webp"
+          alt="Pasgeboren baby - Marley's Kraamzorg"
+          fill
+          priority
+          className="object-cover blur-[3px] scale-105"
+          sizes="100vw"
+        />
+        {/* Warme beige overlay — iets sterker voor een subtieler effect */}
+        <div className="absolute inset-0 bg-[#F5EDE3]/94" />
+        {/* Subtiele gradient onderaan voor tekstleesbaarheid */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F5EDE3]/40" />
       </div>
 
       <div className="hero-content relative z-10 text-center px-4 max-w-4xl mx-auto pt-20 md:pt-24 pb-12 text-berry-dark">
