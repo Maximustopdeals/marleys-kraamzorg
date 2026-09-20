@@ -48,39 +48,62 @@ export default function WerkgebiedDetailClient({ area, otherAreas }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* ═══════ HERO ═══════ */}
-      <section className="relative w-full min-h-[55vh] md:min-h-[50vh] overflow-hidden flex items-center justify-center bg-[#F5EDE3]">
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20 md:pt-24 pb-12 text-berry-dark">
+      {/* ═══════ HERO — Magenta Cinzel-stijl ═══════ */}
+      <section className="relative w-full min-h-[55vh] md:min-h-[50vh] overflow-hidden flex items-center justify-center bg-primary">
+        {/* Decoratieve overlay */}
+        <div className="absolute inset-0 z-0">
+          <div
+            className="absolute inset-0 opacity-[0.05]"
+            style={{
+              backgroundImage: `radial-gradient(circle, #FDF9F4 1px, transparent 1px)`,
+              backgroundSize: "32px 32px",
+            }}
+          />
+          <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-cream/5" />
+          <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-cream/5" />
+        </div>
+
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20 md:pt-24 pb-12">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/70 border border-berry-dark/10 rounded-full px-5 py-2 mb-6">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9A1E61" strokeWidth="2">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2 mb-6 backdrop-blur-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8D5C4" strokeWidth="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
               <circle cx="12" cy="10" r="3" />
             </svg>
-            <span className="font-cinzel text-xs uppercase tracking-[0.12em] text-berry-dark/80">
+            <span className="font-cinzel text-xs uppercase tracking-[0.12em] text-cream/90">
               Marley&apos;s Kraamzorg — {area.naam}
             </span>
           </div>
+
+          {/* H1 in Cinzel */}
           <h1
-            className="text-2xl md:text-4xl lg:text-5xl uppercase text-berry-dark leading-tight tracking-tight mb-6"
+            className="text-2xl md:text-4xl lg:text-5xl uppercase text-cream leading-tight tracking-tight mb-6"
             style={{ fontFamily: "Cinzel, Georgia, serif" }}
           >
             {area.heroH1}
           </h1>
-          <div className="w-16 h-0.5 bg-berry-dark/20 mx-auto mb-6" />
-          <p className="font-body text-base md:text-lg text-berry-dark/90 max-w-2xl mx-auto mb-8 italic">
+
+          <div className="w-16 h-0.5 bg-starlight/50 mx-auto mb-6" />
+
+          {/* Ondertitel in Cinzel */}
+          <p className="font-cinzel text-sm md:text-base uppercase tracking-[0.15em] text-starlight mb-8">
             {area.heroSubtitle}
           </p>
+
           <div className="flex justify-center mb-8">
-            <StarIcon size="md" fillColor="#9A1E61" strokeColor="#4A1A3D" animate />
+            <StarIcon size="md" fillColor="#E8D5C4" strokeColor="#FDF9F4" animate />
           </div>
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact/" className="btn-primary">
+            <Link
+              href="/contact/"
+              className="inline-flex items-center justify-center font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 bg-cream text-primary shadow-glow hover:bg-blush hover:-translate-y-0.5"
+            >
               Meld je aan
             </Link>
             <a
               href="tel:+31645041484"
-              className="btn-outline border-berry-dark/30 text-berry-dark hover:bg-berry-dark hover:text-cream"
+              className="inline-flex items-center justify-center font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 border border-cream/50 text-cream hover:bg-cream hover:text-primary"
             >
               Bel direct
             </a>
