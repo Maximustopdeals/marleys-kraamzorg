@@ -78,7 +78,7 @@ function StepCard({
   );
 }
 
-/* ── Hero ── */
+/* ── Hero — Variant A: Warme, natuurlijke hero ── */
 function HomeHero() {
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -98,24 +98,26 @@ function HomeHero() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full min-h-[90dvh] md:min-h-[85dvh] overflow-hidden flex items-center justify-center pb-8">
+    <section
+      ref={sectionRef}
+      className="relative w-full min-h-[90dvh] md:min-h-[85dvh] overflow-hidden flex items-center justify-center pb-8"
+    >
+      {/* Baby-afbeelding met warme gradient overlay */}
       <div className="absolute inset-0 z-0">
-        {/* Baby-afbeelding met blur voor een zachter effect */}
         <Image
           src="/images/baby-banner.webp"
           alt="Pasgeboren baby - Marley's Kraamzorg"
           fill
           priority
-          className="object-cover blur-[7px] scale-105"
+          className="object-cover"
           sizes="100vw"
         />
-        {/* Warme beige overlay — iets sterker voor een subtieler effect */}
-        <div className="absolute inset-0 bg-[#F5EDE3]/94" />
-        {/* Subtiele gradient onderaan voor tekstleesbaarheid */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F5EDE3]/40" />
+        {/* Warme overlay met gradient voor diepte */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#F5EDE3]/75 via-[#F5EDE3]/60 to-[#9A1E61]/40" />
       </div>
 
-      <div className="hero-content relative z-10 text-center px-4 max-w-4xl mx-auto pt-20 md:pt-24 pb-12 text-berry-dark">
+      {/* Tekst-container met glasachtige achtergrond */}
+      <div className="hero-content relative z-10 text-center px-6 md:px-10 max-w-4xl mx-auto pt-20 md:pt-24 pb-12 text-berry-dark backdrop-blur-md bg-white/40 rounded-3xl border border-white/50 shadow-2xl">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-white/70 border border-berry-dark/10 rounded-full px-5 py-2 mb-6">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9A1E61" strokeWidth="2">
@@ -125,25 +127,39 @@ function HomeHero() {
             Marley&apos;s Kraamzorg
           </span>
         </div>
+
         <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl uppercase text-berry-dark leading-tight tracking-tight mb-6">
           Kraamzorg Rotterdam | met een Vast Gezicht
         </h1>
+
         <div className="w-16 h-0.5 bg-berry-dark/20 mx-auto mb-6" />
+
         <p className="font-body text-base md:text-lg text-berry-dark/95 max-w-xl mx-auto mb-4 italic">
           💖 Marley&apos;s Kraamzorg vernoemd naar mijn dochtertje Marley. Haar naam draag ik met trots, als herinnering aan hoe kostbaar de eerste dagen zijn.
         </p>
+
         <p className="font-body text-sm md:text-base text-berry-dark/90 max-w-2xl mx-auto mb-8 leading-relaxed">
           Verwacht je een baby en verlang je naar rust, vertrouwen en persoonlijke aandacht? Ik ben Lisa en bied kleinschalige kraamzorg in Rotterdam met <strong>één vast gezicht</strong> en dat ben ik. Geen wisselende verzorgenden, maar een vertrouwd gezicht van dag 1. Betrokken, deskundig en 24/7 bereikbaar.
         </p>
+
         <div className="flex justify-center mb-8">
           <StarIcon size="md" fillColor="#9A1E61" strokeColor="#4A1A3D" animate />
         </div>
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/contact/" className="btn-primary">📝 Check beschikbaarheid</Link>
-          <a href="tel:+31645041484" className="btn-outline border-berry-dark/30 text-berry-dark hover:bg-berry-dark hover:text-cream">📞 Bel direct</a>
+          <Link href="/contact/" className="btn-primary">
+            📝 Check beschikbaarheid
+          </Link>
+          <a
+            href="tel:+31645041484"
+            className="btn-outline border-berry-dark/30 text-berry-dark hover:bg-berry-dark hover:text-cream"
+          >
+            📞 Bel direct
+          </a>
         </div>
       </div>
 
+      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-berry-dark/50">
         <span className="text-xs font-cinzel uppercase tracking-wider">Scroll</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="animate-bounce-gentle">
