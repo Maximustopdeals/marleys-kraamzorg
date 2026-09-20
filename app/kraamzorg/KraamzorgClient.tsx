@@ -128,7 +128,7 @@ const faqItems = [
   },
   {
     question: "Wanneer moet ik kraamzorg aanvragen?",
-    answer: "Het advies is om kraamzorg tussen de <strong>12e en 20e zwangerschapsweek</strong> aan te vragen. Bij voorkeur uiterlijk rond week 16, zeker als u specifieke wensen heeft. U kunt bij mij altijd een <strong>gratis intakegesprek</strong> aanvragen zonder verplichtingen.",
+    answerHTML: `<p>Wacht niet te lang met het aanvragen van kraamzorg. Zodra u weet dat u zwanger bent en een uitgerekende datum heeft, is het verstandig om alvast uw kraamzorg te regelen. Veel zwangere vrouwen wachten tot na de 16e zwangerschapsweek, maar tegen die tijd kunnen populaire kraambureaus en zelfstandige kraamverzorgenden al volgeboekt zijn.</p><p>Door vroeg kraamzorg aan te vragen, vergroot u de kans dat u kunt kiezen voor de kraamverzorgende die bij u en uw wensen past. Zo weet u op tijd waar u aan toe bent en kunt u zich ontspannen voorbereiden op de komst van uw baby.</p><p>Wilt u weten wat <strong class="mk-faq-highlight">Marley's Kraamzorg</strong> voor u kan betekenen? U kunt vrijblijvend een <strong>gratis intakegesprek</strong> aanvragen. Samen bespreken we uw wensen en kijken we wat mogelijk is rondom uw uitgerekende datum.</p>`,
     featured: false,
     hasList: false,
   },
