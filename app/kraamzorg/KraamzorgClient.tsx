@@ -109,7 +109,7 @@ const faqItems = [
   },
   {
     question: "Wordt kraamzorg vergoed door verzekeringen?",
-    answer: "Ja, kraamzorg wordt volledig vergoed vanuit de <strong>basisverzekering</strong>. U betaalt <strong>geen eigen risico</strong>. Afhankelijk van uw verzekering krijgt u 45\u201380 uur vergoed. Ik help u graag met de aanvraag bij uw zorgverzekeraar en denk mee over de mogelijkheden.",
+    answer: "Ja, kraamzorg wordt volledig vergoed vanuit de <strong>basisverzekering</strong>. U betaalt <strong>geen eigen risico</strong>. Afhankelijk van uw verzekering krijgt u 45 tot 80 uur vergoed. Ik help u graag met de aanvraag bij uw zorgverzekeraar en denk mee over de mogelijkheden.",
     featured: false,
     hasList: false,
   },
@@ -140,7 +140,7 @@ const faqItems = [
   },
   {
     question: "Kan ik mijn kraamverzorgende kiezen?",
-    answerHTML: `<p>Bij <strong class="mk-faq-highlight">Marley's Kraamzorg</strong> krijgt u persoonlijke aandacht van <strong>mij, Lisa</strong>, uw vaste kraamverzorgende. Omdat ik alleen werk, garandeer ik:</p><ul class="mk-faq-list mk-faq-list-heart"><li><span class="mk-faq-list-icon">&#127919;</span> <strong>Persoonlijke en warme begeleiding</strong> \u2014 geen wisselende gezichten</li><li><span class="mk-faq-list-icon">&#128158;</span> <strong>Een vertrouwde band</strong> vanaf het eerste moment</li><li><span class="mk-faq-list-icon">&#128105;&zwj;&#9877;&#65039;</span> <strong>Volledige focus</strong> op uw gezin tijdens de kraamweek</li></ul><p class="mk-faq-note">Ons kennismakingsgesprek is altijd <strong>gratis en vrijblijvend</strong>, zodat we zeker weten dat het klikt. Die persoonlijke verbinding vind ik essentieel voor een fijne kraamtijd.</p>`,
+    answerHTML: `<p>Bij <strong class="mk-faq-highlight">Marley's Kraamzorg</strong> krijgt u persoonlijke aandacht van <strong>mij, Lisa</strong>, uw vaste kraamverzorgende. Omdat ik alleen werk, garandeer ik:</p><ul class="mk-faq-list mk-faq-list-heart"><li><span class="mk-faq-list-icon">&#127919;</span> <strong>Persoonlijke en warme begeleiding</strong>, geen wisselende gezichten</li><li><span class="mk-faq-list-icon">&#128158;</span> <strong>Een vertrouwde band</strong> vanaf het eerste moment</li><li><span class="mk-faq-list-icon">&#128105;&zwj;&#9877;&#65039;</span> <strong>Volledige focus</strong> op uw gezin tijdens de kraamweek</li></ul><p class="mk-faq-note">Ons kennismakingsgesprek is altijd <strong>gratis en vrijblijvend</strong>, zodat we zeker weten dat het klikt. Die persoonlijke verbinding vind ik essentieel voor een fijne kraamtijd.</p>`,
     featured: true,
     hasList: false,
   },
@@ -152,7 +152,7 @@ const benefits = [
   { icon: <AwardIcon />, title: "Ervaren specialist", text: "Ik ben speciaal getraind in kraamzorg bij bijzondere situaties." },
   { icon: <HandsIcon />, title: "Emotionele ondersteuning", text: "Ik bied een luisterend oor en begeleiding bij uw geboorte-ervaring." },
   { icon: <ClockIcon />, title: "Praktische flexibiliteit", text: "Ik pas mijn diensten aan op uw situatie, hoe bijzonder ook." },
-  { icon: <NetworkIcon />, title: "Co\u00f6rdinatie met specialisten", text: "Ik werk nauw samen met verloskundigen en gynaecologen." },
+  { icon: <NetworkIcon />, title: "Coördinatie met specialisten", text: "Ik werk nauw samen met verloskundigen en gynaecologen." },
   { icon: <PhoneIcon />, title: "Voortdurende beschikbaarheid", text: "Ook na de kraamweek blijf ik beschikbaar voor vragen." },
 ];
 
@@ -256,7 +256,7 @@ export default function KraamzorgClient() {
       <section className="mk-hero" aria-label="Kraamzorg Rotterdam - Hero sectie">
         <div className="mk-hero-overlay" />
         <div className="mk-hero-container">
-          <h1 className="mk-hero-h1">Kraamzorg Rotterdam – Deskundige en Persoonlijke Zorg</h1>
+          <h1 className="mk-hero-h1">Kraamzorg Rotterdam, Deskundige en Persoonlijke Zorg</h1>
           <p className="mk-hero-sub">Kraamzorg Rotterdam voor een zorgeloze kraamtijd</p>
           <div className="mk-hero-text">
             <p>
@@ -362,7 +362,7 @@ export default function KraamzorgClient() {
         <div className="mk-voordelen-container">
           <header className="mk-voordelen-header">
             <span className="mk-section-tag">Waarom kiezen voor Marley&apos;s Kraamzorg?</span>
-            <h2 className="mk-section-h2">Persoonlijke kraamzorg in Rotterdam – Jouw vertrouwde steun</h2>
+            <h2 className="mk-section-h2">Persoonlijke kraamzorg in Rotterdam, Jouw vertrouwde steun</h2>
             <p className="mk-section-sub">
               Bij Marley&apos;s Kraamzorg draait alles om jou. Met <strong>persoonlijke kraamzorg in Rotterdam</strong> krijg je één vast gezicht, deskundige begeleiding en warme zorg, volledig afgestemd op jouw gezinssituatie. Van de eerste kennismaking tot de laatste kraamweek: ik sta voor je klaar.
             </p>
@@ -466,7 +466,7 @@ export default function KraamzorgClient() {
                   <path d="M4 21h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z" />
                 </svg>
                 <p className="mk-highlight-text">
-                  Neem contact op via telefoon, e-mail of vul het online aanmeldformulier in voor al je<strong> vragen</strong>. Ik help je graag bij:
+                  Neem contact op via telefoon, e-mail of vul het online contactformulier in voor al je<strong> vragen</strong>. Ik help je graag bij:
                 </p>
               </div>
 
@@ -493,7 +493,7 @@ export default function KraamzorgClient() {
                     <line x1="12" y1="16" x2="12.01" y2="16" />
                   </svg>
                 </div>
-                <p>Geen wachttijden – direct persoonlijk contact met je vaste kraamverzorgende</p>
+                <p>Geen wachttijden, direct persoonlijk contact met je vaste kraamverzorgende</p>
               </div>
 
               <div className="mk-arrange-cta">
