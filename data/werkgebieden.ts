@@ -150,7 +150,7 @@ export const werkgebieden: WerkgebiedData[] = [
     whyText: [
       "Nieuwerkerk aan den IJssel trekt steeds meer jonge gezinnen vanwege de rustige, groene woonomgeving en de ruime woningen. De gemeente biedt een perfecte balans tussen stad en land — dicht bij Rotterdam, maar met de rust van het platteland.",
       "Als kraamverzorgende ken ik Nieuwerkerk goed. Ik weet waar de speeltuinen zijn, welke zorgverleners actief zijn in de regio en hoe ik me het beste kan navigeren door de verschillende wijken. Die lokale kennis helpt mij om snel en efficiënt te werken.",
-      "Bovendien zijn de gezinnen in Nieuwerkerk aan den IJssel divers — van eerstejaars ouders tot ervaren gezinnen. Ik pas mijn werkwijze altijd aan op uw situatie, zodat u precies de zorg krijgt die u nodig heeft.",
+      "Bovendien zijn de gezinnen in Nieuwerkerk aan den IJssel divers. Van eerstejaars ouders tot ervaren gezinnen. Ik pas mijn werkwijze altijd aan op uw situatie, zodat u precies de zorg krijgt die u nodig heeft.",
     ],
     aboutTitle: "Over Marley's Kraamzorg in Nieuwerkerk aan den IJssel",
     aboutText: [
@@ -179,7 +179,7 @@ export const werkgebieden: WerkgebiedData[] = [
       },
       {
         question: "Welke verloskundigen zijn er in Nieuwerkerk?",
-        answer: "In Nieuwerkerk aan den IJssel zijn verschillende verloskundigenpraktijken actief. Ik werk samen met onder meer Verloskundigen aan de Schie en IVE Verloskundigen. Samen zorgen we voor een soepele overgang van de bevalling naar de kraamperiode.",
+        answer: "In Nieuwerkerk aan den IJssel zijn verschillende verloskundigenpraktijken actief. Ik werk samen met onder meer Verloskundigen Zuidplas en IVE Verloskundigen. Samen zorgen we voor een soepele overgang van de bevalling naar de kraamperiode.",
       },
       {
         question: "Kan ik een kennismaking aanvragen in Nieuwerkerk?",
