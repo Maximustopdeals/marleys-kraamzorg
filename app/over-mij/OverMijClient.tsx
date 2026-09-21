@@ -26,7 +26,7 @@ const aboutFAQ = [
   {
     question: "Werk je samen met verloskundigen?",
     answer:
-      "Ik werk samen met verschillende verloskundigenpraktijken in de regio, waaronder Verloskundigen aan de Schie, IVE Verloskundigen, VIVE Verloskundigen en Cindy's Kraamzorg.",
+      "Ik werk samen met verschillende verloskundigenpraktijken in de regio, waaronder Verloskundigen Zuidplas, IVE Verloskundigen en VIVE Verloskundigen.",
   },
   {
     question: "Waarom de naam Marley's Kraamzorg?",
