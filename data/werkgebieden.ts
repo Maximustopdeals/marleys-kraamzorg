@@ -206,7 +206,7 @@ export const werkgebieden: WerkgebiedData[] = [
     whyText: [
       "Krimpen aan den IJssel is een gemeente die steeds populairder wordt bij jonge gezinnen. De ruime woningen, de groene omgeving en de centrale ligging tussen Rotterdam en Gouda maken het een ideale woonplaats. Als kraamverzorgende zie ik hier een groeiende vraag naar persoonlijke, kleinschalige kraamzorg.",
       "De gemeente heeft een hechte community, waar mensen elkaar kennen en omzien naar elkaar. Die sfeer past perfect bij mijn werkwijze. Ik werk niet alleen professioneel, maar ook vanuit een warme, menselijke verbinding met het gezin waar ik mag komen.",
-      "In Krimpen aan den IJssel werk ik samen met lokale verloskundigen en zorgverleners. Deze samenwerking zorgt ervoor dat u een ononderbroken zorglijn heeft — van de zwangerschap tot na de kraamperiode. Dat geeft rust en zekerheid.",
+      "In Krimpen aan den IJssel werk ik samen met lokale verloskundigen en zorgverleners. Deze samenwerking zorgt ervoor dat u een ononderbroken zorglijn heeft van de zwangerschap tot na de kraamperiode. Dat geeft rust en zekerheid.",
     ],
     aboutTitle: "Over Marley's Kraamzorg in Krimpen aan den IJssel",
     aboutText: [
@@ -235,7 +235,7 @@ export const werkgebieden: WerkgebiedData[] = [
       },
       {
         question: "Met welke verloskundigen werk je samen in Krimpen?",
-        answer: "In Krimpen aan den IJssel werk ik samen met verschillende verloskundigenpraktijken uit de regio, waaronder Verloskundigen aan de Schie. We stemmen de zorg goed op elkaar af voor een soepele overgang.",
+        answer: "In Krimpen aan den IJssel werk ik samen met verschillende verloskundigenpraktijken uit de regio, waaronder Verloskundigen Zuidplas. We stemmen de zorg goed op elkaar af voor een soepele overgang.",
       },
       {
         question: "Kan ik een kennismaking inplannen in Krimpen?",
@@ -262,7 +262,7 @@ export const werkgebieden: WerkgebiedData[] = [
     whyText: [
       "Gouda is een stad die perfect balans biedt tussen historische charme en moderne leefbaarheid. De binnenstad met zijn grachten en monumentale panden is adembenemend, terwijl de nieuwere wijken ruimte en comfort bieden voor gezinnen. Als kraamverzorgende kan ik hier mijn werk optimaal uitvoeren.",
       "De gemeente Gouda investeert veel in jonge gezinnen. Er zijn uitstekende speeltuinen, kindvriendelijke wijken en diverse zorgvoorzieningen. Ik werk samen met verloskundigen en zorgverleners in de regio om u de best mogelijke zorg te bieden.",
-      "Bovendien is Gouda centraal gelegen in de Randstad. Dat maakt het voor mij als kraamverzorgende makkelijk om snel ter plaatse te zijn, ongeacht in welke wijk u woont. Van de binnenstad tot de nieuwbouwwijken — ik kom overal.",
+      "Bovendien is Gouda centraal gelegen in de Randstad. Dat maakt het voor mij als kraamverzorgende makkelijk om snel ter plaatse te zijn, ongeacht in welke wijk u woont. Van de binnenstad tot de nieuwbouwwijken, ik kom overal.",
     ],
     aboutTitle: "Over Marley's Kraamzorg in Gouda",
     aboutText: [
@@ -324,7 +324,7 @@ export const werkgebieden: WerkgebiedData[] = [
     ],
     aboutTitle: "Over Marley's Kraamzorg in Waddinxveen",
     aboutText: [
-      "Marley's Kraamzorg is vernoemd naar mijn dochtertje Marley — een naam die staat voor onvoorwaardelijke liefde en de schoonheid van nieuw leven. Die waarden vormen de basis van mijn werk als kraamverzorgende in Waddinxveen.",
+      "Marley's Kraamzorg is vernoemd naar mijn dochtertje Marley. Een naam die staat voor onvoorwaardelijke liefde en de schoonheid van nieuw leven. Die waarden vormen de basis van mijn werk als kraamverzorgende in Waddinxveen.",
       "Ik ben Lisa en ik heb jarenlange ervaring in de kraamzorg. Mijn werkwijze is kleinschalig en persoonlijk. U krijgt bij mij geen wisselende verzorgenden, maar één vast gezicht dat u kent en vertrouwt.",
       "In Waddinxveen bied ik een breed scala aan kraamzorgdiensten: van medische controles tot huishoudelijke ondersteuning, van borstvoedingsbegeleiding tot emotionele steun. Alles afgestemd op uw specifieke situatie en wensen.",
     ],
@@ -433,7 +433,7 @@ export const werkgebieden: WerkgebiedData[] = [
     whyText: [
       "Zevenhuizen is een dorp dat steeds populairder wordt bij jonge gezinnen. De ruime, betaalbare woningen, de groene omgeving en de centrale ligging tussen Rotterdam, Den Haag en Gouda maken het een aantrekkelijke woonplaats.",
       "Als kraamverzorgende waardeer ik de landelijke sfeer in Zevenhuizen. Hier is ruimte om te ontspannen, te herstellen en te genieten van de eerste weken met uw baby. De rustige omgeving draagt bij aan een ontspannen kraamperiode.",
-      "Bovendien is de gemeenschap in Zevenhuizen hecht en betrokken. Dat voel ik als kraamverzorgende ook — er is altijd wel iemand die een helpende hand biedt. In die sfeer voel ik me thuis en kan ik optimaal mijn werk doen.",
+      "Bovendien is de gemeenschap in Zevenhuizen hecht en betrokken. Dat voel ik als kraamverzorgende ook. Er is altijd wel iemand die een helpende hand biedt. In die sfeer voel ik me thuis en kan ik optimaal mijn werk doen.",
     ],
     aboutTitle: "Over Marley's Kraamzorg in Zevenhuizen",
     aboutText: [
@@ -462,7 +462,7 @@ export const werkgebieden: WerkgebiedData[] = [
       },
       {
         question: "Welke verloskundigen zijn er in Zevenhuizen?",
-        answer: "In Zevenhuizen en omgeving zijn verschillende verloskundigenpraktijken actief. Ik werk samen met onder meer VIVE Verloskundigen en Verloskundigen aan de Schie voor een goede afstemming van zorg.",
+        answer: "In Zevenhuizen en omgeving zijn verschillende verloskundigenpraktijken actief. Ik werk samen met onder meer VIVE Verloskundigen en Verloskundigen Zuidplas voor een goede afstemming van zorg.",
       },
       {
         question: "Kan ik een kennismaking plannen in Zevenhuizen?",
