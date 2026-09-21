@@ -256,7 +256,7 @@ export default function KraamzorgClient() {
       <section className="mk-hero" aria-label="Kraamzorg Rotterdam - Hero sectie">
         <div className="mk-hero-overlay" />
         <div className="mk-hero-container">
-          <h1 className="mk-hero-h1">Kraamzorg Rotterdam, Deskundige en Persoonlijke Zorg</h1>
+          <h1 className="mk-hero-h1">Kraamzorg Rotterdam | Deskundige en Persoonlijke Zorg</h1>
           <p className="mk-hero-sub">Kraamzorg Rotterdam voor een zorgeloze kraamtijd</p>
           <div className="mk-hero-text">
             <p>
