@@ -86,20 +86,20 @@ export const werkgebieden: WerkgebiedData[] = [
     heroSubtitle: "Persoonlijke kraamzorg met 1 vast gezicht in Capelle aan den IJssel",
     intro: [
       "Zoekt u naar betrokken kraamzorg in Capelle aan den IJssel? Marley's Kraamzorg is uw partner voor een warme, zorgzame start met uw pasgeboren baby. Ik ben Lisa, eigenaar en kraamverzorgende, en ik kom graag naar Capelle om u te begeleiden tijdens deze bijzondere periode.",
-      "Capelle aan den IJssel is een prachtige gemeente met een dorpse sfeer, groene woonwijken en uitstekende voorzieningen voor gezinnen. Als kraamverzorgende ken ik de gemeente goed en weet ik precies waar ik moet zijn — of u nu woont in de Schenkel, Capelle-West of aan de 's-Gravenweg.",
+      "Capelle aan den IJssel is een prachtige gemeente met een dorpse sfeer, groene woonwijken en uitstekende voorzieningen voor gezinnen. Als kraamverzorgende ken ik de gemeente goed en weet ik precies waar ik moet zijn. Of u nu woont in de Schenkel, Capelle-West of aan de 's-Gravenweg.",
       "Met Marley's Kraamzorg kiest u voor persoonlijke aandacht, deskundige begeleiding en een vertrouwd gezicht tijdens uw hele kraamperiode. Ik neem de tijd voor u, luister naar uw wensen en zorg dat u zich veilig en gesteund voelt.",
     ],
     whyTitle: "Waarom kraamzorg in Capelle aan den IJssel?",
     whyText: [
       "Capelle aan den IJssel is een geliefde woonplaats voor jonge gezinnen dankzij de ruime woningen, de groene omgeving en de centrale ligging nabij Rotterdam. Veel gezinnen kiezen bewust voor Capelle vanwege de kindvriendelijke wijken en de uitstekende voorzieningen.",
-      "Als kraamverzorgende in Capelle aan den IJssel profiteert u van mijn korte aanrijdtijden. Ik woon in Rotterdam en ben daardoor snel ter plaatse. Bovendien werk ik samen met verloskundigenpraktijken in de regio, waaronder Verloskundigen aan de Schie en VIVE Verloskundigen, zodat de zorg naadloos op elkaar aansluit.",
+      "Als kraamverzorgende in Capelle aan den IJssel profiteert u van mijn korte aanrijdtijden. Ik woon in Rotterdam en ben daardoor snel ter plaatse. Bovendien werk ik samen met verloskundigenpraktijken in de regio, waaronder Verloskundigen Zuidplas en VIVE Verloskundigen, zodat de zorg naadloos op elkaar aansluit.",
       "In Capelle waardeer ik de rust en ruimte die de gemeente biedt. Tegenover de drukte van de stad kunt u hier genieten van een ontspannen kraamperiode, met alle voorzieningen binnen handbereik. Ik zorg dat u zich nergens zorgen over hoeft te maken.",
     ],
     aboutTitle: "Over Marley's Kraamzorg in Capelle aan den IJssel",
     aboutText: [
-      "Marley's Kraamzorg is vernoemd naar mijn dochtertje Marley — een naam die staat voor liefde, warmte en de kostbaarheid van de eerste levensdagen. Die waarden draag ik elke dag met me mee wanneer ik bij gezinnen in Capelle aan den IJssel mag komen.",
+      "Marley's Kraamzorg is vernoemd naar mijn dochtertje Marley een naam die staat voor liefde, warmte en de kostbaarheid van de eerste levensdagen. Die waarden draag ik elke dag met me mee wanneer ik bij gezinnen in Capelle aan den IJssel mag komen.",
       "Mijn werkwijze is kleinschalig en persoonlijk. U krijgt bij mij één vast gezicht: ik ben er vanaf de kennismaking tot het einde van uw kraamperiode. Die continuïteit schept vertrouwen en zorgt voor een prettige, ontspannen sfeer in huis.",
-      "Of u nu uw eerste kindje verwacht of al ervaring heeft met kraamzorg — ik stem mijn begeleiding altijd af op uw situatie. Met jarenlange ervaring en een warme persoonlijke aanpak zorg ik voor een zorgeloze start.",
+      "Of u nu uw eerste kindje verwacht of al ervaring heeft met kraamzorg, ik stem mijn begeleiding altijd af op uw situatie. Met jarenlange ervaring en een warme persoonlijke aanpak zorg ik voor een zorgeloze start.",
     ],
     wijkenTitle: "Wijken en bereikbaarheid in Capelle aan den IJssel",
     wijkenIntro:
@@ -123,7 +123,7 @@ export const werkgebieden: WerkgebiedData[] = [
       },
       {
         question: "Welke verloskundigen werken in Capelle?",
-        answer: "In Capelle aan den IJssel zijn verschillende verloskundigenpraktijken actief. Ik werk onder meer samen met Verloskundigen aan de Schie en VIVE Verloskundigen. We stemmen de zorg goed op elkaar af.",
+        answer: "In Capelle aan den IJssel zijn verschillende verloskundigenpraktijken actief. Ik werk onder meer samen met Verloskundigen Zuidplas en VIVE Verloskundigen. We stemmen de zorg goed op elkaar af.",
       },
       {
         question: "Kan ik ook in Capelle aan den IJssel een kennismaking plannen?",
