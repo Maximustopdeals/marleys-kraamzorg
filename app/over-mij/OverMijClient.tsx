@@ -21,7 +21,7 @@ const aboutFAQ = [
   {
     question: "Ben je 24/7 bereikbaar?",
     answer:
-      "Ja, tijdens de kraamperiode ben ik altijd bereikbaar voor dringende vragen. Dat geeft rust, wetende dat je altijd iemand hebt die je kan helpen — ook midden in de nacht.",
+      "Ja, tijdens de kraamperiode ben ik altijd bereikbaar voor dringende vragen. Dat geeft rust, wetende dat je altijd iemand hebt die je kan helpen, ook midden in de nacht.",
   },
   {
     question: "Werk je samen met verloskundigen?",
