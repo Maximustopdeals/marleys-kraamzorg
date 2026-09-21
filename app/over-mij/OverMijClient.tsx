@@ -341,7 +341,7 @@ export default function OverMijClient() {
                 </svg>
               </div>
               <h3>Flexibiliteit</h3>
-              <p>Kies de zorg die bij jou past. Een paar uur per dag of volledige dagen — alles is bespreekbaar.</p>
+              <p>Kies de zorg die bij jou past. Een paar uur per dag of volledige dagen, alles is bespreekbaar.</p>
             </article>
 
             <article className="om-why-card om-fade" role="listitem" tabIndex={0} aria-label="Babyverzorging">
