@@ -10,7 +10,7 @@ const areaFAQ = [
   { question: "In welke regio werk je?", answer: "Ik werk in Rotterdam en omliggende gemeenten: Capelle aan den IJssel, Nieuwerkerk aan den IJssel, Krimpen aan den IJssel, Gouda, Waddinxveen, Moordrecht en Zevenhuizen." },
   { question: "Wat als ik net buiten je werkgebied woon?", answer: "Neem gerust contact op. In sommige gevallen kan ik toch iets voor je betekenen of je doorverwijzen naar een collega in jouw regio." },
   { question: "Hoe snel ben je ter plaatse?", answer: "Omdat ik in Rotterdam woon, ben ik meestal binnen 30–45 minuten bij je thuis in de regio." },
-  { question: "Kan ik je kiezen als vaste kraamverzorgende?", answer: "Ja, dat is juist de kracht van mijn werkwijze. Je krijgt één vast gezicht — mij — voor de hele kraamperiode." },
+  { question: "Kan ik je kiezen als vaste kraamverzorgende?", answer: "Ja, dat is juist de kracht van mijn werkwijze. Je krijgt één vast gezicht, mij voor de hele kraamperiode." },
 ];
 
 export default function WerkgebiedClient() {
