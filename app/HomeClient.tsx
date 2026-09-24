@@ -157,6 +157,29 @@ function HomeHero() {
             📞 Bel direct
           </a>
         </div>
+
+        {/* ✅ NIEUW: link naar /over-mij/ — verhaal achter Marley's Kraamzorg */}
+        <div className="mt-6">
+          <Link
+            href="/over-mij/"
+            className="inline-flex items-center gap-2 font-cinzel text-xs uppercase tracking-[0.08em] text-berry-dark/70 hover:text-primary transition-colors"
+          >
+            Lees het verhaal achter Marley&apos;s Kraamzorg
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
+        </div>
       </div>
 
       {/* Scroll indicator */}
