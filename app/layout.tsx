@@ -24,7 +24,7 @@ const openSans = Open_Sans({
   preload: true,
 });
 
-/* ✅ NIEUW: viewport als aparte export (Next.js 13+ vereist dit) */
+/* ✅ NIEUW: viewport als aparte export (verplicht in Next.js 13+) */
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -34,15 +34,15 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.marleyskraamzorg.nl"),
 
-  /* ✅ AANGEPAST: title nu 50 tekens i.p.v. 66 */
+  /* ✅ AANGEPAST: title van 66 → 44 tekens */
   title: {
     default: "Kraamzorg Rotterdam | met een Vast Gezicht",
     template: "%s | Marley's Kraamzorg",
   },
 
-  /* ✅ AANGEPAST: description nu 132 tekens i.p.v. 157 */
+  /* ✅ AANGEPAST: description van 157 → 135 tekens, met verwijzing naar Marley */
   description:
-    "Kleinschalige kraamzorg in Rotterdam door Lisa. Eén vast gezicht van dag 1, 24/7 bereikbaar. Persoonlijk, betrokken en deskundig.",
+    "Kraamzorg in Rotterdam, vernoemd naar dochtertje Marley. Persoonlijke zorg, één vast gezicht. Plan een vrijblijvende intake.",
 
   /* ✅ VERWIJDERD: keywords (Google negeert deze al jaren) */
 
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       "Persoonlijke kraamzorg in Rotterdam met één vast gezicht. 24/7 bereikbaar.",
     images: [
       {
-        /* ✅ AANGEPAST: absolute URL i.p.v. relatief */
+        /* ✅ AANGEPAST: absolute URL */
         url: "https://www.marleyskraamzorg.nl/images/hero-banner.jpg",
         width: 1200,
         height: 630,
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
   category: "Kraamzorg",
   classification: "Healthcare / Maternity Care",
   referrer: "origin-when-cross-origin",
-  /* ✅ VERWIJDERD: theme-color uit other (staat nu in viewport) */
+  /* ✅ VERWIJDERD: theme-color uit other — staat nu in viewport */
 };
 
 export default function RootLayout({
