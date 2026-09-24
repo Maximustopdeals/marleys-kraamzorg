@@ -21,7 +21,8 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "rotterdam",
     naam: "Rotterdam",
-    metaTitle: "Kraamzorg Rotterdam | Persoonlijk & Met 1 Vast Gezicht | Marley's Kraamzorg",
+    /* ✅ AANGEPAST: merknaam weg — template voegt "| Marley's Kraamzorg" toe */
+    metaTitle: "Kraamzorg Rotterdam",
     metaDescription:
       "Op zoek naar kraamzorg in Rotterdam? Marley's Kraamzorg biedt persoonlijke begeleiding met één vast gezicht in Kralingen, Centrum, Noord, Zuid & meer. 24/7 bereikbaar.",
     heroH1: "Kraamzorg Rotterdam | Marley's Kraamzorg",
@@ -79,7 +80,8 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "capelle-aan-den-ijssel",
     naam: "Capelle aan den IJssel",
-    metaTitle: "Kraamzorg Capelle aan den IJssel | Persoonlijk & Betrokken | Marley's Kraamzorg",
+    /* ✅ AANGEPAST */
+    metaTitle: "Kraamzorg Capelle aan den IJssel",
     metaDescription:
       "Kraamzorg in Capelle aan den IJssel nodig? Marley's Kraamzorg biedt persoonlijke begeleiding met één vast gezicht. Voor Schenkel, Capelle-West en omgeving. Direct aanmelden.",
     heroH1: "Kraamzorg Capelle aan den IJssel | Marley's Kraamzorg",
@@ -136,7 +138,8 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "nieuwerkerk-aan-den-ijssel",
     naam: "Nieuwerkerk aan den IJssel",
-    metaTitle: "Kraamzorg Nieuwerkerk aan den IJssel | 1 Vast Gezicht | Marley's Kraamzorg",
+    /* ✅ AANGEPAST */
+    metaTitle: "Kraamzorg Nieuwerkerk aan den IJssel",
     metaDescription:
       "Kraamzorg in Nieuwerkerk aan den IJssel gezocht? Marley's Kraamzorg biedt persoonlijke, betrokken kraamzorg. Eén vast gezicht, 24/7 bereikbaar. Meld je vrijblijvend aan.",
     heroH1: "Kraamzorg Nieuwerkerk aan den IJssel | Marley's Kraamzorg",
@@ -192,7 +195,8 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "krimpen-aan-den-ijssel",
     naam: "Krimpen aan den IJssel",
-    metaTitle: "Kraamzorg Krimpen aan den IJssel | Persoonlijk & Vast Gezicht | Marley's Kraamzorg",
+    /* ✅ AANGEPAST */
+    metaTitle: "Kraamzorg Krimpen aan den IJssel",
     metaDescription:
       "Zoekt u kraamzorg in Krimpen aan den IJssel? Marley's Kraamzorg biedt persoonlijke begeleiding met één vast contactpersoon. Betrokken, ervaren & 24/7 bereikbaar.",
     heroH1: "Kraamzorg Krimpen aan den IJssel | Marley's Kraamzorg",
@@ -248,7 +252,8 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "gouda",
     naam: "Gouda",
-    metaTitle: "Kraamzorg Gouda | Persoonlijk met 1 Vast Gezicht | Marley's Kraamzorg",
+    /* ✅ AANGEPAST */
+    metaTitle: "Kraamzorg Gouda",
     metaDescription:
       "Kraamzorg in Gouda gezocht? Marley's Kraamzorg biedt persoonlijke, betrokken kraamzorg. Eén vast gezicht in centrum, Oosterwei, Bloemendaal & meer. Aanmelden.",
     heroH1: "Kraamzorg Gouda | Marley's Kraamzorg",
@@ -306,7 +311,8 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "waddinxveen",
     naam: "Waddinxveen",
-    metaTitle: "Kraamzorg Waddinxveen | Persoonlijk & Betrokken | Marley's Kraamzorg",
+    /* ✅ AANGEPAST */
+    metaTitle: "Kraamzorg Waddinxveen",
     metaDescription:
       "Kraamzorg in Waddinxveen nodig? Marley's Kraamzorg biedt persoonlijke zorg met één vast gezicht. Voor centrum, Noord, Zuid & Lange Akkeren. Direct contact.",
     heroH1: "Kraamzorg Waddinxveen | Marley's Kraamzorg",
@@ -363,7 +369,8 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "moordrecht",
     naam: "Moordrecht",
-    metaTitle: "Kraamzorg Moordrecht | Met 1 Vast Gezicht | Marley's Kraamzorg",
+    /* ✅ AANGEPAST */
+    metaTitle: "Kraamzorg Moordrecht",
     metaDescription:
       "Kraamzorg in Moordrecht gezocht? Marley's Kraamzorg biedt persoonlijke, betrokken kraamzorg. Eén vast gezicht, flexibel & 24/7 bereikbaar. Meld je aan.",
     heroH1: "Kraamzorg Moordrecht | Marley's Kraamzorg",
@@ -419,7 +426,8 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "zevenhuizen",
     naam: "Zevenhuizen",
-    metaTitle: "Kraamzorg Zevenhuizen | Persoonlijk & Betrokken | Marley's Kraamzorg",
+    /* ✅ AANGEPAST */
+    metaTitle: "Kraamzorg Zevenhuizen",
     metaDescription:
       "Kraamzorg in Zevenhuizen gezocht? Marley's Kraamzorg biedt persoonlijke kraamzorg met één vast gezicht. Betrokken, ervaren & flexibel in Zevenhuizen.",
     heroH1: "Kraamzorg Zevenhuizen | Marley's Kraamzorg",
