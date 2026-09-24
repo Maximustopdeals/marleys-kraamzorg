@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cinzel, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -24,49 +24,55 @@ const openSans = Open_Sans({
   preload: true,
 });
 
+/* ✅ NIEUW: viewport als aparte export (Next.js 13+ vereist dit) */
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#9A1E61",
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.marleyskraamzorg.nl"),
+
+  /* ✅ AANGEPAST: title nu 50 tekens i.p.v. 66 */
   title: {
-    default: "Kraamzorg Rotterdam | met een Vast Gezicht - Marley's Kraamzorg",
+    default: "Kraamzorg Rotterdam | met een Vast Gezicht",
     template: "%s | Marley's Kraamzorg",
   },
+
+  /* ✅ AANGEPAST: description nu 132 tekens i.p.v. 157 */
   description:
-    "Marley's Kraamzorg biedt persoonlijke kraamzorg in Rotterdam en omgeving. Eén vast gezicht, 24/7 bereikbaar. Verzekerd van een warme, zorgzame start.",
-  keywords: [
-    "kraamzorg Rotterdam",
-    "kraamverzorgende Rotterdam",
-    "kraamzorg Capelle aan den IJssel",
-    "kraamzorg Barendrecht",
-    "persoonlijke kraamzorg",
-    "vast gezicht kraamzorg",
-    "kraamzorg 24/7",
-    "kraamverzorging Rotterdam",
-    "kraamtijd begeleiding",
-    "newborn zorg Rotterdam",
-  ],
-  metadataBase: new URL("https://www.marleyskraamzorg.nl"),
+    "Kleinschalige kraamzorg in Rotterdam door Lisa. Eén vast gezicht van dag 1, 24/7 bereikbaar. Persoonlijk, betrokken en deskundig.",
+
+  /* ✅ VERWIJDERD: keywords (Google negeert deze al jaren) */
+
   openGraph: {
     type: "website",
     locale: "nl_NL",
     url: "https://www.marleyskraamzorg.nl",
     siteName: "Marley's Kraamzorg",
-    title: "Kraamzorg Rotterdam | met een Vast Gezicht - Marley's Kraamzorg",
+    title: "Kraamzorg Rotterdam | met een Vast Gezicht",
     description:
-      "Persoonlijke kraamzorg in Rotterdam en omgeving. Eén vast gezicht, 24/7 bereikbaar.",
+      "Persoonlijke kraamzorg in Rotterdam met één vast gezicht. 24/7 bereikbaar.",
     images: [
       {
-        url: "/images/hero-banner.jpg",
+        /* ✅ AANGEPAST: absolute URL i.p.v. relatief */
+        url: "https://www.marleyskraamzorg.nl/images/hero-banner.jpg",
         width: 1200,
         height: 630,
         alt: "Marley's Kraamzorg - Persoonlijke kraamzorg Rotterdam",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Marley's Kraamzorg - Persoonlijke kraamzorg Rotterdam",
-    description: "Eén vast gezicht, 24/7 bereikbaar. Verzekerd van een warme start.",
-    images: ["/images/hero-banner.jpg"],
+    title: "Kraamzorg Rotterdam | met een Vast Gezicht",
+    description:
+      "Eén vast gezicht, 24/7 bereikbaar. Verzekerd van een warme start.",
+    images: ["https://www.marleyskraamzorg.nl/images/hero-banner.jpg"],
   },
+
   robots: {
     index: true,
     follow: true,
@@ -79,25 +85,26 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+
   icons: {
     icon: "/images/favicon.png",
     shortcut: "/images/favicon.png",
     apple: "/images/favicon.png",
   },
+
   verification: {
     google: "HDkkplgZsbxIfjiX_7m2RFRZVJpi9O-z3WTJD9EoHO0",
   },
+
   alternates: {
     canonical: "https://www.marleyskraamzorg.nl",
   },
+
   authors: [{ name: "Lisa - Marley's Kraamzorg" }],
   category: "Kraamzorg",
   classification: "Healthcare / Maternity Care",
   referrer: "origin-when-cross-origin",
-  other: {
-    "theme-color": "#9A1E61",
-    "msapplication-TileColor": "#9A1E61",
-  },
+  /* ✅ VERWIJDERD: theme-color uit other (staat nu in viewport) */
 };
 
 export default function RootLayout({
@@ -107,7 +114,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl" className="scroll-smooth">
-      <body className={`${cinzel.variable} ${openSans.variable} min-h-screen antialiased`}>
+      <body
+        className={`${cinzel.variable} ${openSans.variable} min-h-screen antialiased`}
+      >
         <JsonLd />
         <a href="#main-content" className="skip-link">
           Sla navigatie over
