@@ -21,10 +21,9 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "rotterdam",
     naam: "Rotterdam",
-    /* ✅ AANGEPAST: merknaam weg — template voegt "| Marley's Kraamzorg" toe */
     metaTitle: "Kraamzorg Rotterdam",
     metaDescription:
-      "Op zoek naar kraamzorg in Rotterdam? Marley's Kraamzorg biedt persoonlijke begeleiding met één vast gezicht in Kralingen, Centrum, Noord, Zuid & meer. 24/7 bereikbaar.",
+      "Op zoek naar kraamzorg in Rotterdam? Marley's Kraamzorg biedt persoonlijke begeleiding met één vast gezicht in Kralingen, Blijdorp, Hillegersberg & meer. 24/7 bereikbaar.",
     heroH1: "Kraamzorg Rotterdam | Marley's Kraamzorg",
     heroSubtitle:
       "Persoonlijke kraamzorg met 1 vast gezicht in Rotterdam — van Kralingen tot Hillegersberg",
@@ -47,13 +46,13 @@ export const werkgebieden: WerkgebiedData[] = [
     ],
     wijkenTitle: "Wijken en bereikbaarheid in Rotterdam",
     wijkenIntro:
-      "Ik bied kraamzorg aan gezinnen in Rotterdam en omgeving. Hieronder staan voorbeelden van stadsdelen waar ik regelmatig werkzaam ben:",
+      "Ik bied kraamzorg aan gezinnen in Rotterdam en omgeving. Hieronder staan voorbeelden van stadsdelen en wijken waar ik regelmatig werkzaam ben:",
     wijken: [
-      "Kralingen-Crooswijk — Populair bij jonge gezinnen, nabij het Kralingse Bos",
-      "Rotterdam Noord — Inclusief gebieden zoals Blijdorp, het Oude Noorden en de Agniesebuurt",
-      "Hillegersberg-Schiebroek — Groene woonomgeving met een rustige uitstraling",
+      "Kralingen-Crooswijk — Inclusief Kralingen, Crooswijk, De Esch en Struisenburg",
+      "Rotterdam Noord — Inclusief Blijdorp, Oude Noorden, Agniesebuurt en Bergpolder",
+      "Hillegersberg-Schiebroek — Inclusief Hillegersberg, Schiebroek en Terbregge",
       "Overschie — Stadsdeel met een dorps karakter aan de rand van Rotterdam",
-      "Prins Alexander — Inclusief wijken zoals Oosterflank en Zevenkamp",
+      "Prins Alexander — Inclusief Ommoord, Zevenkamp, Nesselande en Oosterflank",
     ],
     faq: [
       {
@@ -79,7 +78,6 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "capelle-aan-den-ijssel",
     naam: "Capelle aan den IJssel",
-    /* ✅ AANGEPAST */
     metaTitle: "Kraamzorg Capelle aan den IJssel",
     metaDescription:
       "Kraamzorg in Capelle aan den IJssel nodig? Marley's Kraamzorg biedt persoonlijke begeleiding met één vast gezicht. Voor Schenkel, Capelle-West en omgeving. Direct aanmelden.",
@@ -106,11 +104,11 @@ export const werkgebieden: WerkgebiedData[] = [
     wijkenIntro:
       "Ik ben actief in heel Capelle aan den IJssel. Hieronder vindt u een aantal wijken waar ik regelmatig werkzaam ben:",
     wijken: [
-      "Schenkel — Een groene en gezinsvriendelijke wijk met een prettige woonomgeving",
-      "Capelle-West — Een karakteristieke wijk dichtbij Rotterdam en de Hollandsche IJssel",
-      "Oostgaarde — Een ruime woonwijk met veel groen, scholen en speelvoorzieningen",
-      "Schollevaar — Een populaire gezinswijk met een combinatie van rust en bereikbaarheid",
-      "Fascinatio — Een moderne woonwijk met eigentijdse woningen en goede verbindingen",
+      "Schenkel — Groene en gezinsvriendelijke wijk met de Bloemenbuurt en 's-Gravenweg",
+      "Capelle-West — Karakteristieke wijk dichtbij Rotterdam en de Hollandsche IJssel",
+      "Oostgaarde — Ruime woonwijk met veel groen, scholen en speelvoorzieningen",
+      "Schollevaar — Populaire gezinswijk met rust en bereikbaarheid",
+      "Fascinatio — Moderne woonwijk met eigentijdse woningen en goede verbindingen",
     ],
     faq: [
       {
@@ -134,9 +132,64 @@ export const werkgebieden: WerkgebiedData[] = [
   },
 
   {
+    slug: "barendrecht",
+    naam: "Barendrecht",
+    metaTitle: "Kraamzorg Barendrecht",
+    metaDescription:
+      "Kraamzorg in Barendrecht gezocht? Marley's Kraamzorg biedt persoonlijke, betrokken kraamzorg met één vast gezicht. Voor Carnisselande, Smitshoek & meer. Meld je aan.",
+    heroH1: "Kraamzorg Barendrecht | Marley's Kraamzorg",
+    heroSubtitle: "Persoonlijke kraamzorg met 1 vast gezicht in Barendrecht",
+    intro: [
+      "Op zoek naar betrokken kraamzorg in Barendrecht? Marley's Kraamzorg is er voor aanstaande ouders in deze mooie gemeente aan de rand van Rotterdam. Ik ben Lisa en ik begeleid u graag tijdens uw kraamperiode in Barendrecht.",
+      "Barendrecht is een geliefde woonplaats voor jonge gezinnen dankzij de ruime woningen, groene wijken en de centrale ligging tussen Rotterdam en de Hoeksche Waard. Als kraamverzorgende kom ik hier graag en voel ik me snel thuis bij de gezinnen die ik mag ondersteunen.",
+      "Met Marley's Kraamzorg kiest u voor continuïteit en vertrouwen. Ik ben van begin tot eind uw vaste kraamverzorgende, zodat u niet hoeft te wennen aan verschillende gezichten. Die persoonlijke band maakt uw kraamperiode rustiger en prettiger.",
+    ],
+    whyTitle: "Waarom kraamzorg in Barendrecht?",
+    whyText: [
+      "Barendrecht trekt al jaren jonge gezinnen vanwege de rustige, groene woonomgeving en de goede bereikbaarheid. De gemeente biedt een prettige balans tussen de nabijheid van Rotterdam en de rust van een dorpse omgeving.",
+      "Als kraamverzorgende ken ik Barendrecht goed. Ik weet waar de voorzieningen zijn, welke zorgverleners actief zijn in de regio en hoe ik me het beste kan navigeren door de verschillende wijken. Die lokale kennis helpt mij om snel en efficiënt te werken.",
+      "Bovendien is Barendrecht goed bereikbaar voor mij. Via de A15 en de A16 ben ik snel ter plaatse. Dat betekent dat ik flexibel kan inzetten en snel kan schakelen als dat nodig is.",
+    ],
+    aboutTitle: "Over Marley's Kraamzorg in Barendrecht",
+    aboutText: [
+      "Marley's Kraamzorg staat voor kwaliteit, warmte en persoonlijke aandacht. Mijn naam is Lisa en ik ben de trotse eigenaresse van dit kleinschalige kraamzorgbedrijf. De naam is afkomstig van mijn dochtertje Marley, die me elke dag inspireert om de beste zorg te verlenen.",
+      "In Barendrecht bied ik een volledig pakket aan kraamzorgdiensten: van de verzorging van uw pasgeboren baby tot het begeleiden van de borstvoeding en het ondersteunen van uw herstel na de bevalling. Alles onder één dak, met één vast gezicht.",
+      "Mijn missie is om elke kraamperiode zo rustig en zorgeloos mogelijk te maken. Dat doe ik door betrokken te zijn, door te luisteren en door altijd beschikbaar te zijn voor vragen en ondersteuning. Ook 's nachts, ook in het weekend.",
+    ],
+    wijkenTitle: "Wijken en bereikbaarheid in Barendrecht",
+    wijkenIntro:
+      "Ik ben actief in heel Barendrecht. Hieronder vindt u een aantal wijken waar ik regelmatig kraamzorg verleen:",
+    wijken: [
+      "Carnisselande — Ruime en groene woonwijk met veel gezinswoningen",
+      "Smitshoek — Gezinsvriendelijke wijk met een dorps karakter",
+      "Nieuweland — Populaire woonwijk met diverse voorzieningen",
+      "Centrum — Het hart van Barendrecht met winkels en dagelijkse voorzieningen",
+      "Vrijenburg — Moderne woonwijk met ruim opgezette straten en groen",
+    ],
+    faq: [
+      {
+        question: "Ben je beschikbaar voor kraamzorg in Barendrecht?",
+        answer: "Ja, ik werk regelmatig in Barendrecht en ben beschikbaar voor kraamzorg in alle wijken van de gemeente. Neem contact op om mijn beschikbaarheid te bespreken.",
+      },
+      {
+        question: "Hoe snel ben je in Barendrecht?",
+        answer: "Vanuit Rotterdam ben ik doorgaans binnen 20 tot 30 minuten in Barendrecht. Via de A15 en de A16 is de gemeente goed bereikbaar.",
+      },
+      {
+        question: "Met welke verloskundigen werk je samen in Barendrecht?",
+        answer: "In Barendrecht zijn verschillende verloskundigenpraktijken actief. Ik werk samen met verloskundigen uit de regio voor een goede afstemming van zorg. Tijdens de kennismaking bespreken we de mogelijkheden.",
+      },
+      {
+        question: "Kan ik een kennismaking aanvragen in Barendrecht?",
+        answer: "Zeker! Ik kom graag bij u thuis in Barendrecht voor een vrijblijvende kennismaking. We bespreken uw wensen en ik beantwoord al uw vragen. Dit is volledig gratis en vrijblijvend.",
+      },
+    ],
+    gradient: "linear-gradient(135deg, rgba(154,30,97,0.10) 0%, rgba(80,50,90,0.10) 50%, rgba(245,200,216,0.18) 100%)",
+  },
+
+  {
     slug: "nieuwerkerk-aan-den-ijssel",
     naam: "Nieuwerkerk aan den IJssel",
-    /* ✅ AANGEPAST */
     metaTitle: "Kraamzorg Nieuwerkerk aan den IJssel",
     metaDescription:
       "Kraamzorg in Nieuwerkerk aan den IJssel gezocht? Marley's Kraamzorg biedt persoonlijke, betrokken kraamzorg. Eén vast gezicht, 24/7 bereikbaar. Meld je vrijblijvend aan.",
@@ -163,12 +216,12 @@ export const werkgebieden: WerkgebiedData[] = [
     wijkenIntro:
       "Ik ben actief in heel Nieuwerkerk aan den IJssel. Hieronder vindt u een aantal wijken en buurten waar ik regelmatig kraamzorg verleen:",
     wijken: [
-      "Dorrestein — Een groene en populaire woonwijk met veel voorzieningen voor gezinnen",
-      "Esse Hoog — Een ruim opgezette woonwijk met een kindvriendelijk karakter",
+      "Dorrestein — Groene en populaire woonwijk met veel voorzieningen voor gezinnen",
+      "Esse Hoog — Ruim opgezette woonwijk met een kindvriendelijk karakter",
       "Esse Laag — Rustig wonen nabij winkels, scholen en openbaar vervoer",
-      "Zuidplas — Een moderne woonomgeving met veel jonge gezinnen",
+      "Zuidplas — Moderne woonomgeving met veel jonge gezinnen",
       "Oude Dorp — Het karakteristieke hart van Nieuwerkerk aan den IJssel",
-      "Kleinpolder — Een rustige woonbuurt met een centrale ligging",
+      "Kleinpolder — Rustige woonbuurt met een centrale ligging",
     ],
     faq: [
       {
@@ -194,7 +247,6 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "krimpen-aan-den-ijssel",
     naam: "Krimpen aan den IJssel",
-    /* ✅ AANGEPAST */
     metaTitle: "Kraamzorg Krimpen aan den IJssel",
     metaDescription:
       "Zoekt u kraamzorg in Krimpen aan den IJssel? Marley's Kraamzorg biedt persoonlijke begeleiding met één vast contactpersoon. Betrokken, ervaren & 24/7 bereikbaar.",
@@ -221,11 +273,13 @@ export const werkgebieden: WerkgebiedData[] = [
     wijkenIntro:
       "Ik ben actief in heel Krimpen aan den IJssel. Hieronder vindt u een aantal buurten waar ik regelmatig kraamzorg verleen:",
     wijken: [
-      "Kortland-Noord — Een populaire woonbuurt met veel voorzieningen voor gezinnen",
+      "Kortland-Noord — Populaire woonbuurt met veel voorzieningen voor gezinnen",
       "Kortland-Zuid — Ruime woonomgeving met diverse gezinswoningen",
-      "Boveneind — Een centrale buurt met een mix van woningen en groen",
-      "Langeland — Een kindvriendelijke woonwijk met veel ruimte en speelvoorzieningen",
-      ],
+      "Oud-Krimpen — Historische wijk nabij de Hollandsche IJssel",
+      "Langeland — Kindvriendelijke woonwijk met veel ruimte en speelvoorzieningen",
+      "Boveneind — Centrale buurt met een mix van woningen en groen",
+      "Stormpolder — Bedrijventerrein met een groeiende woonfunctie",
+    ],
     faq: [
       {
         question: "Ben je beschikbaar in Krimpen aan den IJssel?",
@@ -250,10 +304,9 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "gouda",
     naam: "Gouda",
-    /* ✅ AANGEPAST */
     metaTitle: "Kraamzorg in Gouda met één vast gezicht",
     metaDescription:
-      "Kraamzorg in Gouda gezocht? Marley's Kraamzorg biedt persoonlijke, betrokken kraamzorg. Eén vast gezicht in centrum, Oosterwei, Bloemendaal & meer. Aanmelden.",
+      "Kraamzorg in Gouda gezocht? Marley's Kraamzorg biedt persoonlijke, betrokken kraamzorg. Eén vast gezicht in Binnenstad, Oosterwei, Bloemendaal & meer. Aanmelden.",
     heroH1: "Kraamzorg Gouda | Marley's Kraamzorg",
     heroSubtitle: "Persoonlijke kraamzorg met 1 vast gezicht in Gouda en omgeving",
     intro: [
@@ -277,9 +330,9 @@ export const werkgebieden: WerkgebiedData[] = [
     wijkenIntro:
       "Ik werk in alle wijken van Gouda. Hieronder een overzicht van de belangrijkste gebieden:",
     wijken: [
-      "Centrum — De historische binnenstad met grachten en monumentale panden",
-      "Oosterwei — Een groene, kindvriendelijke wijk met veel voorzieningen",
-      "Bloemendaal — Een ruime woonwijk nabij winkels en scholen",
+      "Binnenstad — De historische binnenstad met grachten en monumentale panden",
+      "Oosterwei — Groene, kindvriendelijke wijk met veel voorzieningen",
+      "Bloemendaal — Ruime woonwijk nabij winkels en scholen",
       "Goverwelle — Moderne woningen in een rustige omgeving",
       "Korte Akkeren — Karakteristieke wijk met diverse woningtypen",
       "Plaswijck — Nabij de Goudse Plassen, groen en waterrijk",
@@ -309,10 +362,9 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "waddinxveen",
     naam: "Waddinxveen",
-    /* ✅ AANGEPAST */
     metaTitle: "Kraamzorg Waddinxveen",
     metaDescription:
-      "Kraamzorg in Waddinxveen nodig? Marley's Kraamzorg biedt persoonlijke zorg met één vast gezicht. Voor centrum, Noord, Zuid & Lange Akkeren. Direct contact.",
+      "Kraamzorg in Waddinxveen nodig? Marley's Kraamzorg biedt persoonlijke zorg met één vast gezicht. Voor centrum, Noord, Zuid & Groenswaard. Direct contact.",
     heroH1: "Kraamzorg Waddinxveen | Marley's Kraamzorg",
     heroSubtitle: "Persoonlijke kraamzorg met 1 vast gezicht in Waddinxveen",
     intro: [
@@ -339,9 +391,9 @@ export const werkgebieden: WerkgebiedData[] = [
       "Centrum — Het hart van Waddinxveen met winkels en dagelijkse voorzieningen",
       "Noord — Woongebied met een ruime opzet en veel groen",
       "Zuid — Gezinsgerichte woonomgeving met diverse speelvoorzieningen",
-      "Lange Akkeren — Gevarieerde wijk met verschillende woningtypen",
+      "Groenswaard — Groene woonwijk met een dorps karakter",
       "Triangel — Moderne nieuwbouwwijk in ontwikkeling",
-      "Engelse Werk — Rustige woonomgeving nabij groen en water",
+      "Zuidplas — Rustige woonomgeving nabij groen en water",
     ],
     faq: [
       {
@@ -367,7 +419,6 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "moordrecht",
     naam: "Moordrecht",
-    /* ✅ AANGEPAST */
     metaTitle: "Kraamzorg Moordrecht",
     metaDescription:
       "Kraamzorg in Moordrecht gezocht? Marley's Kraamzorg biedt persoonlijke, betrokken kraamzorg. Eén vast gezicht, flexibel & 24/7 bereikbaar. Meld je aan.",
@@ -395,7 +446,6 @@ export const werkgebieden: WerkgebiedData[] = [
       "Ik ben actief in heel Moordrecht. Hieronder vindt u een aantal gebieden waar ik regelmatig kraamzorg verleen:",
     wijken: [
       "Dorpskern — Het historische hart van Moordrecht met karakteristieke woningen en voorzieningen",
-      "Westergouwe-Moordrechtzijde — Moderne woonomgeving aan de rand van Moordrecht",
       "IJsseldijk — Wonen langs de Hollandsche IJssel met een karakteristiek dorps karakter",
       "Middelweg en omgeving — Rustig wonen met een landelijke uitstraling",
       "Moordrecht-Oost — Gezinsvriendelijke woonomgeving met goede verbindingen",
@@ -425,7 +475,6 @@ export const werkgebieden: WerkgebiedData[] = [
   {
     slug: "zevenhuizen",
     naam: "Zevenhuizen",
-    /* ✅ AANGEPAST */
     metaTitle: "Kraamzorg Zevenhuizen",
     metaDescription:
       "Kraamzorg in Zevenhuizen gezocht? Marley's Kraamzorg biedt persoonlijke kraamzorg met één vast gezicht. Betrokken, ervaren & flexibel in Zevenhuizen.",
@@ -452,10 +501,11 @@ export const werkgebieden: WerkgebiedData[] = [
     wijkenIntro:
       "Ik ben actief in heel Zevenhuizen. Hieronder vindt u een aantal wijken en buurten waar ik regelmatig werkzaam ben:",
     wijken: [
-      "Kern Zevenhuizen",
-      "Oud Verlaat",
-      "Zevenhuizen Bloemenbuurt",
-      "Zevenhuizen-Zuid, Zevenhuizen-West 1, Zevenhuizen-West 2",
+      "Kern Zevenhuizen — Het historische centrum van het dorp",
+      "Oud Verlaat — Rustige woonomgeving nabij groen en water",
+      "Zevenhuizen Bloemenbuurt — Gezinsvriendelijke wijk met veel groen",
+      "Zevenhuizen-Zuid — Ruime woonomgeving met diverse woningtypen",
+      "Zevenhuizen-West — Moderne woonwijk in ontwikkeling",
     ],
     faq: [
       {
