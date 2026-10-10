@@ -85,7 +85,7 @@ export const werkgebieden: WerkgebiedData[] = [
     heroSubtitle: "Persoonlijke kraamzorg met 1 vast gezicht in Capelle aan den IJssel",
     intro: [
       "Zoekt u naar betrokken kraamzorg in Capelle aan den IJssel? Marley's Kraamzorg is uw partner voor een warme, zorgzame start met uw pasgeboren baby. Ik ben Lisa, eigenaar en kraamverzorgende, en ik kom graag naar Capelle om u te begeleiden tijdens deze bijzondere periode.",
-      "Capelle aan den IJssel is een prachtige gemeente met een dorpse sfeer, groene woonwijken en uitstekende voorzieningen voor gezinnen. Als kraamverzorgende ken ik de gemeente goed en weet ik precies waar ik moet zijn. Of u nu woont in de Schenkel, Capelle-West of aan de 's-Gravenweg.",
+      "Capelle aan den IJssel is een prachtige gemeente met een dorpse sfeer, groene woonwijken en uitstekende voorzieningen voor gezinnen. Als kraamverzorgende ken ik de gemeente goed en weet ik precies waar ik moet zijn. Of u nu woont in Schenkel, Capelle-West of Oostgaarde.",
       "Met Marley's Kraamzorg kiest u voor persoonlijke aandacht, deskundige begeleiding en een vertrouwd gezicht tijdens uw hele kraamperiode. Ik neem de tijd voor u, luister naar uw wensen en zorg dat u zich veilig en gesteund voelt.",
     ],
     whyTitle: "Waarom kraamzorg in Capelle aan den IJssel?",
