@@ -128,11 +128,13 @@ function HomeHero() {
           </span>
         </div>
 
-        <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl uppercase text-berry-dark leading-tight tracking-tight mb-6">
+        {/* ✅ AANGEPAST: H1 in magenta huisstijlkleur */}
+        <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl uppercase text-primary leading-tight tracking-tight mb-6">
           Kraamzorg Rotterdam | met een Vast Gezicht
         </h1>
 
-        <div className="w-16 h-0.5 bg-berry-dark/20 mx-auto mb-6" />
+        {/* ✅ AANGEPAST: streepje ook in magenta */}
+        <div className="w-16 h-0.5 bg-primary mx-auto mb-6" />
 
         <p className="font-body text-base md:text-lg text-berry-dark/95 max-w-xl mx-auto mb-4 italic">
           💖 Marley&apos;s Kraamzorg vernoemd naar mijn dochtertje Marley. Haar naam draag ik met trots, als herinnering aan hoe kostbaar de eerste dagen zijn.
