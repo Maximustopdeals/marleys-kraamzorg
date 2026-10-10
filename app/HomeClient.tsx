@@ -154,7 +154,7 @@ function HomeHero() {
 
             {/* Hoofdtekst */}
             <p className="font-body text-sm md:text-base text-berry-dark/80 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-              Verwacht je een baby en verlang je naar rust, vertrouwen en persoonlijke aandacht? Ik ben <strong className="text-berry-dark font-semibold">Lisa</strong> en bied kleinschalige kraamzorg in Rotterdam met <strong className="text-berry-dark font-semibold">één vast gezicht</strong> — en dat ben ik. Geen wisselende verzorgenden, maar een vertrouwd gezicht van dag 1.
+              Verwacht je een baby en verlang je naar rust, vertrouwen en persoonlijke aandacht? Ik ben <strong className="text-berry-dark font-semibold">Lisa</strong> en bied kleinschalige kraamzorg in Rotterdam met <strong className="text-berry-dark font-semibold">één vast gezicht</strong> en dat ben ik. Geen wisselende verzorgenden, maar een vertrouwd gezicht van dag 1.
             </p>
 
             {/* CTA's */}
