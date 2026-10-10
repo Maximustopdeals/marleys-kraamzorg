@@ -66,30 +66,62 @@ export default async function WerkgebiedDetailPage({ params }: Props) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://www.marleyskraamzorg.nl/#business",
     name: `Marley's Kraamzorg - ${area.naam}`,
     description: area.metaDescription,
     url: `https://www.marleyskraamzorg.nl/werkgebied/${area.slug}/`,
     image: "https://www.marleyskraamzorg.nl/images/hero-banner.jpg",
+    logo: "https://www.marleyskraamzorg.nl/images/logo.webp",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Dr. J.J.P. Oudsingel 62",
       addressLocality: "Rotterdam",
       addressRegion: "Zuid-Holland",
-      postalCode: "3079",
+      postalCode: "3067 EH",
       addressCountry: "NL",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "51.8833",
-      longitude: "4.55",
+      latitude: 51.9471597,
+      longitude: 4.5466515,
     },
+    hasMap: "https://www.google.com/maps/place/Marley's+Kraamzorg/@51.9472273,4.5463225,17z",
     telephone: "+31-6-45041484",
     email: "info@marleyskraamzorg.nl",
     priceRange: "€€",
-    areaServed: {
-      "@type": "City",
-      name: area.naam,
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "09:00",
+        closes: "22:00",
+      },
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "85",
+      bestRating: "5",
+      worstRating: "1",
     },
+    areaServed: [
+      {
+        "@type": "City",
+        name: area.naam,
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Rotterdam en omgeving",
+      },
+    ],
   };
 
   return (
