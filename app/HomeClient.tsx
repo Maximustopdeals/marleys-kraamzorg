@@ -99,7 +99,7 @@ function HomeHero() {
           </div>
 
           {/* ─── FOTO RECHTS ─── */}
-          <div className="relative order-first lg:order-last">
+          <div className="relative">
             {/* Zeer subtiel kader-effect — geen drukke ringen */}
             <div
               className="absolute -inset-3 rounded-[2rem] bg-blush/30 blur-xl"
