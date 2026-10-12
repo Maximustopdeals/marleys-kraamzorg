@@ -127,7 +127,7 @@ export default function WerkgebiedPage() {
         <div className="container-main">
           <div className="text-center mb-12">
             <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl uppercase text-primary mb-4">
-              Waar ik werk
+              Waar ik werkzaam ben
             </h2>
 
             <div className="w-16 h-0.5 bg-primary mx-auto mb-6" />
