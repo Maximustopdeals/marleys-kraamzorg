@@ -338,63 +338,114 @@ function StepsSection() {
   );
 }
 
-/* ── Section 3: Wat is kraamzorg? ── */
+/* ── Section 3: Wat is kraamzorg? — Tekst-only editorial ── */
 function WhatIsSection() {
-  return (
-    <section className="bg-white py-20 md:py-32">
-      <div className="container-main">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto relative">
-          {/* Left: Image */}
-          <div className="flex justify-center">
-            <Image
-              src="/images/baby-section.png"
-              alt="Baby in warme, zachte omgeving - Marley's Kraamzorg Rotterdam"
-              className="rounded-2xl shadow-card max-w-full h-auto"
-              width={500}
-              height={600}
-              loading="lazy"
-            />
-          </div>
+  const kenmerken = [
+    {
+      title: "Vaste, ervaren kraamverzorgende",
+      text: "Één vertrouwd gezicht, van de eerste kennismaking tot het einde van de kraamweek.",
+    },
+    {
+      title: "24/7 bereikbaar voor vragen",
+      text: "Ook 's nachts en in het weekend sta ik voor je klaar met advies en een luisterend oor.",
+    },
+    {
+      title: "Persoonlijke begeleiding aan huis",
+      text: "Zorg in jouw eigen vertrouwde omgeving, afgestemd op jouw gezin en ritme.",
+    },
+  ];
 
-          {/* Right: Text */}
-          <div>
-            <span className="font-cinzel text-xs uppercase tracking-[0.08em] text-primary/60 block mb-2">
-              Persoonlijke kraamzorg
-            </span>
-            <h2 className="font-cinzel text-2xl md:text-3xl uppercase text-primary mb-6">
-              Wat is kraamzorg?
+  return (
+    <section className="bg-white py-24 sm:py-32">
+      <div className="container-main">
+        <div className="mx-auto max-w-4xl">
+          {/* Section header — gecentreerd */}
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow mb-4">Wat is kraamzorg?</p>
+
+            <h2 className="font-cinzel text-3xl uppercase leading-tight text-berry-dark sm:text-4xl">
+              Professionele zorg in{" "}
+              <span className="text-primary">de eerste week</span>
             </h2>
 
-            <div className="space-y-4 font-sans text-sm md:text-base text-berry-dark/80 leading-relaxed mb-6">
-              <p>
-                Kraamzorg is professionele ondersteuning voor jou en je pasgeboren baby na de bevalling. Als kraamverzorgende bied ik hulp bij de verzorging van je baby, zoals verschonen, voeden en in bad doen. Daarnaast controleer ik de gezondheid van moeder en baby.
-              </p>
+            <div className="mx-auto my-8 flex items-center justify-center gap-4">
+              <span className="h-px w-12 bg-primary/40" />
+              <span className="text-primary">✦</span>
+              <span className="h-px w-12 bg-primary/40" />
+            </div>
+          </div>
 
-              <blockquote className="border-l-3 border-primary pl-5 italic text-primary bg-primary/[0.04] rounded-r-lg py-3 pr-4">
-                &ldquo;Kraamzorg is meer dan alleen huishoudelijke hulp. Het is betrokken en professionele zorg die rust, vertrouwen en deskundigheid brengt.&rdquo;
-              </blockquote>
+          {/* Twee rustige paragrafen — gecentreerd, max-w-2xl */}
+          <div className="mx-auto max-w-2xl space-y-5 text-center">
+            <p className="font-sans text-lg leading-relaxed text-berry-dark/80">
+              Kraamzorg is professionele ondersteuning voor jou en je
+              pasgeboren baby na de bevalling. Ik bied hulp bij de verzorging
+              van je baby — verschonen, voeden en in bad doen — en controleer
+              de gezondheid van moeder en baby.
+            </p>
 
-              <p>
-                Ook geef ik deskundig advies over borstvoeding, het herstel van de moeder en de dagelijkse verzorging van je baby.
-              </p>
+            <p className="font-sans text-lg leading-relaxed text-berry-dark/80">
+              Ook geef ik deskundig advies over borstvoeding, het herstel van
+              de moeder en de dagelijkse verzorging van je baby.
+            </p>
+          </div>
+
+          {/* Quote — gecentreerd met dunne sierlijnen */}
+          <div className="mx-auto my-16 max-w-2xl text-center">
+            <div className="mx-auto mb-6 flex items-center justify-center gap-4">
+              <span className="h-px w-8 bg-primary/40" />
+              <span className="text-primary text-xs">✦</span>
+              <span className="h-px w-8 bg-primary/40" />
             </div>
 
-            {/* Feature Blocks */}
-            <div className="grid grid-cols-1 gap-3 mb-8">
-              {[
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>, label: "Vaste, ervaren kraamverzorgende" },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>, label: "24/7 bereikbaar voor vragen" },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>, label: "Persoonlijke begeleiding aan huis" },
-              ].map((item, i) => (
-                <div key={i} className="bg-primary rounded-xl px-5 py-4 flex items-center gap-4 text-cream shadow-glow">
-                  <div className="flex-shrink-0">{item.icon}</div>
-                  <span className="font-cinzel text-sm uppercase tracking-wider">{item.label}</span>
+            <p className="font-cinzel text-xl uppercase leading-snug tracking-wide text-berry-dark sm:text-2xl">
+              Meer dan huishoudelijke hulp —{" "}
+              <span className="text-primary">
+                rust, vertrouwen en deskundigheid
+              </span>{" "}
+              voor jouw gezin.
+            </p>
+
+            <div className="mx-auto mt-6 flex items-center justify-center gap-4">
+              <span className="h-px w-8 bg-primary/40" />
+              <span className="text-primary text-xs">✦</span>
+              <span className="h-px w-8 bg-primary/40" />
+            </div>
+          </div>
+
+          {/* 3 kenmerken in kolommen */}
+          <div className="mt-20 grid gap-12 sm:gap-16 lg:grid-cols-3">
+            {kenmerken.map((k, i) => (
+              <div key={i} className="text-center">
+                {/* Klein nummer + sierlijn */}
+                <div className="mb-6 flex items-center justify-center gap-3">
+                  <span className="font-cinzel text-sm text-primary/60">
+                    0{i + 1}
+                  </span>
+                  <span className="text-primary text-xs">✦</span>
                 </div>
-              ))}
-            </div>
 
-            <Link href="/contact/" className="btn-primary">
-              Contact opnemen
+                {/* Titel */}
+                <h3 className="mb-4 font-cinzel text-base uppercase leading-tight text-berry-dark sm:text-lg">
+                  {k.title}
+                </h3>
+
+                {/* Tekst */}
+                <p className="font-sans text-sm leading-relaxed text-berry-dark/70">
+                  {k.text}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA-link */}
+          <div className="mt-20 text-center">
+            <Link
+              href="/kraamzorg/"
+              className="inline-flex items-center gap-2 font-cinzel text-xs uppercase tracking-[0.15em] text-primary transition-colors hover:text-berry-dark"
+            >
+              Lees meer over kraamzorg
+              <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
