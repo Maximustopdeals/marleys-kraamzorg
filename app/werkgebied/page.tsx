@@ -18,12 +18,12 @@ const areaFAQ = [
   {
     question: "Hoe snel ben je ter plaatse?",
     answer:
-      "Omdat ik in Rotterdam woon, ben ik meestal binnen 30–45 minuten bij je thuis in de regio.",
+      "Omdat ik in Rotterdam woon, ben ik meestal binnen 30 tot 45 minuten bij je thuis in de regio.",
   },
   {
     question: "Kan ik je kiezen als vaste kraamverzorgende?",
     answer:
-      "Ja, dat is juist de kracht van mijn werkwijze. Je krijgt één vast gezicht, mij voor de hele kraamperiode.",
+      "Ja, dat is juist de kracht van mijn werkwijze. Je krijgt één vast gezicht, mij, voor de hele kraamperiode.",
   },
 ];
 
@@ -67,32 +67,38 @@ export default function WerkgebiedPage() {
   return (
     <>
       {/* ============ HERO — high-end ============ */}
-      <section className="relative overflow-hidden bg-cream-beige pt-32 pb-20 sm:pt-40 sm:pb-24">
-        {/* Subtiel decoratief element */}
+      <section className="relative overflow-hidden bg-white pt-32 pb-20 sm:pt-40 sm:pb-24">
+        {/* Zeer subtiele blush-gloed rechts */}
         <div
-          className="pointer-events-none absolute -right-32 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blush/40 blur-3xl"
+          className="pointer-events-none absolute -right-40 top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-blush/20 blur-3xl"
           aria-hidden="true"
         />
 
         <div className="container-main relative">
           <div className="mx-auto max-w-3xl text-center">
-            {/* Badge */}
-            <p className="eyebrow mb-6">Werkgebied</p>
+            {/* Klein label met sterretje */}
+            <div className="mb-8 flex items-center justify-center gap-2">
+              <span className="text-primary text-xs">✦</span>
+              <span className="font-cinzel text-[11px] uppercase tracking-[0.28em] text-primary">
+                Werkgebied
+              </span>
+            </div>
 
             {/* H1 */}
-            <h1 className="font-cinzel text-3xl uppercase leading-[1.1] text-berry-dark sm:text-4xl lg:text-5xl">
-              Kraamzorg in uw regio
+            <h1 className="font-cinzel text-4xl uppercase leading-[1.1] text-berry-dark sm:text-5xl lg:text-6xl">
+              Kraamzorg in{" "}
+              <span className="text-primary">uw regio</span>
             </h1>
 
-            {/* Sierlijn */}
-            <div className="my-8 flex items-center justify-center gap-4">
-              <span className="h-px w-16 bg-primary/40" />
+            {/* Sierlijn met sterretje */}
+            <div className="mx-auto my-8 flex items-center justify-center gap-4">
+              <span className="h-px w-12 bg-primary/40" />
               <span className="text-primary">✦</span>
-              <span className="h-px w-16 bg-primary/40" />
+              <span className="h-px w-12 bg-primary/40" />
             </div>
 
             {/* Subtitel */}
-            <p className="font-sans text-lg leading-relaxed text-berry-dark/80 sm:text-xl">
+            <p className="mx-auto max-w-2xl font-sans text-lg leading-relaxed text-berry-dark/80 sm:text-xl">
               Ik bied persoonlijke kraamzorg in Rotterdam en de omliggende
               gemeenten. Klik op jouw regio voor meer informatie.
             </p>
@@ -101,7 +107,7 @@ export default function WerkgebiedPage() {
       </section>
 
       {/* ============ WERKGEBIEDEN GRID ============ */}
-      <section className="py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-24">
         <div className="container-main">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {werkgebieden.map((area) => (
@@ -147,19 +153,20 @@ export default function WerkgebiedPage() {
             >
               Neem contact op
             </Link>{" "}
-            — mogelijk kan ik toch iets voor je betekenen.
+            en mogelijk kan ik toch iets voor je betekenen.
           </p>
         </div>
       </section>
 
       {/* ============ FAQ — high-end ============ */}
-      <section className="bg-cream-beige py-20 sm:py-24">
+      <section className="bg-white py-24 sm:py-32">
         <div className="container-main max-w-3xl">
           <div className="text-center">
             <p className="eyebrow mb-3">Goed om te weten</p>
 
-            <h2 className="font-cinzel text-2xl uppercase text-primary sm:text-3xl lg:text-4xl">
-              Veelgestelde vragen
+            <h2 className="font-cinzel text-3xl uppercase text-berry-dark sm:text-4xl">
+              Veelgestelde{" "}
+              <span className="text-primary">vragen</span>
             </h2>
 
             <div className="mx-auto my-8 flex items-center justify-center gap-4">
