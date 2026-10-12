@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { StarIcon } from "@/components/StarIcon";
 
 /* ── Hero — Editorial Split-Screen ── */
 function HomeHero() {
@@ -29,7 +28,7 @@ function HomeHero() {
       ref={sectionRef}
       className="relative w-full overflow-hidden bg-white"
     >
-      {/* Zeer subtiel decoratief element — geen crème, geen drukke cirkels */}
+      {/* Zeer subtiel decoratief element */}
       <div
         className="pointer-events-none absolute -right-40 top-20 h-[600px] w-[600px] rounded-full bg-blush/20 blur-3xl"
         aria-hidden="true"
@@ -41,7 +40,7 @@ function HomeHero() {
           {/* ─── TEKST LINKS ─── */}
           <div className="max-w-xl">
 
-            {/* Klein label met sterretje — subtiel eerbetoon aan Marley */}
+            {/* Klein label met sterretje */}
             <div className="mb-8 flex items-center gap-2">
               <span className="text-primary text-xs">✦</span>
               <span className="font-cinzel text-[11px] uppercase tracking-[0.28em] text-primary">
@@ -49,7 +48,7 @@ function HomeHero() {
               </span>
             </div>
 
-            {/* H1 — grote Cinzel, twee-regelig */}
+            {/* H1 */}
             <h1 className="font-cinzel text-4xl uppercase leading-[1.05] tracking-tight text-berry-dark sm:text-5xl lg:text-6xl xl:text-[4rem]">
               Kraamzorg in Rotterdam,
               <span className="block mt-3 text-primary">
@@ -57,25 +56,25 @@ function HomeHero() {
               </span>
             </h1>
 
-            {/* Sierlijn met sterretje — subtiel */}
+            {/* Sierlijn met sterretje */}
             <div className="my-8 flex items-center gap-3">
               <span className="h-px w-12 bg-primary/40" />
               <span className="text-primary text-xs">✦</span>
             </div>
 
-            {/* Persoonlijke noot — kort, warm, oprecht */}
+            {/* Persoonlijke noot */}
             <p className="mb-6 font-sans text-lg leading-relaxed text-berry-dark/90">
               Ik ben <strong className="font-semibold text-berry-dark">Lisa</strong>.
               Persoonlijke kraamzorg met <strong className="font-semibold text-berry-dark">één vast gezicht</strong> —
               geen wisselende verzorgenden, maar een vertrouwd iemand van dag 1.
             </p>
 
-            {/* Kleinere toelichting — rustig */}
+            {/* Kleinere toelichting */}
             <p className="mb-10 font-sans text-base leading-relaxed text-berry-dark/70">
               Met zorg voor jou, je baby en je hele gezin. In Rotterdam en omgeving.
             </p>
 
-            {/* CTA's — slechts 2, geen 4 */}
+            {/* CTA's */}
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <Link
                 href="/contact/"
@@ -91,7 +90,7 @@ function HomeHero() {
               </Link>
             </div>
 
-            {/* Trust-regel — klein, onder de CTA's, niet prominent */}
+            {/* Trust-regel */}
             <p className="mt-8 font-sans text-xs uppercase tracking-[0.2em] text-berry-dark/50">
               KCKZ-gecertificeerd · 24/7 bereikbaar · 5.0 op Google
             </p>
@@ -100,13 +99,11 @@ function HomeHero() {
 
           {/* ─── FOTO RECHTS ─── */}
           <div className="relative">
-            {/* Zeer subtiel kader-effect — geen drukke ringen */}
             <div
               className="absolute -inset-3 rounded-[2rem] bg-blush/30 blur-xl"
               aria-hidden="true"
             />
 
-            {/* De foto in een strak, high-end kader */}
             <div className="relative overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(74,26,61,0.35)]">
               <Image
                 src="/images/baby-portrait.webp"
@@ -119,11 +116,9 @@ function HomeHero() {
                 className="h-auto w-full object-cover"
               />
 
-              {/* Zeer subtiele overlay onderaan voor diepte — optioneel */}
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-berry-dark/5 via-transparent to-transparent" />
             </div>
 
-            {/* Klein accent — respectvol, niet dominant */}
             <div className="absolute -bottom-4 -right-4 flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-card">
               <span className="text-primary text-lg">✦</span>
             </div>
@@ -135,51 +130,97 @@ function HomeHero() {
   );
 }
 
-/* ── Flip Card Component ── */
-function FlipCard({
-  icon,
-  title,
-  shortDesc,
-  backText,
-  backCta,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  shortDesc: string;
-  backText: string;
-  backCta: string;
-}) {
+/* ── Section 1: Waarom Marley's — Editorial 3-koloms ── */
+function FlipboxSection() {
+  const pijlers = [
+    {
+      nr: "01",
+      title: "Deskundige babyzorg",
+      text: "Professionele zorg voor je pasgeboren baby door een ervaren kraamverzorgende, met oog voor detail en een warme aanpak.",
+    },
+    {
+      nr: "02",
+      title: "Altijd persoonlijk",
+      text: "Kleinschalige en betrokken ondersteuning, volledig afgestemd op jouw wensen, gewoontes en gezinsdynamiek.",
+    },
+    {
+      nr: "03",
+      title: "Zorg aan huis",
+      text: "Rust en comfort in je eigen vertrouwde omgeving. Geen reistijd, geen onbekende plek — jij bent thuis.",
+    },
+  ];
+
   return (
-    <div className="group h-[320px] w-full perspective-[1000px]">
-      <div className="relative w-full h-full transition-transform duration-500 preserve-3d group-hover:[transform:rotateY(180deg)]">
-        {/* Front */}
-        <div className="absolute inset-0 bg-primary rounded-2xl flex flex-col items-center justify-center text-center p-6 backface-hidden shadow-card">
-          <div className="text-cream/90 mb-4">{icon}</div>
-          <h3 className="font-cinzel text-lg uppercase text-cream tracking-wider mb-3">
-            {title}
-          </h3>
-          <p className="text-cream/80 text-sm font-body leading-relaxed px-2">
-            {shortDesc}
+    <section className="bg-white py-24 sm:py-32">
+      <div className="container-main">
+        {/* Section header */}
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="eyebrow mb-4">Waarom Marley&apos;s</p>
+
+          <h2 className="font-cinzel text-3xl uppercase leading-tight text-berry-dark sm:text-4xl">
+            Waarom kiezen voor{" "}
+            <span className="text-primary">Marley&apos;s Kraamzorg?</span>
+          </h2>
+
+          <div className="mx-auto my-8 flex items-center justify-center gap-4">
+            <span className="h-px w-12 bg-primary/40" />
+            <span className="text-primary">✦</span>
+            <span className="h-px w-12 bg-primary/40" />
+          </div>
+
+          <p className="font-sans text-base leading-relaxed text-berry-dark/75">
+            Kleinschalige kraamzorg in Rotterdam betekent een vertrouwde band,
+            persoonlijke aandacht en een zorgvuldige aanpak.
           </p>
         </div>
-        {/* Back */}
-        <div className="absolute inset-0 bg-white rounded-2xl flex flex-col items-center justify-center text-center p-6 [transform:rotateY(180deg)] backface-hidden shadow-card border border-berry-dark/[0.08]">
-          <h4 className="font-cinzel text-base uppercase text-primary tracking-wider mb-4">
-            {title}
-          </h4>
-          <p className="text-berry-dark/80 text-sm leading-relaxed mb-6 font-body">
-            {backText}
+
+        {/* 3-koloms editorial grid */}
+        <div className="mx-auto mt-20 grid max-w-6xl gap-16 sm:gap-12 lg:grid-cols-3 lg:gap-16">
+          {pijlers.map((p, i) => (
+            <div key={i} className="text-center lg:text-left">
+              {/* Nummer + sierlijn */}
+              <div className="mb-8 flex items-center justify-center gap-3 lg:justify-start">
+                <span className="font-cinzel text-sm text-primary/60">
+                  {p.nr}
+                </span>
+                <span className="text-primary text-xs">✦</span>
+              </div>
+
+              {/* Titel */}
+              <h3 className="mb-4 font-cinzel text-xl uppercase leading-tight text-berry-dark sm:text-2xl">
+                {p.title}
+              </h3>
+
+              {/* Tekst */}
+              <p className="font-sans text-base leading-relaxed text-berry-dark/70">
+                {p.text}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Subtiele afsluitende regel */}
+        <div className="mx-auto mt-24 max-w-2xl text-center">
+          <p className="font-cinzel text-sm uppercase tracking-[0.2em] text-berry-dark/50 mb-4">
+            Start vandaag met jouw kraamzorg
           </p>
-          <Link href="/kraamzorg/" className="font-cinzel text-xs uppercase tracking-[0.06em] text-primary hover:underline">
-            {backCta} →
+          <p className="font-sans text-base leading-relaxed text-berry-dark/70">
+            Klaar voor een persoonlijke kraamzorg met één vast gezicht? Ik nodig
+            je graag uit voor een vrijblijvende kennismaking.
+          </p>
+          <Link
+            href="/contact/"
+            className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover"
+          >
+            Plan een kennismaking
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-/* ── Step Card ── */
+/* ── Section 2: Hoe werkt het? ── */
 function StepCard({
   step,
   title,
@@ -200,7 +241,7 @@ function StepCard({
         {step}
       </span>
       <h3 className="font-cinzel text-lg uppercase text-cream mb-4">{title}</h3>
-      <p className="font-body text-sm text-cream/85 leading-relaxed mb-4">
+      <p className="font-sans text-sm text-cream/85 leading-relaxed mb-4">
         {description}
       </p>
       {extra && <div className="mt-2">{extra}</div>}
@@ -208,64 +249,6 @@ function StepCard({
   );
 }
 
-/* ── Section 1: Flipboxen ── */
-function FlipboxSection() {
-  const flipCards = [
-    {
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/><circle cx="12" cy="12" r="2"/></svg>,
-      title: "Deskundige babyzorg",
-      shortDesc: "Professionele zorg voor je pasgeboren baby",
-      backText: "Liefdevolle en professionele zorg voor je pasgeboren baby door een ervaren kraamverzorgende met oog voor detail.",
-    },
-    {
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" /></svg>,
-      title: "Altijd persoonlijk",
-      shortDesc: "Kleinschalige ondersteuning op maat",
-      backText: "Kleinschalige en betrokken ondersteuning, volledig afgestemd op jouw wensen, gewoontes en gezinsdynamiek.",
-    },
-    {
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>,
-      title: "Zorg aan huis",
-      shortDesc: "Rust in je eigen vertrouwde omgeving",
-      backText: "Rust en comfort in je eigen vertrouwde omgeving. Geen reistijd, geen onbekende omgeving — jij bent thuis.",
-    },
-  ];
-
-  return (
-    <section className="bg-white py-20 md:py-32">
-      <div className="container-main">
-        <div className="text-center mb-12">
-          <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl uppercase text-primary mb-6">
-            Waarom Marley&apos;s Kraamzorg?
-          </h2>
-          <div className="w-16 h-0.5 bg-primary mx-auto mb-6" />
-          <p className="font-body text-base md:text-lg text-berry-dark/75 max-w-2xl mx-auto leading-relaxed">
-            Kleinschalige kraamzorg in Rotterdam betekent een vertrouwde band, persoonlijke aandacht en een zorgvuldige aanpak. Ik zorg voor een warme en professionele begeleiding tijdens deze bijzondere kraamweek.
-          </p>
-        </div>
-
-        {/* Flip Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-          {flipCards.map((card, i) => (
-            <FlipCard key={i} icon={card.icon} title={card.title} shortDesc={card.shortDesc} backText={card.backText} backCta="Meer informatie" />
-          ))}
-        </div>
-
-        {/* Sub-text */}
-        <div className="max-w-3xl mx-auto text-center border-t border-berry-dark/10 pt-12">
-          <h3 className="font-cinzel text-xl md:text-2xl uppercase text-primary mb-4">
-            Start vandaag met jouw kraamzorg in Rotterdam
-          </h3>
-          <p className="font-body text-base text-berry-dark/75 leading-relaxed">
-            Klaar voor een persoonlijke kraamzorg met één vast gezicht? Ik nodig je graag uit voor een vrijblijvende kennismaking, zonder verplichtingen. Samen kijken we wat jij nodig hebt voor een warme en zorgzame start.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Section 2: Hoe werkt het? ── */
 function StepsSection() {
   return (
     <section className="bg-white py-20 md:py-32">
@@ -308,7 +291,7 @@ function StepsSection() {
               </svg>
             }
             extra={
-              <span className="font-body text-xs text-cream/80">✓ Vrijblijvend &amp; zonder kosten</span>
+              <span className="font-sans text-xs text-cream/80">✓ Vrijblijvend &amp; zonder kosten</span>
             }
           />
 
@@ -325,7 +308,7 @@ function StepsSection() {
             }
             extra={
               <>
-                <span className="font-body text-xs text-cream/80 block">✓ Dagelijks overleg &amp; afstemming</span>
+                <span className="font-sans text-xs text-cream/80 block">✓ Dagelijks overleg &amp; afstemming</span>
                 <a href="tel:+31645041484" className="font-cinzel text-xs uppercase tracking-[0.06em] text-cream underline hover:text-white transition-colors mt-2 inline-block">
                   📞 Bel voor vragen
                 </a>
@@ -365,7 +348,7 @@ function WhatIsSection() {
               Wat is kraamzorg?
             </h2>
 
-            <div className="space-y-4 font-body text-sm md:text-base text-berry-dark/80 leading-relaxed mb-6">
+            <div className="space-y-4 font-sans text-sm md:text-base text-berry-dark/80 leading-relaxed mb-6">
               <p>
                 Kraamzorg is professionele ondersteuning voor jou en je pasgeboren baby na de bevalling. Als kraamverzorgende bied ik hulp bij de verzorging van je baby, zoals verschonen, voeden en in bad doen. Daarnaast controleer ik de gezondheid van moeder en baby.
               </p>
