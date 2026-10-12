@@ -67,10 +67,10 @@ export default function WerkgebiedPage() {
   return (
     <>
       {/* ============ HERO — high-end ============ */}
-      <section className="relative overflow-hidden bg-cream pt-32 pb-20 sm:pt-40 sm:pb-24">
+      <section className="relative overflow-hidden bg-cream-beige pt-32 pb-20 sm:pt-40 sm:pb-24">
         {/* Subtiel decoratief element */}
         <div
-          className="pointer-events-none absolute -right-32 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blush/30 blur-3xl"
+          className="pointer-events-none absolute -right-32 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blush/40 blur-3xl"
           aria-hidden="true"
         />
 
@@ -92,7 +92,7 @@ export default function WerkgebiedPage() {
             </div>
 
             {/* Subtitel */}
-            <p className="font-body text-lg leading-relaxed text-berry-dark/80 sm:text-xl">
+            <p className="font-sans text-lg leading-relaxed text-berry-dark/80 sm:text-xl">
               Ik bied persoonlijke kraamzorg in Rotterdam en de omliggende
               gemeenten. Klik op jouw regio voor meer informatie.
             </p>
@@ -108,10 +108,10 @@ export default function WerkgebiedPage() {
               <Link
                 key={area.slug}
                 href={`/werkgebied/${area.slug}/`}
-                className="group flex flex-col rounded-2xl border border-berry-dark/[0.08] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-soft"
+                className="group flex flex-col rounded-2xl border border-berry-dark/[0.08] bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-card-hover"
               >
                 {/* Regio-label */}
-                <span className="mb-4 inline-flex w-fit rounded-full bg-cream px-3 py-1 font-cinzel text-[10px] font-semibold uppercase tracking-[0.15em] text-primary">
+                <span className="mb-4 inline-flex w-fit rounded-full bg-cream-beige px-3 py-1 font-cinzel text-[10px] font-semibold uppercase tracking-[0.15em] text-primary">
                   Regio Rotterdam
                 </span>
 
@@ -121,7 +121,7 @@ export default function WerkgebiedPage() {
                 </h2>
 
                 {/* Beschrijving */}
-                <p className="mb-6 text-sm leading-relaxed text-berry-dark/70 line-clamp-3">
+                <p className="mb-6 font-sans text-sm leading-relaxed text-berry-dark/70 line-clamp-3">
                   {area.intro[0].length > 150
                     ? area.intro[0].slice(0, 150).trim() + "…"
                     : area.intro[0]}
@@ -139,7 +139,7 @@ export default function WerkgebiedPage() {
           </div>
 
           {/* Extra info onder het grid */}
-          <p className="mx-auto mt-16 max-w-2xl text-center font-body text-sm leading-relaxed text-berry-dark/70">
+          <p className="mx-auto mt-16 max-w-2xl text-center font-sans text-sm leading-relaxed text-berry-dark/70">
             Staat jouw regio er niet bij?{" "}
             <Link
               href="/contact/"
@@ -153,7 +153,7 @@ export default function WerkgebiedPage() {
       </section>
 
       {/* ============ FAQ — high-end ============ */}
-      <section className="bg-cream py-20 sm:py-24">
+      <section className="bg-cream-beige py-20 sm:py-24">
         <div className="container-main max-w-3xl">
           <div className="text-center">
             <p className="eyebrow mb-3">Goed om te weten</p>
@@ -162,7 +162,11 @@ export default function WerkgebiedPage() {
               Veelgestelde vragen
             </h2>
 
-            <div className="divider-leaf mx-auto my-8">✦</div>
+            <div className="mx-auto my-8 flex items-center justify-center gap-4">
+              <span className="h-px w-12 bg-primary/40" />
+              <span className="text-primary">✦</span>
+              <span className="h-px w-12 bg-primary/40" />
+            </div>
           </div>
 
           <div className="mt-10">
