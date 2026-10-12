@@ -65,8 +65,8 @@ function HomeHero() {
             {/* Persoonlijke noot */}
             <p className="mb-6 font-sans text-lg leading-relaxed text-berry-dark/90">
               Ik ben <strong className="font-semibold text-berry-dark">Lisa</strong>.
-              Persoonlijke kraamzorg met <strong className="font-semibold text-berry-dark">één vast gezicht</strong> —
-              geen wisselende verzorgenden, maar een vertrouwd iemand van dag 1.
+              Persoonlijke kraamzorg met <strong className="font-semibold text-berry-dark">één vast gezicht</strong>.
+              Geen wisselende verzorgenden, maar een vertrouwd iemand van dag 1.
             </p>
 
             {/* Kleinere toelichting */}
@@ -107,7 +107,7 @@ function HomeHero() {
             <div className="relative overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(74,26,61,0.35)]">
               <Image
                 src="/images/baby-portrait.webp"
-                alt="Pasgeboren baby in een zachte witte omgeving — Marley's Kraamzorg Rotterdam"
+                alt="Pasgeboren baby in een zachte witte omgeving - Marley's Kraamzorg Rotterdam"
                 width={900}
                 height={1100}
                 priority
@@ -146,7 +146,7 @@ function FlipboxSection() {
     {
       nr: "03",
       title: "Zorg aan huis",
-      text: "Rust en comfort in je eigen vertrouwde omgeving. Geen reistijd, geen onbekende plek — jij bent thuis.",
+      text: "Rust en comfort in je eigen vertrouwde omgeving. Geen reistijd, geen onbekende plek. Jij bent thuis.",
     },
   ];
 
@@ -270,14 +270,14 @@ function StepsSection() {
           </div>
 
           <p className="font-sans text-base leading-relaxed text-berry-dark/75">
-            Van eerste aanmelding tot de kraamweek zelf — ik begeleid je in
+            Van eerste aanmelding tot de kraamweek zelf. Ik begeleid je in
             elke stap.
           </p>
         </div>
 
         {/* Tijdlijn */}
         <div className="relative mx-auto mt-20 max-w-5xl">
-          {/* Horizontale verbindingslijn — alleen op desktop */}
+          {/* Horizontale verbindingslijn - alleen op desktop */}
           <div
             className="absolute left-0 right-0 top-6 hidden h-px bg-primary/15 lg:block"
             aria-hidden="true"
@@ -287,7 +287,7 @@ function StepsSection() {
           <ol className="relative grid gap-16 lg:grid-cols-3 lg:gap-12">
             {stappen.map((stap) => (
               <li key={stap.nr} className="relative text-center lg:text-left">
-                {/* Nummer in cirkel — met witte achtergrond om de lijn te onderbreken */}
+                {/* Nummer in cirkel, met witte achtergrond om de lijn te onderbreken */}
                 <div className="mb-8 flex items-center justify-center gap-3 lg:justify-start">
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white font-cinzel text-sm text-primary ring-1 ring-primary/20">
                     {stap.nr}
@@ -343,7 +343,7 @@ function WhatIsSection() {
   const kenmerken = [
     {
       title: "Vaste, ervaren kraamverzorgende",
-      text: "Één vertrouwd gezicht, van de eerste kennismaking tot het einde van de kraamweek.",
+      text: "Eén vertrouwd gezicht, van de eerste kennismaking tot het einde van de kraamweek.",
     },
     {
       title: "24/7 bereikbaar voor vragen",
@@ -359,7 +359,7 @@ function WhatIsSection() {
     <section className="bg-white py-24 sm:py-32">
       <div className="container-main">
         <div className="mx-auto max-w-4xl">
-          {/* Section header — gecentreerd */}
+          {/* Section header - gecentreerd */}
           <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow mb-4">Wat is kraamzorg?</p>
 
@@ -375,13 +375,13 @@ function WhatIsSection() {
             </div>
           </div>
 
-          {/* Twee rustige paragrafen — gecentreerd, max-w-2xl */}
+          {/* Twee rustige paragrafen - gecentreerd, max-w-2xl */}
           <div className="mx-auto max-w-2xl space-y-5 text-center">
             <p className="font-sans text-lg leading-relaxed text-berry-dark/80">
               Kraamzorg is professionele ondersteuning voor jou en je
               pasgeboren baby na de bevalling. Ik bied hulp bij de verzorging
-              van je baby — verschonen, voeden en in bad doen — en controleer
-              de gezondheid van moeder en baby.
+              van je baby, zoals verschonen, voeden en in bad doen, en
+              controleer de gezondheid van moeder en baby.
             </p>
 
             <p className="font-sans text-lg leading-relaxed text-berry-dark/80">
@@ -390,7 +390,7 @@ function WhatIsSection() {
             </p>
           </div>
 
-          {/* Quote — gecentreerd met dunne sierlijnen */}
+          {/* Quote - gecentreerd met dunne sierlijnen */}
           <div className="mx-auto my-16 max-w-2xl text-center">
             <div className="mx-auto mb-6 flex items-center justify-center gap-4">
               <span className="h-px w-8 bg-primary/40" />
@@ -399,9 +399,9 @@ function WhatIsSection() {
             </div>
 
             <p className="font-cinzel text-xl uppercase leading-snug tracking-wide text-berry-dark sm:text-2xl">
-              Meer dan huishoudelijke hulp —{" "}
+              Meer dan huishoudelijke hulp.{" "}
               <span className="text-primary">
-                rust, vertrouwen en deskundigheid
+                Rust, vertrouwen en deskundigheid
               </span>{" "}
               voor jouw gezin.
             </p>
