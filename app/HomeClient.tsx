@@ -220,101 +220,118 @@ function FlipboxSection() {
   );
 }
 
-/* ── Section 2: Hoe werkt het? ── */
-function StepCard({
-  step,
-  title,
-  description,
-  icon,
-  extra,
-}: {
-  step: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  extra?: React.ReactNode;
-}) {
-  return (
-    <div className="bg-primary rounded-2xl p-8 text-center text-cream shadow-card">
-      <div className="flex justify-center mb-5 text-cream">{icon}</div>
-      <span className="font-cinzel text-xs uppercase tracking-[0.1em] text-cream/70 block mb-2">
-        {step}
-      </span>
-      <h3 className="font-cinzel text-lg uppercase text-cream mb-4">{title}</h3>
-      <p className="font-sans text-sm text-cream/85 leading-relaxed mb-4">
-        {description}
-      </p>
-      {extra && <div className="mt-2">{extra}</div>}
-    </div>
-  );
-}
-
+/* ── Section 2: Hoe werkt het — Horizontale tijdlijn ── */
 function StepsSection() {
+  const stappen = [
+    {
+      nr: "01",
+      title: "Aanmelden",
+      text: "Meld je eenvoudig online aan voor kraamzorg in Rotterdam. Ik neem daarna snel contact op om je wensen en beschikbaarheid te bespreken.",
+      cta: {
+        label: "Direct aanmelden",
+        href: "https://marleyskraamzorg.mijngeboortezorg.nl/Aanvragen/kraamzorg?mode=frame",
+        external: true,
+      },
+    },
+    {
+      nr: "02",
+      title: "Kennismaking",
+      text: "Het intakegesprek vindt plaats bij jou thuis of telefonisch. We bespreken jouw wensen, verwachtingen en leren elkaar kennen.",
+      cta: null,
+    },
+    {
+      nr: "03",
+      title: "Jouw kraamperiode",
+      text: "Vanaf de bevalling sta ik voor je klaar. Ik assisteer de verloskundige en begeleid jouw gezin in de eerste dagen thuis.",
+      cta: {
+        label: "Bel voor vragen",
+        href: "tel:+31645041484",
+        external: false,
+      },
+    },
+  ];
+
   return (
-    <section className="bg-white py-20 md:py-32">
+    <section className="bg-white py-24 sm:py-32">
       <div className="container-main">
-        <div className="text-center mb-12">
-          <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl uppercase text-primary mb-4">
-            Hoe werkt het?
+        {/* Section header */}
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="eyebrow mb-4">Hoe werkt het</p>
+
+          <h2 className="font-cinzel text-3xl uppercase leading-tight text-berry-dark sm:text-4xl">
+            In drie stappen naar{" "}
+            <span className="text-primary">een zorgeloze kraamweek</span>
           </h2>
-          <div className="w-16 h-0.5 bg-primary mx-auto" />
+
+          <div className="mx-auto my-8 flex items-center justify-center gap-4">
+            <span className="h-px w-12 bg-primary/40" />
+            <span className="text-primary">✦</span>
+            <span className="h-px w-12 bg-primary/40" />
+          </div>
+
+          <p className="font-sans text-base leading-relaxed text-berry-dark/75">
+            Van eerste aanmelding tot de kraamweek zelf — ik begeleid je in
+            elke stap.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <StepCard
-            step="Stap 1"
-            title="Aanmelden"
-            description="Meld je eenvoudig online aan voor kraamzorg in Rotterdam. Ik neem daarna snel contact op om je wensen en beschikbaarheid te bespreken."
-            icon={
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                <line x1="16" y1="2" x2="16" y2="6" />
-                <line x1="8" y1="2" x2="8" y2="6" />
-                <line x1="3" y1="10" x2="21" y2="10" />
-              </svg>
-            }
-            extra={
-              <a href="https://marleyskraamzorg.mijngeboortezorg.nl/Aanvragen/kraamzorg?mode=frame" target="_blank" rel="noopener noreferrer" className="font-cinzel text-xs uppercase tracking-[0.06em] text-cream underline hover:text-white transition-colors">
-                Direct aanmelden →
-              </a>
-            }
+        {/* Tijdlijn */}
+        <div className="relative mx-auto mt-20 max-w-5xl">
+          {/* Horizontale verbindingslijn — alleen op desktop */}
+          <div
+            className="absolute left-0 right-0 top-6 hidden h-px bg-primary/15 lg:block"
+            aria-hidden="true"
           />
 
-          <StepCard
-            step="Stap 2"
-            title="Kennismaking"
-            description="Het intakegesprek vindt plaats bij jou thuis of telefonisch. We bespreken jouw wensen, de verwachtingen en leren elkaar kennen."
-            icon={
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                <circle cx="12" cy="7" r="4" />
-              </svg>
-            }
-            extra={
-              <span className="font-sans text-xs text-cream/80">✓ Vrijblijvend &amp; zonder kosten</span>
-            }
-          />
+          {/* Grid van stappen */}
+          <ol className="relative grid gap-16 lg:grid-cols-3 lg:gap-12">
+            {stappen.map((stap) => (
+              <li key={stap.nr} className="relative text-center lg:text-left">
+                {/* Nummer in cirkel — met witte achtergrond om de lijn te onderbreken */}
+                <div className="mb-8 flex items-center justify-center gap-3 lg:justify-start">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white font-cinzel text-sm text-primary ring-1 ring-primary/20">
+                    {stap.nr}
+                  </span>
+                  <span className="text-primary text-xs">✦</span>
+                </div>
 
-          <StepCard
-            step="Stap 3"
-            title="Jouw kraamperiode"
-            description="Vanaf de bevalling sta ik klaar. Ik assisteer de verloskundige en begeleid jouw gezin in de eerste dagen thuis."
-            icon={
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 16v-4" />
-                <path d="M12 8h.01" />
-              </svg>
-            }
-            extra={
-              <>
-                <span className="font-sans text-xs text-cream/80 block">✓ Dagelijks overleg &amp; afstemming</span>
-                <a href="tel:+31645041484" className="font-cinzel text-xs uppercase tracking-[0.06em] text-cream underline hover:text-white transition-colors mt-2 inline-block">
-                  📞 Bel voor vragen
-                </a>
-              </>
-            }
-          />
+                {/* Titel */}
+                <h3 className="mb-4 font-cinzel text-xl uppercase leading-tight text-berry-dark sm:text-2xl">
+                  {stap.title}
+                </h3>
+
+                {/* Tekst */}
+                <p className="font-sans text-base leading-relaxed text-berry-dark/70">
+                  {stap.text}
+                </p>
+
+                {/* Optionele CTA-link */}
+                {stap.cta && (
+                  <div className="mt-6">
+                    {stap.cta.external ? (
+                      <a
+                        href={stap.cta.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 font-cinzel text-xs uppercase tracking-[0.15em] text-primary transition-colors hover:text-berry-dark"
+                      >
+                        {stap.cta.label}
+                        <span aria-hidden="true">→</span>
+                      </a>
+                    ) : (
+                      <a
+                        href={stap.cta.href}
+                        className="inline-flex items-center gap-2 font-cinzel text-xs uppercase tracking-[0.15em] text-primary transition-colors hover:text-berry-dark"
+                      >
+                        {stap.cta.label}
+                        <span aria-hidden="true">→</span>
+                      </a>
+                    )}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>
