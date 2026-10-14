@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 import Link from "next/link";
-import { StarIcon } from "@/components/StarIcon";
+import Image from "next/image";
 
 export default function ReviewsClient() {
   return (
@@ -13,88 +13,104 @@ export default function ReviewsClient() {
         strategy="afterInteractive"
       />
 
-      {/* ═══════ HERO — Magenta achtergrond, Cinzel koppen ═══════ */}
-      <section className="relative w-full min-h-[60vh] md:min-h-[55vh] overflow-hidden flex items-center justify-center bg-primary">
-        {/* Decoratieve overlay */}
-        <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0 opacity-[0.05]"
-            style={{
-              backgroundImage: `radial-gradient(circle, #FDF9F4 1px, transparent 1px)`,
-              backgroundSize: "32px 32px",
-            }}
-          />
-          <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-cream/5" />
-          <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-cream/5" />
-        </div>
+      {/* ═══════ HERO — Split-screen met foto ═══════ */}
+      <section className="relative overflow-hidden bg-white pt-32 pb-20 sm:pt-40 sm:pb-24">
+        {/* Zachte blush-gloed rechts */}
+        <div
+          className="pointer-events-none absolute -right-40 top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-blush/20 blur-3xl"
+          aria-hidden="true"
+        />
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20 md:pt-24 pb-12">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2 mb-6 backdrop-blur-sm">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8D5C4" strokeWidth="2">
-              <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-            </svg>
-            <span className="font-cinzel text-xs uppercase tracking-[0.12em] text-cream/90">
-              Reviews
-            </span>
+        <div className="relative mx-auto max-w-7xl px-6 md:px-10">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+            {/* FOTO LINKS */}
+            <div className="order-1 lg:order-1">
+              <div className="relative mx-auto max-w-lg lg:mx-0">
+                {/* Zachte blush-gloed achter foto */}
+                <div
+                  className="absolute -inset-3 rounded-[2rem] bg-blush/30 blur-xl"
+                  aria-hidden="true"
+                />
+
+                {/* Foto in strak kader */}
+                <div className="relative overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(74,26,61,0.35)]">
+                  <Image
+                    src="/images/lisa-reviews.jpg"
+                    alt="Lisa van Marley's Kraamzorg"
+                    width={1536}
+                    height={1024}
+                    priority
+                    fetchPriority="high"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="h-auto w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* TEKST RECHTS */}
+            <div className="order-2 max-w-xl text-center lg:order-2 lg:text-left">
+              {/* Klein label */}
+              <div className="mb-8 flex items-center justify-center gap-2 lg:justify-start">
+                <span className="text-primary text-xs">✦</span>
+                <span className="font-cinzel text-[11px] uppercase tracking-[0.28em] text-primary">
+                  Ervaringen
+                </span>
+              </div>
+
+              {/* H1 */}
+              <h1 className="font-cinzel text-4xl uppercase leading-[1.1] text-berry-dark sm:text-5xl lg:text-6xl">
+                Vertel over uw{" "}
+                <span className="text-primary">ervaring</span>
+              </h1>
+
+              {/* Sierlijn */}
+              <div className="my-8 flex items-center justify-center gap-3 lg:justify-start">
+                <span className="h-px w-12 bg-primary/40" />
+                <span className="text-primary text-xs">✦</span>
+              </div>
+
+              {/* Subtitel */}
+              <p className="font-sans text-lg leading-relaxed text-berry-dark/85 sm:text-xl">
+                Bij Marley&apos;s Kraamzorg ben ik, Lisa, dankbaar dat ik met
+                liefde en zorg zoveel gezinnen heb mogen ondersteunen in de
+                bijzondere periode na de geboorte.
+              </p>
+
+              <p className="mt-5 font-sans text-base leading-relaxed text-berry-dark/70">
+                Jouw ervaring helpt andere ouders bij het vinden van de juiste
+                kraamzorg.
+              </p>
+            </div>
           </div>
-
-          {/* H1 in Cinzel */}
-          <h1 className="font-cinzel text-2xl md:text-4xl lg:text-5xl uppercase text-cream leading-tight tracking-tight mb-4">
-            Vertel over uw ervaring met Marley&apos;s Kraamzorg
-          </h1>
-
-          {/* Goudkleurige ondertitel in Cinzel */}
-          <p className="font-cinzel text-sm md:text-base uppercase tracking-[0.15em] text-starlight mb-6">
-            Kraamzorg Rotterdam voor een zorgeloze kraamtijd
-          </p>
-
-          <div className="w-16 h-0.5 bg-starlight/50 mx-auto mb-6" />
-
-          <p className="font-body text-base md:text-lg text-cream/90 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Bij Marley&apos;s Kraamzorg ben ik, Lisa, dankbaar dat ik met liefde en zorg zoveel gezinnen
-            heb mogen ondersteunen in de bijzondere periode na de geboorte. Jouw ervaring is niet
-            alleen belangrijk voor mij, maar ook voor toekomstige ouders in Rotterdam en omgeving
-            die een zorgverlener zoeken waar ze op kunnen vertrouwen.
-          </p>
-
-          <div className="flex justify-center">
-            <StarIcon size="md" fillColor="#E8D5C4" strokeColor="#FDF9F4" animate />
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-cream/50">
-          <span className="text-xs font-cinzel uppercase tracking-wider">Scroll</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="animate-bounce-gentle">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
         </div>
       </section>
 
-      {/* ═══════ GOOGLE REVIEWS ═══════ */}
-      <section className="bg-white py-20 md:py-32">
-        <div className="container-main">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary/[0.06] border border-primary/10 rounded-full px-5 py-2 mb-6">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9A1E61" strokeWidth="2">
-                <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-              </svg>
-              <span className="font-cinzel text-xs uppercase tracking-[0.12em] text-primary">
-                Google Reviews
-              </span>
-            </div>
-            <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl uppercase text-primary mb-4">
-              Wat ouders zeggen
+      {/* ═══════ GOOGLE REVIEWS WIDGET ═══════ */}
+      <section className="bg-white py-20 sm:py-24">
+        <div className="mx-auto max-w-6xl px-6 md:px-10">
+          <div className="text-center">
+            <p className="eyebrow mb-4">Google Reviews</p>
+
+            <h2 className="font-cinzel text-3xl uppercase leading-tight text-berry-dark sm:text-4xl">
+              Wat ouders{" "}
+              <span className="text-primary">zeggen</span>
             </h2>
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-6" />
-            <p className="font-body text-base md:text-lg text-berry-dark/75 max-w-2xl mx-auto leading-relaxed">
-              Lees hieronder de ervaringen van gezinnen die ik heb mogen begeleiden tijdens hun kraamperiode.
+
+            <div className="mx-auto my-8 flex items-center justify-center gap-4">
+              <span className="h-px w-12 bg-primary/40" />
+              <span className="text-primary">✦</span>
+              <span className="h-px w-12 bg-primary/40" />
+            </div>
+
+            <p className="mx-auto max-w-2xl font-sans text-base leading-relaxed text-berry-dark/75">
+              Lees hieronder de ervaringen van gezinnen die ik heb mogen
+              begeleiden tijdens hun kraamperiode.
             </p>
           </div>
 
           {/* Elfsight Google Reviews Widget */}
-          <div className="max-w-6xl mx-auto">
+          <div className="mt-16">
             <div
               className="elfsight-app-217006b8-8c72-4abf-a112-e77497452b93"
               data-elfsight-app-lazy
@@ -103,45 +119,48 @@ export default function ReviewsClient() {
         </div>
       </section>
 
-      {/* ═══════ CTA — Magenta huisstijl ═══════ */}
-      <section className="relative py-20 md:py-28 overflow-hidden bg-primary">
-        {/* Decoratieve overlay */}
-        <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0 opacity-[0.05]"
-            style={{
-              backgroundImage: `radial-gradient(circle, #FDF9F4 1px, transparent 1px)`,
-              backgroundSize: "32px 32px",
-            }}
-          />
-          <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-cream/5" />
-          <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-cream/5" />
-        </div>
-
-        <div className="container-main relative z-10 text-center">
-          <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl uppercase text-cream mb-4">
-            Ook tevreden over mijn zorg?
+      {/* ═══════ CTA ═══════ */}
+      <section className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-3xl px-6 text-center md:px-10">
+          <h2 className="font-cinzel text-3xl uppercase leading-tight text-berry-dark sm:text-4xl">
+            Ook tevreden over{" "}
+            <span className="text-primary">mijn zorg</span>?
           </h2>
-          <div className="w-16 h-0.5 bg-starlight/50 mx-auto mb-6" />
-          <p className="font-body text-base md:text-lg text-cream/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Deel jouw ervaring en help andere ouders bij het vinden van de juiste kraamzorg.
-            Jouw review betekent veel voor mij!
+
+          <div className="mx-auto my-8 flex items-center justify-center gap-4">
+            <span className="h-px w-12 bg-primary/40" />
+            <span className="text-primary">✦</span>
+            <span className="h-px w-12 bg-primary/40" />
+          </div>
+
+          <p className="mx-auto mb-10 max-w-2xl font-sans text-base leading-relaxed text-berry-dark/80 sm:text-lg">
+            Deel jouw ervaring en help andere ouders bij het vinden van de
+            juiste kraamzorg. Jouw review betekent veel voor mij.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <a
               href="https://g.page/r/CZ7m3zZ9t5ZvEB0/review"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 bg-cream text-primary shadow-glow hover:bg-blush hover:-translate-y-0.5"
+              className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover"
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className="mr-2"
+              >
                 <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
               </svg>
               Schrijf een review
             </a>
             <Link
               href="/contact/"
-              className="inline-flex items-center justify-center font-cinzel uppercase tracking-[0.06em] text-xs rounded-full transition-all duration-300 h-11 px-6 border border-cream/50 text-cream hover:bg-cream hover:text-primary"
+              className="inline-flex h-14 items-center justify-center rounded-full border border-berry-dark/20 px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-berry-dark transition-all duration-300 hover:border-berry-dark hover:bg-berry-dark hover:text-white"
             >
               Neem contact op
             </Link>
