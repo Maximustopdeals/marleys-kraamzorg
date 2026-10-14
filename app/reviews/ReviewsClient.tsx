@@ -1,7 +1,6 @@
 "use client";
 
 import Script from "next/script";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function ReviewsClient() {
@@ -115,55 +114,6 @@ export default function ReviewsClient() {
               className="elfsight-app-217006b8-8c72-4abf-a112-e77497452b93"
               data-elfsight-app-lazy
             />
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ CTA ═══════ */}
-      <section className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-3xl px-6 text-center md:px-10">
-          <h2 className="font-cinzel text-3xl uppercase leading-tight text-berry-dark sm:text-4xl">
-            Ook tevreden over{" "}
-            <span className="text-primary">mijn zorg</span>?
-          </h2>
-
-          <div className="mx-auto my-8 flex items-center justify-center gap-4">
-            <span className="h-px w-12 bg-primary/40" />
-            <span className="text-primary">✦</span>
-            <span className="h-px w-12 bg-primary/40" />
-          </div>
-
-          <p className="mx-auto mb-10 max-w-2xl font-sans text-base leading-relaxed text-berry-dark/80 sm:text-lg">
-            Deel jouw ervaring en help andere ouders bij het vinden van de
-            juiste kraamzorg. Jouw review betekent veel voor mij.
-          </p>
-
-          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-            <a
-              href="https://g.page/r/CZ7m3zZ9t5ZvEB0/review"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover"
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                className="mr-2"
-              >
-                <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-              </svg>
-              Schrijf een review
-            </a>
-            <Link
-              href="/contact/"
-              className="inline-flex h-14 items-center justify-center rounded-full border border-berry-dark/20 px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-berry-dark transition-all duration-300 hover:border-berry-dark hover:bg-berry-dark hover:text-white"
-            >
-              Neem contact op
-            </Link>
           </div>
         </div>
       </section>
