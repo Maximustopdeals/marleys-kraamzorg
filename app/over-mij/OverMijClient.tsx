@@ -1,10 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Accordion from "@/components/Accordion";
-import "./overmij.css";
 
 /* ─── FAQ Data ─── */
 const aboutFAQ = [
@@ -41,392 +38,415 @@ const aboutFAQ = [
 ];
 
 export default function OverMijClient() {
-  useEffect(() => {
-    const fadeEls = document.querySelectorAll(".om-fade");
-    fadeEls.forEach((el) => {
-      (el as HTMLElement).style.opacity = "0";
-      (el as HTMLElement).style.transform = "translateY(30px)";
-      (el as HTMLElement).style.transition = "opacity 0.8s ease, transform 0.8s ease";
-    });
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            (entry.target as HTMLElement).style.opacity = "1";
-            (entry.target as HTMLElement).style.transform = "translateY(0)";
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.08 }
-    );
-
-    fadeEls.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <>
-      {/* ═══════ SECTIE 1: HERO ═══════ */}
-      <section className="om-hero" aria-label="Over Lisa - Marley's Kraamzorg">
-        <div className="om-hero-deco1" aria-hidden="true" />
-        <div className="om-hero-deco2" aria-hidden="true" />
-        <div className="om-hero-deco3" aria-hidden="true" />
+      {/* ═══════ HERO — Split-Screen met foto ═══════ */}
+      <section className="relative overflow-hidden bg-white pt-32 pb-20 sm:pt-40 sm:pb-24">
+        {/* Zachte blush-gloed rechts */}
+        <div
+          className="pointer-events-none absolute -right-40 top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-blush/20 blur-3xl"
+          aria-hidden="true"
+        />
 
-        <div className="om-hero-content">
-          <div className="om-hero-badge">Over mij</div>
-          <h1>Ontdek Lisa van Marley&apos;s Kraamzorg in Rotterdam</h1>
-          <div className="om-hero-line" />
-          <p className="om-hero-sub">
-            Lisa van Marley&apos;s Kraamzorg biedt warme zorg in Rotterdam, vernoemd
-            naar haar dochtertje. Persoonlijke aandacht voor jou en je baby.
-            Ontdek haar verhaal.
-          </p>
-        </div>
+        <div className="relative mx-auto max-w-7xl px-6 md:px-10">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+            {/* FOTO LINKS */}
+            <div className="order-1 lg:order-1">
+              <div className="relative mx-auto max-w-md lg:mx-0">
+                {/* Zachte blush-gloed achter foto */}
+                <div
+                  className="absolute -inset-3 rounded-[2rem] bg-blush/30 blur-xl"
+                  aria-hidden="true"
+                />
 
-        <div className="om-hero-scroll" aria-hidden="true">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          >
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </div>
-      </section>
-
-      {/* ═══════ SECTIE 2: HET VERHAAL ═══════ */}
-      <section className="om-story" aria-labelledby="story-title">
-        <div className="om-story-bg" aria-hidden="true">
-          <div className="om-story-circle" />
-          <div className="om-story-dots" />
-          <div className="om-story-line-deco" />
-        </div>
-
-        <div className="om-story-container">
-          {/* Header */}
-          <div className="om-story-header om-fade">
-            <div className="om-story-badge">Persoonlijk &amp; oprecht</div>
-            <h2 id="story-title" className="om-story-title">
-              <span className="om-story-title-small">Het verhaal achter</span>
-              <span className="om-story-title-big">Marley&apos;s Kraamzorg</span>
-            </h2>
-            <div className="om-story-divider">
-              <span className="om-divider-icon">&#10023;</span>
-            </div>
-          </div>
-
-          {/* Grid */}
-          <div className="om-story-grid">
-            {/* AFBEELDING */}
-            <div className="om-image-block om-fade">
-              <div className="om-image-wrapper">
-                <div className="om-image-inner">
-                  <div className="om-img-overlay-top" />
-                  <div className="om-img-overlay-bottom" />
+                {/* Foto in strak kader */}
+                <div className="relative overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(74,26,61,0.35)]">
                   <Image
                     src="/images/lisa.jpg"
-                    alt="Lisa - Oprichter van Marley's Kraamzorg"
-                    loading="lazy"
-                    width={600}
-                    height={800}
-                    className="om-image"
+                    alt="Lisa, oprichter en kraamverzorgende bij Marley's Kraamzorg"
+                    width={1145}
+                    height={1374}
+                    priority
+                    fetchPriority="high"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="h-auto w-full object-cover"
                   />
-                  {/* Corner accents */}
-                  <div className="om-corner om-corner-tl" />
-                  <div className="om-corner om-corner-tr" />
-                  <div className="om-corner om-corner-bl" />
-                  <div className="om-corner om-corner-br" />
                 </div>
-              </div>
 
-              {/* Heart badge */}
-              <div className="om-heart-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
-                </svg>
-              </div>
-
-              {/* Caption */}
-              <div className="om-caption">
-                <span className="om-caption-name">Lisa</span>
-                <span className="om-caption-role">Oprichter &amp; kraamverzorgende</span>
+                {/* Naam + rol onder foto */}
+                <div className="mt-8 flex items-center justify-center gap-4 lg:justify-center">
+                  <span className="h-px w-12 bg-primary/40" />
+                  <div className="text-center">
+                    <span className="block font-cinzel text-xl uppercase tracking-wide text-berry-dark sm:text-2xl">
+                      Lisa
+                    </span>
+                    <span className="mt-1 block font-sans text-xs uppercase tracking-[0.15em] text-berry-dark/60">
+                      Oprichter &amp; kraamverzorgende
+                    </span>
+                  </div>
+                  <span className="h-px w-12 bg-primary/40" />
+                </div>
               </div>
             </div>
 
-            {/* TEKST */}
-            <div className="om-text-block om-fade">
-              <div className="om-text-card">
-                {/* Opening quote */}
-                <div className="om-quote-open">&ldquo;</div>
-
-                <p className="om-paragraph">
-                  <span className="om-dropcap">M</span>
-                  ijn naam is <strong className="om-highlight">Lisa</strong>, de trotse oprichter van Marley&apos;s Kraamzorg. Als enthousiaste en gediplomeerde kraamverzorgende is mijn passie gewijd aan het creëren van een ontspannen sfeer tijdens de bijzondere kraamperiode. Mijn werk gaat verder dan een beroep; het is mijn roeping, uitgevoerd met liefde en toewijding.
-                </p>
-
-                {/* Separator */}
-                <div className="om-separator">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09A6.52 6.52 0 0 1 16.5 3 5.5 5.5 0 0 1 21 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                  </svg>
-                </div>
-
-                <p className="om-paragraph">
-                  Als moeder van twee jongens, <strong className="om-highlight">Sem &amp; Mees</strong>, en dochter <strong className="om-highlight">Marley</strong>, begrijp ik de onschatbare waarde van een ondersteunende omgeving tijdens het ouderschap.
-                </p>
-
-                {/* Emotional block */}
-                <div className="om-emotional">
-                  <div className="om-emotional-deco">&#10023;</div>
-                  <p className="om-emotional-text">
-                    <span className="om-q">&ldquo;</span>
-                    Hoewel Marley nu een stralend sterretje aan de hemel is, blijft haar naam synoniem met de toewijding en liefde die ik in mijn werk stop.
-                    <span className="om-q">&rdquo;</span>
-                  </p>
-                  <div className="om-emotional-deco">&#10023;</div>
-                </div>
-
-                <p className="om-paragraph">
-                  Mijn toewijding overstijgt een standaard dienst; het is een persoonlijke missie om gezinnen te ondersteunen. Met mijn spontaniteit en positieve instelling stel ik iedereen op zijn gemak. Bij Marley&apos;s Kraamzorg bied ik daarom zorg op maat, waarbij flexibiliteit en deskundigheid hand in hand gaan.
-                </p>
-
-                {/* Signature */}
-                <div className="om-signature">
-                  <div className="om-sig-line" />
-                  <div>
-                    <span className="om-sig-text">Met warme groet,</span>
-                    <span className="om-sig-name">Lisa</span>
-                  </div>
-                  <div className="om-sig-line" />
-                </div>
-
-                {/* CTA */}
-                <div className="om-story-cta">
-                  <Link href="/contact/" className="om-story-link">
-                    <span>Maak kennis met Lisa</span>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                      <polyline points="12 5 19 12 12 19" />
-                    </svg>
-                  </Link>
-                </div>
+            {/* TEKST RECHTS */}
+            <div className="order-2 max-w-xl text-center lg:order-2 lg:text-left">
+              {/* Klein label */}
+              <div className="mb-8 flex items-center justify-center gap-2 lg:justify-start">
+                <span className="text-primary text-xs">✦</span>
+                <span className="font-cinzel text-[11px] uppercase tracking-[0.28em] text-primary">
+                  Over mij
+                </span>
               </div>
+
+              {/* H1 */}
+              <h1 className="font-cinzel text-4xl uppercase leading-[1.1] text-berry-dark sm:text-5xl lg:text-6xl">
+                Ontdek Lisa van{" "}
+                <span className="text-primary">Marley&apos;s Kraamzorg</span>
+              </h1>
+
+              {/* Sierlijn */}
+              <div className="my-8 flex items-center justify-center gap-3 lg:justify-start">
+                <span className="h-px w-12 bg-primary/40" />
+                <span className="text-primary text-xs">✦</span>
+              </div>
+
+              {/* Subtitel */}
+              <p className="font-sans text-lg leading-relaxed text-berry-dark/85 sm:text-xl">
+                Warme zorg in Rotterdam, vernoemd naar mijn dochtertje Marley.
+                Persoonlijke aandacht voor jou en je baby.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══════ SECTIE 3: WAT MARLEY'S BIJZONDER MAAKT ═══════ */}
-      <section className="om-features" aria-labelledby="features-heading">
-        <div className="om-features-container">
-          <h2 id="features-heading" className="om-features-h2">
-            Wat Marley&apos;s Kraamzorg bijzonder maakt
-          </h2>
+      {/* ═══════ HET VERHAAL ═══════ */}
+      <section className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-3xl px-6 md:px-10">
+          <div className="text-center">
+            <p className="eyebrow mb-4">Persoonlijk en oprecht</p>
 
-          <div className="om-features-grid">
-            <div className="om-feature-card om-fade">
-              <div className="om-feature-icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
-                </svg>
-              </div>
-              <h3>Een Persoonlijke Verbinding</h3>
-              <p>
-                Bij Marley&apos;s Kraamzorg gaat het niet alleen om het bieden van kraamzorg; het gaat om het opbouwen van een persoonlijke band met de gezinnen die ik mag ondersteunen. Mijn eigen ervaringen als moeder hebben me geleerd dat de kraamperiode een mix is van vreugde, uitdagingen en kwetsbaarheid.
-              </p>
-            </div>
+            <h2 className="font-cinzel text-3xl uppercase leading-tight text-berry-dark sm:text-4xl">
+              Het verhaal achter{" "}
+              <span className="text-primary">Marley&apos;s Kraamzorg</span>
+            </h2>
 
-            <div className="om-feature-card om-fade">
-              <div className="om-feature-icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                  <path d="M6 12v5c0 1.66 2.24 3 5 3s5-1.34 5-3v-5" />
-                </svg>
-              </div>
-              <h3>Expertise in Actie</h3>
-              <p>
-                Als ervaren kraamverzorgster ben ik niet alleen gedreven door passie, maar ook door kennis en expertise. Mijn deskundige begeleiding omvat alles, van praktische hulp in het huishouden tot gerichte educatie over babyverzorging.
-              </p>
-            </div>
-
-            <div className="om-feature-card om-fade">
-              <div className="om-feature-icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M17 1l4 4-4 4" />
-                  <path d="M3 11V9a4 4 0 014-4h14" />
-                  <path d="M7 23l-4-4 4-4" />
-                  <path d="M21 13v2a4 4 0 01-4 4H3" />
-                </svg>
-              </div>
-              <h3>Flexibiliteit en Zorg op Maat</h3>
-              <p>
-                Elk gezin heeft zijn eigen behoeften en wensen, en bij Marley&apos;s Kraamzorg begrijp ik het belang van flexibiliteit. Mijn diensten passen zich aan op basis van uw specifieke situatie.
-              </p>
-            </div>
-
-            <div className="om-feature-card om-fade">
-              <div className="om-feature-icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              </div>
-              <h3>Marley&apos;s Kraamzorg Familie</h3>
-              <p>
-                Wanneer u kiest voor Marley&apos;s Kraamzorg, wordt u niet alleen een cliënt; u wordt deel van de Marley&apos;s Kraamzorg-familie. Deze familie staat voor betrokkenheid, warmte en zorg die verder gaat dan de kraamperiode zelf.
-              </p>
+            <div className="mx-auto my-8 flex items-center justify-center gap-4">
+              <span className="h-px w-12 bg-primary/40" />
+              <span className="text-primary">✦</span>
+              <span className="h-px w-12 bg-primary/40" />
             </div>
           </div>
 
-          <div className="om-features-cta om-fade">
-            <p>
-              Voor meer informatie over mijn kraamzorgdiensten, aarzel niet om contact op te nemen. Ik kijk ernaar uit om u te verwelkomen in de Marley&apos;s Kraamzorg-familie en samen deze prachtige reis te maken.
+          <div className="mt-12 space-y-6">
+            <p className="font-sans text-lg leading-relaxed text-berry-dark/85">
+              Mijn naam is{" "}
+              <strong className="font-semibold text-berry-dark">Lisa</strong>,
+              de trotse oprichter van Marley&apos;s Kraamzorg. Als enthousiaste
+              en gediplomeerde kraamverzorgende is mijn passie gewijd aan het
+              creëren van een ontspannen sfeer tijdens de bijzondere
+              kraamperiode. Mijn werk gaat verder dan een beroep. Het is mijn
+              roeping, uitgevoerd met liefde en toewijding.
             </p>
-            <Link href="/contact/" className="om-features-btn">
+
+            <p className="font-sans text-lg leading-relaxed text-berry-dark/85">
+              Als moeder van twee jongens,{" "}
+              <strong className="font-semibold text-berry-dark">
+                Sem en Mees
+              </strong>
+              , en dochter{" "}
+              <strong className="font-semibold text-berry-dark">Marley</strong>,
+              begrijp ik de onschatbare waarde van een ondersteunende omgeving
+              tijdens het ouderschap.
+            </p>
+
+            {/* Rustige quote over Marley */}
+            <div className="my-12 border-l-2 border-primary/40 pl-6">
+              <p className="font-cinzel text-lg uppercase leading-snug tracking-wide text-berry-dark sm:text-xl">
+                Hoewel Marley nu een stralend sterretje aan de hemel is, blijft
+                haar naam synoniem met de{" "}
+                <span className="text-primary">toewijding en liefde</span> die
+                ik in mijn werk stop.
+              </p>
+            </div>
+
+            <p className="font-sans text-lg leading-relaxed text-berry-dark/85">
+              Mijn toewijding overstijgt een standaard dienst. Het is een
+              persoonlijke missie om gezinnen te ondersteunen. Met mijn
+              spontaniteit en positieve instelling stel ik iedereen op zijn
+              gemak. Bij Marley&apos;s Kraamzorg bied ik daarom zorg op maat,
+              waarbij flexibiliteit en deskundigheid hand in hand gaan.
+            </p>
+          </div>
+
+          {/* Signature */}
+          <div className="mt-16 flex items-center justify-center gap-4">
+            <span className="h-px w-16 bg-primary/30" />
+            <div className="text-center">
+              <span className="block font-sans text-sm italic text-berry-dark/50">
+                Met warme groet,
+              </span>
+              <span className="mt-1 block font-cinzel text-2xl uppercase tracking-wide text-berry-dark">
+                Lisa
+              </span>
+            </div>
+            <span className="h-px w-16 bg-primary/30" />
+          </div>
+
+          {/* CTA */}
+          <div className="mt-12 text-center">
+            <Link
+              href="/contact/"
+              className="inline-flex items-center gap-2 font-cinzel text-xs uppercase tracking-[0.15em] text-primary transition-colors hover:text-berry-dark"
+            >
+              Maak kennis met Lisa
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ WAT BIJZONDER MAAKT ═══════ */}
+      <section className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-4xl px-6 md:px-10">
+          <div className="text-center">
+            <p className="eyebrow mb-4">Wat mij bijzonder maakt</p>
+
+            <h2 className="font-cinzel text-3xl uppercase leading-tight text-berry-dark sm:text-4xl">
+              Wat Marley&apos;s Kraamzorg{" "}
+              <span className="text-primary">bijzonder maakt</span>
+            </h2>
+
+            <div className="mx-auto my-8 flex items-center justify-center gap-4">
+              <span className="h-px w-12 bg-primary/40" />
+              <span className="text-primary">✦</span>
+              <span className="h-px w-12 bg-primary/40" />
+            </div>
+          </div>
+
+          {/* 4 kaarten — originele teksten behouden */}
+          <div className="mt-16 grid gap-8 sm:grid-cols-2">
+            {[
+              {
+                title: "Een Persoonlijke Verbinding",
+                text: "Bij Marley's Kraamzorg gaat het niet alleen om het bieden van kraamzorg; het gaat om het opbouwen van een persoonlijke band met de gezinnen die ik mag ondersteunen. Mijn eigen ervaringen als moeder hebben me geleerd dat de kraamperiode een mix is van vreugde, uitdagingen en kwetsbaarheid.",
+              },
+              {
+                title: "Expertise in Actie",
+                text: "Als ervaren kraamverzorgster ben ik niet alleen gedreven door passie, maar ook door kennis en expertise. Mijn deskundige begeleiding omvat alles, van praktische hulp in het huishouden tot gerichte educatie over babyverzorging.",
+              },
+              {
+                title: "Flexibiliteit en Zorg op Maat",
+                text: "Elk gezin heeft zijn eigen behoeften en wensen, en bij Marley's Kraamzorg begrijp ik het belang van flexibiliteit. Mijn diensten passen zich aan op basis van uw specifieke situatie.",
+              },
+              {
+                title: "Marley's Kraamzorg Familie",
+                text: "Wanneer u kiest voor Marley's Kraamzorg, wordt u niet alleen een cliënt; u wordt deel van de Marley's Kraamzorg-familie. Deze familie staat voor betrokkenheid, warmte en zorg die verder gaat dan de kraamperiode zelf.",
+              },
+            ].map((p, i) => (
+              <div
+                key={i}
+                className="rounded-2xl border border-berry-dark/[0.08] bg-white p-8 shadow-card transition-shadow hover:shadow-card-hover"
+              >
+                {/* Klein nummer + sierlijn */}
+                <div className="mb-6 flex items-center gap-3">
+                  <span className="font-cinzel text-sm text-primary/60">
+                    0{i + 1}
+                  </span>
+                  <span className="text-primary text-xs">✦</span>
+                </div>
+
+                <h3 className="mb-4 font-cinzel text-lg uppercase leading-tight text-berry-dark sm:text-xl">
+                  {p.title}
+                </h3>
+
+                <p className="font-sans text-base leading-relaxed text-berry-dark/75">
+                  {p.text}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-20 text-center">
+            <p className="mx-auto max-w-2xl font-sans text-base leading-relaxed text-berry-dark/70">
+              Voor meer informatie over mijn kraamzorgdiensten, aarzel niet om
+              contact op te nemen. Ik kijk ernaar uit om u te verwelkomen in de
+              Marley&apos;s Kraamzorg-familie en samen deze prachtige reis te
+              maken.
+            </p>
+            <Link
+              href="/contact/"
+              className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover"
+            >
               Neem contact op
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ═══════ SECTIE 4: WAAROM KIEZEN ═══════ */}
-      <section className="om-why" aria-labelledby="why-title">
-        <div className="om-why-container">
-          <header className="om-why-intro om-fade">
-            <h2 id="why-title">Waarom kiezen voor Marley&apos;s Kraamzorg?</h2>
-            <p>
-              Bij Marley&apos;s Kraamzorg bied ik professionele en persoonlijke <strong>kraamzorg in Rotterdam</strong> en omgeving. Als ervaren kraamverzorgende ondersteun ik jou en je gezin tijdens deze bijzondere periode.
+      {/* ═══════ WAAROM KIEZEN ═══════ */}
+      <section className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-5xl px-6 md:px-10">
+          <div className="text-center">
+            <p className="eyebrow mb-4">Waarom kiezen</p>
+
+            <h2 className="font-cinzel text-3xl uppercase leading-tight text-berry-dark sm:text-4xl">
+              Waarom kiezen voor{" "}
+              <span className="text-primary">Marley&apos;s Kraamzorg?</span>
+            </h2>
+
+            <div className="mx-auto my-8 flex items-center justify-center gap-4">
+              <span className="h-px w-12 bg-primary/40" />
+              <span className="text-primary">✦</span>
+              <span className="h-px w-12 bg-primary/40" />
+            </div>
+
+            <p className="mx-auto max-w-2xl font-sans text-base leading-relaxed text-berry-dark/75 sm:text-lg">
+              Bij Marley&apos;s Kraamzorg bied ik professionele en persoonlijke
+              kraamzorg in Rotterdam en omgeving. Als ervaren kraamverzorgende
+              ondersteun ik jou en je gezin tijdens deze bijzondere periode.
             </p>
-            <p className="om-why-highlight">Dat ben ik, Lisa!</p>
-          </header>
+          </div>
 
-          <div className="om-why-grid">
-            <article className="om-why-card om-fade" role="listitem" tabIndex={0} aria-label="Persoonlijke aandacht">
-              <div className="om-why-icon" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 4.01 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                </svg>
-              </div>
-              <h3>Persoonlijke aandacht</h3>
-              <p>Je ontvangt persoonlijke zorg op maat, in je vertrouwde omgeving, zodat jij je comfortabel voelt.</p>
-            </article>
+          <div className="mt-16 grid gap-12 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Persoonlijke aandacht",
+                text: "Je ontvangt persoonlijke zorg op maat, in je vertrouwde omgeving, zodat jij je comfortabel voelt.",
+              },
+              {
+                title: "Ervaring en kwaliteit",
+                text: "Met mijn jarenlange ervaring weet ik precies wat jij nodig hebt tijdens je kraamtijd. Betrouwbaarheid staat voorop.",
+              },
+              {
+                title: "Flexibiliteit",
+                text: "Kies de zorg die bij jou past. Een paar uur per dag of volledige dagen, alles is bespreekbaar.",
+              },
+              {
+                title: "Babyverzorging",
+                text: "Ik bied ondersteuning die volledig is afgestemd op jouw gezin en de behoeften van je baby.",
+              },
+              {
+                title: "Persoonlijke klik",
+                text: "Met een vrijblijvend intakegesprek ontdekken we samen of er een goede klik is.",
+              },
+              {
+                title: "Betrouwbare keuze",
+                text: "Kies voor Marley's Kraamzorg en ontvang deskundige, liefdevolle zorg voor jou en je baby.",
+              },
+            ].map((v, i) => (
+              <div key={i} className="text-center">
+                <div className="mb-6 flex items-center justify-center gap-3">
+                  <span className="font-cinzel text-sm text-primary/60">
+                    0{i + 1}
+                  </span>
+                  <span className="text-primary text-xs">✦</span>
+                </div>
 
-            <article className="om-why-card om-fade" role="listitem" tabIndex={0} aria-label="Ervaring en kwaliteit">
-              <div className="om-why-icon" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                </svg>
-              </div>
-              <h3>Ervaring en kwaliteit</h3>
-              <p>Met mijn jarenlange ervaring weet ik precies wat jij nodig hebt tijdens je kraamtijd. Betrouwbaarheid staat voorop.</p>
-            </article>
+                <h3 className="mb-3 font-cinzel text-lg uppercase leading-tight text-berry-dark sm:text-xl">
+                  {v.title}
+                </h3>
 
-            <article className="om-why-card om-fade" role="listitem" tabIndex={0} aria-label="Flexibiliteit">
-              <div className="om-why-icon" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z" />
-                </svg>
+                <p className="font-sans text-sm leading-relaxed text-berry-dark/70">
+                  {v.text}
+                </p>
               </div>
-              <h3>Flexibiliteit</h3>
-              <p>Kies de zorg die bij jou past. Een paar uur per dag of volledige dagen, alles is bespreekbaar.</p>
-            </article>
-
-            <article className="om-why-card om-fade" role="listitem" tabIndex={0} aria-label="Babyverzorging">
-              <div className="om-why-icon" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M18 21v-2a4 4 0 00-4-4h-4a4 4 0 00-4 4v2" />
-                </svg>
-              </div>
-              <h3>Babyverzorging</h3>
-              <p>Ik bied ondersteuning die volledig is afgestemd op jouw gezin en de behoeften van je baby.</p>
-            </article>
-
-            <article className="om-why-card om-fade" role="listitem" tabIndex={0} aria-label="Persoonlijke klik">
-              <div className="om-why-icon" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M23 21v-2a4 4 0 00-3-3.87" />
-                  <path d="M16 3.13a4 4 0 010 7.75" />
-                </svg>
-              </div>
-              <h3>Persoonlijke klik</h3>
-              <p>Met een vrijblijvend intakegesprek ontdekken we samen of er een goede klik is.</p>
-            </article>
-
-            <article className="om-why-card om-fade" role="listitem" tabIndex={0} aria-label="Betrouwbare keuze">
-              <div className="om-why-icon" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="8" r="7" />
-                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-                </svg>
-              </div>
-              <h3>Betrouwbare keuze</h3>
-              <p>Kies voor Marley&apos;s Kraamzorg en ontvang deskundige, liefdevolle zorg voor jou en je baby.</p>
-            </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════ SECTIE 5: CTA ═══════ */}
-      <section className="om-cta" aria-label="Kennismaken met Lisa">
-        <div className="om-cta-deco1" aria-hidden="true" />
-        <div className="om-cta-deco2" aria-hidden="true" />
-        <div className="om-cta-content om-fade">
-          <h2>Wil je kennismaken?</h2>
-          <p>
+      {/* ═══════ CTA ═══════ */}
+      <section className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-3xl px-6 text-center md:px-10">
+          <h2 className="font-cinzel text-3xl uppercase leading-tight text-berry-dark sm:text-4xl">
+            Wil je{" "}
+            <span className="text-primary">kennismaken</span>?
+          </h2>
+
+          <div className="mx-auto my-8 flex items-center justify-center gap-4">
+            <span className="h-px w-12 bg-primary/40" />
+            <span className="text-primary">✦</span>
+            <span className="h-px w-12 bg-primary/40" />
+          </div>
+
+          <p className="mx-auto mb-10 max-w-2xl font-sans text-base leading-relaxed text-berry-dark/80 sm:text-lg">
             Een kraamtijd is zo persoonlijk. Ik neem graag de tijd om te kijken
             wat jij nodig hebt en hoe ik jou het beste kan ondersteunen. Ons
             kennismakingsgesprek is altijd gratis en vrijblijvend.
           </p>
-          <Link href="/contact/" className="om-cta-btn">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            >
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
+
+          <Link
+            href="/contact/"
+            className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover"
+          >
             Neem contact op
           </Link>
         </div>
       </section>
 
-      {/* ═══════ SECTIE 6: FAQ ═══════ */}
-      <section className="bg-white py-20 md:py-32">
-        <div className="container-main">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-cinzel text-2xl md:text-3xl uppercase text-primary text-center mb-4">
-              Veelgestelde vragen
+      {/* ═══════ FAQ ═══════ */}
+      <section className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-3xl px-6 md:px-10">
+          <div className="text-center">
+            <p className="eyebrow mb-4">Goed om te weten</p>
+
+            <h2 className="font-cinzel text-3xl uppercase leading-tight text-berry-dark sm:text-4xl">
+              Veelgestelde <span className="text-primary">vragen</span>
             </h2>
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-12" />
-            <Accordion items={aboutFAQ} />
-            <p className="text-center mt-10 font-body text-berry-dark/80">
-              Wil je meer weten?{" "}
-              <Link href="/contact/" className="text-primary hover:underline font-semibold">
-                Neem gerust contact op
-              </Link>
-            </p>
+
+            <div className="mx-auto my-8 flex items-center justify-center gap-4">
+              <span className="h-px w-12 bg-primary/40" />
+              <span className="text-primary">✦</span>
+              <span className="h-px w-12 bg-primary/40" />
+            </div>
           </div>
+
+          <div className="mt-12 space-y-4">
+            {aboutFAQ.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-2xl border border-berry-dark/[0.08] bg-white p-6 shadow-card transition-shadow open:shadow-card-hover"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+                  <h3 className="font-cinzel text-base uppercase leading-tight text-berry-dark sm:text-lg">
+                    {faq.question}
+                  </h3>
+                  <span
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform duration-300 group-open:rotate-45"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    >
+                      <line x1="12" y1="5" x2="12" y2="19" />
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                  </span>
+                </summary>
+                <p className="mt-4 font-sans text-base leading-relaxed text-berry-dark/75">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+
+          <p className="mt-12 text-center font-sans text-base text-berry-dark/70">
+            Wil je meer weten?{" "}
+            <Link
+              href="/contact/"
+              className="font-semibold text-primary hover:underline"
+            >
+              Neem gerust contact op
+            </Link>
+          </p>
         </div>
       </section>
     </>
