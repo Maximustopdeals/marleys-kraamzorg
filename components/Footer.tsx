@@ -17,6 +17,7 @@ const samenwerkingen = [
   { label: "IVE Verloskundigen", href: "https://www.ive-verloskundigen.nl/" },
   { label: "VIVE Verloskundigen", href: "https://www.viveverloskundigen.nl/" },
   { label: "Cindy's Kraamzorg", href: "https://cindyskraamzorg.nl/" },
+  { label: "Nathalie · Lactatiekundige begeleiding", href: "https://nathalielactatiekundigebegeleiding.nl/" },
 ];
 
 const certificeringen = [
