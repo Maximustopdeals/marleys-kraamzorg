@@ -37,7 +37,15 @@ const certificeringen = [
   },
 ];
 
-function ExternalLink({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) {
+function ExternalLink({
+  href,
+  children,
+  className = "",
+}: {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
     <a
       href={href}
@@ -54,32 +62,23 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer
-      className="relative text-cream overflow-hidden"
-      style={{ backgroundColor: "#541036" }}
-    >
-      {/* Depth gradient overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: "linear-gradient(180deg, rgba(120,40,80,0.4) 0%, rgba(84,16,54,1) 15%, rgba(84,16,54,1) 85%, rgba(60,10,38,0.95) 100%)",
-        }}
-      />
+    <footer className="relative overflow-hidden bg-berry-dark text-cream">
       {/* Top subtle glow */}
       <div
-        className="absolute top-0 left-0 right-0 h-px"
+        className="absolute left-0 right-0 top-0 h-px"
         style={{
-          background: "linear-gradient(90deg, transparent 0%, rgba(154,30,97,0.2) 50%, transparent 100%)",
+          background:
+            "linear-gradient(90deg, transparent 0%, rgba(154,30,97,0.3) 50%, transparent 100%)",
         }}
       />
 
       <div className="relative z-10">
         {/* Main footer content */}
-        <div className="container-main pt-20 md:pt-24 pb-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="container-main pb-16 pt-20 md:pt-24">
+          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {/* Blok 1: Logo & bedrijfsgegevens */}
             <div>
-              <Link href="/" className="inline-block mb-6">
+              <Link href="/" className="mb-6 inline-block">
                 <Image
                   src="/images/logo-new.webp"
                   alt="Marley's Kraamzorg"
@@ -88,10 +87,10 @@ export default function Footer() {
                   className="h-16 w-auto"
                 />
               </Link>
-              <p className="text-cream/80 text-sm leading-relaxed mb-6">
-                Persoonlijke kraamzorg in Rotterdam met 1 vast gezicht
+              <p className="mb-6 font-sans text-sm leading-relaxed text-cream/80">
+                Persoonlijke kraamzorg in Rotterdam met één vast gezicht.
               </p>
-              <div className="space-y-2 text-cream/60 text-xs">
+              <div className="space-y-2 font-sans text-xs text-cream/60">
                 <p>KvK: 92463398</p>
                 <p>KCKZ: 218156</p>
               </div>
@@ -99,16 +98,19 @@ export default function Footer() {
 
             {/* Blok 2: Sitemap */}
             <div>
-              <h4 className="font-cinzel text-base uppercase tracking-[0.06em] mb-4">
+              <h4 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
                 Sitemap
               </h4>
-              <div className="w-8 h-0.5 bg-cream/30 mb-6" />
+              <div className="mb-6 flex items-center gap-2">
+                <span className="h-px w-8 bg-cream/30" />
+                <span className="text-[8px] text-cream/40">✦</span>
+              </div>
               <ul className="space-y-3">
                 {sitemapLinks.map((l) => (
                   <li key={l.href}>
                     <Link
                       href={l.href}
-                      className="text-cream/80 text-sm hover:text-cream transition-colors duration-150"
+                      className="font-sans text-sm text-cream/80 transition-colors duration-150 hover:text-cream"
                     >
                       {l.label}
                     </Link>
@@ -119,27 +121,68 @@ export default function Footer() {
 
             {/* Blok 3: Contact */}
             <div>
-              <h4 className="font-cinzel text-base uppercase tracking-[0.06em] mb-4">
+              <h4 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
                 Contact
               </h4>
-              <div className="w-8 h-0.5 bg-cream/30 mb-6" />
-              <div className="space-y-4 text-sm text-cream/80">
-                <p className="flex items-start gap-2">
-                  <span>📍</span>
+              <div className="mb-6 flex items-center gap-2">
+                <span className="h-px w-8 bg-cream/30" />
+                <span className="text-[8px] text-cream/40">✦</span>
+              </div>
+              <div className="space-y-4 font-sans text-sm text-cream/80">
+                <p className="flex items-start gap-3">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="mt-0.5 flex-shrink-0 text-cream/60"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
                   <span>Dr. J.J.P. Oudsingel 62, Rotterdam</span>
                 </p>
                 <a
                   href="tel:+31645041484"
-                  className="flex items-center gap-2 hover:text-cream transition-colors"
+                  className="flex items-center gap-3 transition-colors hover:text-cream"
                 >
-                  <span>📞</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="flex-shrink-0 text-cream/60"
+                  >
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.86 19.86 0 012.11 4.1 2 2 0 014.11 2h3a2 2 0 012 1.72 12.13 12.13 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.13 12.13 0 002.81.7A2 2 0 0122 16.92z" />
+                  </svg>
                   <span>06 - 450 414 84</span>
                 </a>
                 <a
                   href="mailto:info@marleyskraamzorg.nl"
-                  className="flex items-center gap-2 hover:text-cream transition-colors"
+                  className="flex items-center gap-3 transition-colors hover:text-cream"
                 >
-                  <span>✉️</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="flex-shrink-0 text-cream/60"
+                  >
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="m22 7-10 6L2 7" />
+                  </svg>
                   <span>info@marleyskraamzorg.nl</span>
                 </a>
               </div>
@@ -147,18 +190,21 @@ export default function Footer() {
 
             {/* Blok 4: Samenwerkingen */}
             <div>
-              <h4 className="font-cinzel text-base uppercase tracking-[0.06em] mb-4">
+              <h4 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
                 Samenwerkingen
               </h4>
-              <div className="w-8 h-0.5 bg-cream/30 mb-6" />
+              <div className="mb-6 flex items-center gap-2">
+                <span className="h-px w-8 bg-cream/30" />
+                <span className="text-[8px] text-cream/40">✦</span>
+              </div>
               <ul className="space-y-3">
                 {samenwerkingen.map((s) => (
                   <li key={s.href}>
                     <ExternalLink
                       href={s.href}
-                      className="text-cream/80 text-sm hover:text-cream transition-colors duration-150 flex items-center gap-2"
+                      className="flex items-center gap-2 font-sans text-sm text-cream/80 transition-colors duration-150 hover:text-cream"
                     >
-                      <span className="text-cream/40">✦</span>
+                      <span className="text-[8px] text-cream/40">✦</span>
                       {s.label}
                     </ExternalLink>
                   </li>
@@ -171,17 +217,17 @@ export default function Footer() {
         {/* Certificeringen rij */}
         <div className="border-t border-cream/[0.08]">
           <div className="container-main py-8">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+            <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
               {certificeringen.map((cert) => (
                 <ExternalLink
                   key={cert.label}
                   href={cert.href}
-                  className="text-center group"
+                  className="group text-center"
                 >
-                  <div className="text-cream/70 text-sm font-cinzel uppercase tracking-wider group-hover:text-cream transition-colors">
+                  <div className="font-cinzel text-sm uppercase tracking-wider text-cream/70 transition-colors group-hover:text-cream">
                     {cert.label}
                   </div>
-                  <div className="text-cream/45 text-[10px] mt-0.5">
+                  <div className="mt-0.5 font-sans text-[10px] text-cream/45">
                     {cert.sub}
                   </div>
                 </ExternalLink>
@@ -193,42 +239,42 @@ export default function Footer() {
         {/* Copyright rij */}
         <div className="border-t border-cream/[0.06]">
           <div className="container-main py-6">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-              {/* Links */}
-              <p className="text-cream/50 text-xs">
+            <div className="flex flex-col items-center justify-center gap-4 text-center">
+              {/* Copyright */}
+              <p className="font-sans text-xs text-cream/50">
                 &copy; {currentYear} Marley&apos;s Kraamzorg
               </p>
 
-              {/* Midden — 3 links */}
-              <div className="flex items-center gap-3 text-xs">
+              {/* Juridische links */}
+              <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-sans text-xs">
                 <Link
                   href="/privacy-policy/"
-                  className="text-cream/50 hover:text-cream transition-colors"
+                  className="text-cream/50 transition-colors hover:text-cream"
                 >
                   Privacy Policy
                 </Link>
-                <span className="text-cream/25">|</span>
+                <span className="text-cream/20">✦</span>
                 <Link
                   href="/cookie-policy/"
-                  className="text-cream/50 hover:text-cream transition-colors"
+                  className="text-cream/50 transition-colors hover:text-cream"
                 >
                   Cookie Policy
                 </Link>
-                <span className="text-cream/25">|</span>
+                <span className="text-cream/20">✦</span>
                 <Link
                   href="/algemene-voorwaarden/"
-                  className="text-cream/50 hover:text-cream transition-colors"
+                  className="text-cream/50 transition-colors hover:text-cream"
                 >
                   Algemene Voorwaarden
                 </Link>
               </div>
 
-              {/* Rechts */}
-              <p className="text-cream/50 text-xs">
+              {/* Webdesign credit */}
+              <p className="font-sans text-xs text-cream/50">
                 Webdesign door{" "}
                 <ExternalLink
                   href="https://www.webboostpartner.nl/"
-                  className="underline hover:text-cream transition-colors"
+                  className="underline transition-colors hover:text-cream"
                 >
                   Webboostpartner
                 </ExternalLink>
