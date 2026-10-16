@@ -120,7 +120,31 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Blok 3: Contact */}
+            {/* Blok 3: Samenwerkingen */}
+            <div>
+              <h4 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
+                Samenwerkingen
+              </h4>
+              <div className="mb-6 flex items-center gap-2">
+                <span className="h-px w-8 bg-cream/30" />
+                <span className="text-[8px] text-cream/40">✦</span>
+              </div>
+              <ul className="space-y-3">
+                {samenwerkingen.map((s) => (
+                  <li key={s.href}>
+                    <ExternalLink
+                      href={s.href}
+                      className="flex items-center gap-2 font-sans text-sm text-cream/80 transition-colors duration-150 hover:text-cream"
+                    >
+                      <span className="text-[8px] text-cream/40">✦</span>
+                      {s.label}
+                    </ExternalLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Blok 4: Contact (uiterst rechts) */}
             <div>
               <h4 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
                 Contact
@@ -187,30 +211,6 @@ export default function Footer() {
                   <span>info@marleyskraamzorg.nl</span>
                 </a>
               </div>
-            </div>
-
-            {/* Blok 4: Samenwerkingen */}
-            <div>
-              <h4 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
-                Samenwerkingen
-              </h4>
-              <div className="mb-6 flex items-center gap-2">
-                <span className="h-px w-8 bg-cream/30" />
-                <span className="text-[8px] text-cream/40">✦</span>
-              </div>
-              <ul className="space-y-3">
-                {samenwerkingen.map((s) => (
-                  <li key={s.href}>
-                    <ExternalLink
-                      href={s.href}
-                      className="flex items-center gap-2 font-sans text-sm text-cream/80 transition-colors duration-150 hover:text-cream"
-                    >
-                      <span className="text-[8px] text-cream/40">✦</span>
-                      {s.label}
-                    </ExternalLink>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
