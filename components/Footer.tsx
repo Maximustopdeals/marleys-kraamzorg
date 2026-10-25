@@ -91,7 +91,8 @@ export default function Footer() {
               <p className="mb-6 font-sans text-sm leading-relaxed text-cream/80">
                 Persoonlijke kraamzorg in Rotterdam met één vast gezicht.
               </p>
-              <div className="space-y-2 font-sans text-xs text-cream/60">
+              {/* ✅ FIX: text-cream/60 -> text-cream/80 voor KvK en KCKZ */}
+              <div className="space-y-2 font-sans text-xs text-cream/80">
                 <p>KvK: 92463398</p>
                 <p>KCKZ: 218156</p>
               </div>
@@ -99,9 +100,10 @@ export default function Footer() {
 
             {/* Blok 2: Sitemap */}
             <div>
-              <h4 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
+              {/* ✅ FIX: h4 -> h2 (heading volgorde) */}
+              <h2 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
                 Sitemap
-              </h4>
+              </h2>
               <div className="mb-6 flex items-center gap-2">
                 <span className="h-px w-8 bg-cream/30" />
                 <span className="text-[8px] text-cream/40">✦</span>
@@ -122,9 +124,10 @@ export default function Footer() {
 
             {/* Blok 3: Samenwerkingen */}
             <div>
-              <h4 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
+              {/* ✅ FIX: h4 -> h2 */}
+              <h2 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
                 Samenwerkingen
-              </h4>
+              </h2>
               <div className="mb-6 flex items-center gap-2">
                 <span className="h-px w-8 bg-cream/30" />
                 <span className="text-[8px] text-cream/40">✦</span>
@@ -146,9 +149,10 @@ export default function Footer() {
 
             {/* Blok 4: Contact (uiterst rechts) */}
             <div>
-              <h4 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
+              {/* ✅ FIX: h4 -> h2 */}
+              <h2 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
                 Contact
-              </h4>
+              </h2>
               <div className="mb-6 flex items-center gap-2">
                 <span className="h-px w-8 bg-cream/30" />
                 <span className="text-[8px] text-cream/40">✦</span>
@@ -164,7 +168,7 @@ export default function Footer() {
                     strokeWidth="1.8"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="mt-0.5 flex-shrink-0 text-cream/60"
+                    className="mt-0.5 flex-shrink-0 text-cream/80"
                   >
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
@@ -184,7 +188,7 @@ export default function Footer() {
                     strokeWidth="1.8"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="flex-shrink-0 text-cream/60"
+                    className="flex-shrink-0 text-cream/80"
                   >
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.86 19.86 0 012.11 4.1 2 2 0 014.11 2h3a2 2 0 012 1.72 12.13 12.13 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.13 12.13 0 002.81.7A2 2 0 0122 16.92z" />
                   </svg>
@@ -203,7 +207,7 @@ export default function Footer() {
                     strokeWidth="1.8"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="flex-shrink-0 text-cream/60"
+                    className="flex-shrink-0 text-cream/80"
                   >
                     <rect x="2" y="4" width="20" height="16" rx="2" />
                     <path d="m22 7-10 6L2 7" />
@@ -225,10 +229,12 @@ export default function Footer() {
                   href={cert.href}
                   className="group text-center"
                 >
-                  <div className="font-cinzel text-sm uppercase tracking-wider text-cream/70 transition-colors group-hover:text-cream">
+                  {/* ✅ FIX: text-cream/70 -> text-cream/90 */}
+                  <div className="font-cinzel text-sm uppercase tracking-wider text-cream/90 transition-colors group-hover:text-cream">
                     {cert.label}
                   </div>
-                  <div className="mt-0.5 font-sans text-[10px] text-cream/45">
+                  {/* ✅ FIX: text-cream/45 -> text-cream/80 */}
+                  <div className="mt-0.5 font-sans text-[10px] text-cream/80">
                     {cert.sub}
                   </div>
                 </ExternalLink>
@@ -242,7 +248,8 @@ export default function Footer() {
           <div className="container-main py-6">
             <div className="flex flex-col items-center justify-center gap-4 text-center">
               {/* Copyright */}
-              <p className="font-sans text-xs text-cream/50">
+              {/* ✅ FIX: text-cream/50 -> text-cream/80 */}
+              <p className="font-sans text-xs text-cream/80">
                 &copy; {currentYear} Marley&apos;s Kraamzorg
               </p>
 
@@ -250,28 +257,28 @@ export default function Footer() {
               <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-sans text-xs">
                 <Link
                   href="/privacy-policy/"
-                  className="text-cream/50 transition-colors hover:text-cream"
+                  className="text-cream/80 transition-colors hover:text-cream"
                 >
                   Privacy Policy
                 </Link>
-                <span className="text-cream/20">✦</span>
+                <span className="text-cream/50">✦</span>
                 <Link
                   href="/cookie-policy/"
-                  className="text-cream/50 transition-colors hover:text-cream"
+                  className="text-cream/80 transition-colors hover:text-cream"
                 >
                   Cookie Policy
                 </Link>
-                <span className="text-cream/20">✦</span>
+                <span className="text-cream/50">✦</span>
                 <Link
                   href="/algemene-voorwaarden/"
-                  className="text-cream/50 transition-colors hover:text-cream"
+                  className="text-cream/80 transition-colors hover:text-cream"
                 >
                   Algemene Voorwaarden
                 </Link>
               </div>
 
               {/* Webdesign credit */}
-              <p className="font-sans text-xs text-cream/50">
+              <p className="font-sans text-xs text-cream/80">
                 Webdesign door{" "}
                 <ExternalLink
                   href="https://www.webboostpartner.nl/"
