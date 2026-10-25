@@ -91,7 +91,6 @@ export default function Footer() {
               <p className="mb-6 font-sans text-sm leading-relaxed text-cream/80">
                 Persoonlijke kraamzorg in Rotterdam met één vast gezicht.
               </p>
-              {/* ✅ FIX: text-cream/60 -> text-cream/80 voor KvK en KCKZ */}
               <div className="space-y-2 font-sans text-xs text-cream/80">
                 <p>KvK: 92463398</p>
                 <p>KCKZ: 218156</p>
@@ -100,13 +99,12 @@ export default function Footer() {
 
             {/* Blok 2: Sitemap */}
             <div>
-              {/* ✅ FIX: h4 -> h2 (heading volgorde) */}
               <h2 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
                 Sitemap
               </h2>
               <div className="mb-6 flex items-center gap-2">
-                <span className="h-px w-8 bg-cream/30" />
-                <span className="text-[8px] text-cream/40">✦</span>
+                <span className="h-px w-8 bg-cream/50" />
+                <span className="text-[8px] text-cream/80">✦</span> {/* ✅ FIX: /40 -> /80 */}
               </div>
               <ul className="space-y-3">
                 {sitemapLinks.map((l) => (
@@ -124,13 +122,12 @@ export default function Footer() {
 
             {/* Blok 3: Samenwerkingen */}
             <div>
-              {/* ✅ FIX: h4 -> h2 */}
               <h2 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
                 Samenwerkingen
               </h2>
               <div className="mb-6 flex items-center gap-2">
-                <span className="h-px w-8 bg-cream/30" />
-                <span className="text-[8px] text-cream/40">✦</span>
+                <span className="h-px w-8 bg-cream/50" />
+                <span className="text-[8px] text-cream/80">✦</span> {/* ✅ FIX: /40 -> /80 */}
               </div>
               <ul className="space-y-3">
                 {samenwerkingen.map((s) => (
@@ -139,7 +136,7 @@ export default function Footer() {
                       href={s.href}
                       className="flex items-center gap-2 font-sans text-sm text-cream/80 transition-colors duration-150 hover:text-cream"
                     >
-                      <span className="text-[8px] text-cream/40">✦</span>
+                      <span className="text-[8px] text-cream/80">✦</span> {/* ✅ FIX: /40 -> /80 */}
                       {s.label}
                     </ExternalLink>
                   </li>
@@ -149,13 +146,12 @@ export default function Footer() {
 
             {/* Blok 4: Contact (uiterst rechts) */}
             <div>
-              {/* ✅ FIX: h4 -> h2 */}
               <h2 className="mb-4 font-cinzel text-base uppercase tracking-[0.06em]">
                 Contact
               </h2>
               <div className="mb-6 flex items-center gap-2">
-                <span className="h-px w-8 bg-cream/30" />
-                <span className="text-[8px] text-cream/40">✦</span>
+                <span className="h-px w-8 bg-cream/50" />
+                <span className="text-[8px] text-cream/80">✦</span> {/* ✅ FIX: /40 -> /80 */}
               </div>
               <div className="space-y-4 font-sans text-sm text-cream/80">
                 <p className="flex items-start gap-3">
@@ -229,11 +225,9 @@ export default function Footer() {
                   href={cert.href}
                   className="group text-center"
                 >
-                  {/* ✅ FIX: text-cream/70 -> text-cream/90 */}
                   <div className="font-cinzel text-sm uppercase tracking-wider text-cream/90 transition-colors group-hover:text-cream">
                     {cert.label}
                   </div>
-                  {/* ✅ FIX: text-cream/45 -> text-cream/80 */}
                   <div className="mt-0.5 font-sans text-[10px] text-cream/80">
                     {cert.sub}
                   </div>
@@ -248,7 +242,6 @@ export default function Footer() {
           <div className="container-main py-6">
             <div className="flex flex-col items-center justify-center gap-4 text-center">
               {/* Copyright */}
-              {/* ✅ FIX: text-cream/50 -> text-cream/80 */}
               <p className="font-sans text-xs text-cream/80">
                 &copy; {currentYear} Marley&apos;s Kraamzorg
               </p>
@@ -261,14 +254,14 @@ export default function Footer() {
                 >
                   Privacy Policy
                 </Link>
-                <span className="text-cream/50">✦</span>
+                <span className="text-cream/80">✦</span> {/* ✅ FIX: /50 -> /80 */}
                 <Link
                   href="/cookie-policy/"
                   className="text-cream/80 transition-colors hover:text-cream"
                 >
                   Cookie Policy
                 </Link>
-                <span className="text-cream/50">✦</span>
+                <span className="text-cream/80">✦</span> {/* ✅ FIX: /50 -> /80 */}
                 <Link
                   href="/algemene-voorwaarden/"
                   className="text-cream/80 transition-colors hover:text-cream"
