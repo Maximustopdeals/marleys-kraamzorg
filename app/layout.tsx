@@ -4,14 +4,14 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import ClientWidgets from "@/components/ClientWidgets"; // ✅ NIEUW
+import ClientWidgets from "@/components/ClientWidgets";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
   weight: "500",
   variable: "--font-cinzel",
   display: "swap",
-  preload: true,
+  preload: true, // ✅ Deze mag blijven (voor de grote H1)
 });
 
 const openSans = Open_Sans({
@@ -19,7 +19,7 @@ const openSans = Open_Sans({
   weight: ["400", "600"],
   variable: "--font-open-sans",
   display: "swap",
-  preload: true,
+  // ✅ FIX: preload: true is hier weggehaald!
 });
 
 export const viewport: Viewport = {
@@ -108,8 +108,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        
-        {/* ✅ Alle zware Client Components in één lazy wrapper */}
         <ClientWidgets />
       </body>
     </html>
