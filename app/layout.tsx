@@ -12,7 +12,8 @@ const cinzel = Cinzel({
   variable: "--font-cinzel",
   display: "swap",
   preload: true,
-  adjustFontFallback: true, // ✅ NIEUW: Voorkomt dat de browser wacht op het font
+  adjustFontFallback: true,
+  fallback: ["Georgia", "serif"], // ✅ NIEUW: Voorkomt de Layout Shift
 });
 
 const openSans = Open_Sans({
@@ -20,7 +21,8 @@ const openSans = Open_Sans({
   weight: ["400", "600"],
   variable: "--font-open-sans",
   display: "swap",
-  adjustFontFallback: true, // ✅ NIEUW
+  adjustFontFallback: true,
+  fallback: ["Arial", "sans-serif"], // ✅ NIEUW: Voorkomt de Layout Shift
 });
 
 export const viewport: Viewport = {
