@@ -9,9 +9,10 @@ export default function ClientWidgets() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // ✅ 3000ms zorgt voor een lagere Total Blocking Time (TBT)
     const timer = setTimeout(() => {
       setIsMounted(true);
-    }, 1500); 
+    }, 3000); 
 
     return () => clearTimeout(timer);
   }, []);
