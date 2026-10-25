@@ -62,7 +62,6 @@ function HomeHero() {
               </Link>
             </div>
 
-            {/* ✅ FIX: text-berry-dark/50 -> text-berry-dark/80 */}
             <p className="mt-8 font-sans text-xs uppercase tracking-[0.2em] text-berry-dark/80">
               KCKZ-gecertificeerd · 24/7 bereikbaar · 5.0 op Google
             </p>
@@ -75,17 +74,17 @@ function HomeHero() {
               aria-hidden="true"
             />
 
-            <div className="relative overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(74,26,61,0.35)]">
+            {/* ✅ FIX: aspect-[9/11] reserveert direct de ruimte, fill zorgt dat de afbeelding past */}
+            <div className="relative aspect-[9/11] w-full overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(74,26,61,0.35)]">
               <Image
                 src="/images/baby-portrait.webp"
                 alt="Pasgeboren baby in een zachte witte omgeving - Marley's Kraamzorg Rotterdam"
-                width={900}
-                height={1100}
+                fill
                 priority
                 fetchPriority="high"
                 quality={75}
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="h-auto w-full object-cover"
+                className="object-cover"
               />
 
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-berry-dark/5 via-transparent to-transparent" />
@@ -136,7 +135,6 @@ function FlipboxSection() {
             <span className="text-primary">✦</span>
             <span className="h-px w-12 bg-primary/40" />
           </div>
-          {/* ✅ FIX: text-berry-dark/75 -> text-berry-dark/85 */}
           <p className="font-sans text-base leading-relaxed text-berry-dark/85">
             Kleinschalige kraamzorg in Rotterdam betekent een vertrouwde band,
             persoonlijke aandacht en een zorgvuldige aanpak.
@@ -147,7 +145,6 @@ function FlipboxSection() {
           {pijlers.map((p, i) => (
             <div key={i} className="text-center lg:text-left">
               <div className="mb-8 flex items-center justify-center gap-3 lg:justify-start">
-                {/* ✅ FIX: text-primary/60 -> text-primary/80 */}
                 <span className="font-cinzel text-sm text-primary/80">
                   {p.nr}
                 </span>
@@ -156,7 +153,6 @@ function FlipboxSection() {
               <h3 className="mb-4 font-cinzel text-xl uppercase leading-tight text-berry-dark sm:text-2xl">
                 {p.title}
               </h3>
-              {/* ✅ FIX: text-berry-dark/70 -> text-berry-dark/80 */}
               <p className="font-sans text-base leading-relaxed text-berry-dark/80">
                 {p.text}
               </p>
@@ -165,11 +161,9 @@ function FlipboxSection() {
         </div>
 
         <div className="mx-auto mt-24 max-w-2xl text-center">
-          {/* ✅ FIX: text-berry-dark/50 -> text-berry-dark/80 */}
           <p className="font-cinzel text-sm uppercase tracking-[0.2em] text-berry-dark/80 mb-4">
             Start vandaag met jouw kraamzorg
           </p>
-          {/* ✅ FIX: text-berry-dark/70 -> text-berry-dark/80 */}
           <p className="font-sans text-base leading-relaxed text-berry-dark/80">
             Klaar voor een persoonlijke kraamzorg met één vast gezicht? Ik nodig
             je graag uit voor een vrijblijvende kennismaking.
@@ -231,7 +225,6 @@ function StepsSection() {
             <span className="text-primary">✦</span>
             <span className="h-px w-12 bg-primary/40" />
           </div>
-          {/* ✅ FIX: text-berry-dark/75 -> text-berry-dark/85 */}
           <p className="font-sans text-base leading-relaxed text-berry-dark/85">
             Van eerste aanmelding tot de kraamweek zelf. Ik begeleid je in
             elke stap.
@@ -255,7 +248,6 @@ function StepsSection() {
                 <h3 className="mb-4 font-cinzel text-xl uppercase leading-tight text-berry-dark sm:text-2xl">
                   {stap.title}
                 </h3>
-                {/* ✅ FIX: text-berry-dark/70 -> text-berry-dark/80 */}
                 <p className="font-sans text-base leading-relaxed text-berry-dark/80">
                   {stap.text}
                 </p>
@@ -362,7 +354,6 @@ function WhatIsSection() {
             {kenmerken.map((k, i) => (
               <div key={i} className="text-center">
                 <div className="mb-6 flex items-center justify-center gap-3">
-                  {/* ✅ FIX: text-primary/60 -> text-primary/80 */}
                   <span className="font-cinzel text-sm text-primary/80">
                     0{i + 1}
                   </span>
@@ -371,7 +362,6 @@ function WhatIsSection() {
                 <h3 className="mb-4 font-cinzel text-base uppercase leading-tight text-berry-dark sm:text-lg">
                   {k.title}
                 </h3>
-                {/* ✅ FIX: text-berry-dark/70 -> text-berry-dark/80 */}
                 <p className="font-sans text-sm leading-relaxed text-berry-dark/80">
                   {k.text}
                 </p>
