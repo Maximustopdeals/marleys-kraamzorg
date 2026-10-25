@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
     nextScriptWorkers: true,
+    optimizeCss: true, // ✅ Activeert de CSS-optimalisatie
   },
   images: {
     formats: ["image/avif", "image/webp"],
