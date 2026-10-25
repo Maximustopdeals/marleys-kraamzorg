@@ -3,10 +3,8 @@ import { Cinzel, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FloatingActions from "@/components/FloatingActions";
-import CookieConsent from "@/components/CookieConsent";
-import Analytics from "@/components/Analytics";
 import JsonLd from "@/components/JsonLd";
+import ClientWidgets from "@/components/ClientWidgets"; // ✅ NIEUW
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -24,7 +22,6 @@ const openSans = Open_Sans({
   preload: true,
 });
 
-/* ✅ NIEUW: viewport als aparte export (verplicht in Next.js 13+) */
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -33,19 +30,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.marleyskraamzorg.nl"),
-
-  /* ✅ AANGEPAST: title van 66 → 44 tekens */
   title: {
     default: "Kraamzorg Rotterdam | met een Vast Gezicht",
     template: "%s | Marley's Kraamzorg",
   },
-
-  /* ✅ AANGEPAST: description van 157 → 135 tekens, met verwijzing naar Marley */
   description:
     "Kraamzorg in Rotterdam, vernoemd naar dochtertje Marley. Persoonlijke zorg, één vast gezicht. Plan een vrijblijvende intake.",
-
-  /* ✅ VERWIJDERD: keywords (Google negeert deze al jaren) */
-
   openGraph: {
     type: "website",
     locale: "nl_NL",
@@ -56,7 +46,6 @@ export const metadata: Metadata = {
       "Persoonlijke kraamzorg in Rotterdam met één vast gezicht. 24/7 bereikbaar.",
     images: [
       {
-        /* ✅ AANGEPAST: absolute URL */
         url: "https://www.marleyskraamzorg.nl/images/hero-banner.jpg",
         width: 1200,
         height: 630,
@@ -64,7 +53,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Kraamzorg Rotterdam | met een Vast Gezicht",
@@ -72,7 +60,6 @@ export const metadata: Metadata = {
       "Eén vast gezicht, 24/7 bereikbaar. Verzekerd van een warme start.",
     images: ["https://www.marleyskraamzorg.nl/images/hero-banner.jpg"],
   },
-
   robots: {
     index: true,
     follow: true,
@@ -85,26 +72,21 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
   icons: {
     icon: "/images/favicon.png",
     shortcut: "/images/favicon.png",
     apple: "/images/favicon.png",
   },
-
   verification: {
     google: "HDkkplgZsbxIfjiX_7m2RFRZVJpi9O-z3WTJD9EoHO0",
   },
-
   alternates: {
     canonical: "https://www.marleyskraamzorg.nl",
   },
-
   authors: [{ name: "Lisa - Marley's Kraamzorg" }],
   category: "Kraamzorg",
   classification: "Healthcare / Maternity Care",
   referrer: "origin-when-cross-origin",
-  /* ✅ VERWIJDERD: theme-color uit other — staat nu in viewport */
 };
 
 export default function RootLayout({
@@ -126,9 +108,9 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <FloatingActions />
-        <CookieConsent />
-        <Analytics />
+        
+        {/* ✅ Alle zware Client Components in één lazy wrapper */}
+        <ClientWidgets />
       </body>
     </html>
   );
