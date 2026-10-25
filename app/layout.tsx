@@ -11,7 +11,8 @@ const cinzel = Cinzel({
   weight: "500",
   variable: "--font-cinzel",
   display: "swap",
-  preload: true, // ✅ Deze mag blijven (voor de grote H1)
+  preload: true,
+  adjustFontFallback: true, // ✅ NIEUW: Voorkomt dat de browser wacht op het font
 });
 
 const openSans = Open_Sans({
@@ -19,7 +20,7 @@ const openSans = Open_Sans({
   weight: ["400", "600"],
   variable: "--font-open-sans",
   display: "swap",
-  // ✅ FIX: preload: true is hier weggehaald!
+  adjustFontFallback: true, // ✅ NIEUW
 });
 
 export const viewport: Viewport = {
