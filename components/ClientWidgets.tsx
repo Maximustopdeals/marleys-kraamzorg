@@ -9,10 +9,9 @@ export default function ClientWidgets() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    // Wacht 1.5 seconde zodat de LCP-afbeelding eerst kan laden
     const timer = setTimeout(() => {
       setIsMounted(true);
-    }, 1500);
+    }, 1500); 
 
     return () => clearTimeout(timer);
   }, []);
