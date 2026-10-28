@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, Check, ExternalLink, Zap, Monitor, Smartphone } from "lucide-react";
-import USPGrid from "@/components/USPGrid";
 import PageSpeedTool from "@/components/PageSpeedTool";
 import CTASection from "@/components/CTASection";
 
@@ -102,7 +101,6 @@ export default function HomePage() {
         </div>
       </section>
       
-      <USPGrid />
       <PageSpeedTool />
       <CTASection />
     </>
