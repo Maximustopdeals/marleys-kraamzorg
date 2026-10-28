@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, Check, ExternalLink, Zap, Monitor, Smartphone } from "lucide-react";
-import PageSpeedTool from "@/components/PageSpeedTool";
-import CTASection from "@/components/CTASection";
 
 export const metadata = {
   title: "Website Laten Maken Rotterdam | Conversiegericht & Snel | WebBoost Partner",
@@ -101,8 +99,10 @@ export default function HomePage() {
         </div>
       </section>
       
-      <PageSpeedTool />
-      <CTASection />
+      {/* 
+        De componenten <PageSpeedTool /> en <CTASection /> zijn hier verwijderd 
+        omdat de bestanden niet in je components map staan. 
+      */}
     </>
   );
 }
