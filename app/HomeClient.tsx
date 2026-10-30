@@ -26,12 +26,16 @@ function HomeHero() {
             </div>
 
             {/* 
-              DE NIEUWE H1: Één vloeiende zin, geen pijpen, perfect voor SEO.
-              De class 'break-words' en de grootte zijn afgesteld op de kolom.
+              HIGH-END H1: 
+              De titel is nu opgedeeld in een grote kop en een subtitel.
+              Dit voorkomt dat het lange woord 'kraamverzorgende' afbreekt
+              en zorgt voor een prachtige, professionele hiërarchie.
             */}
-            <h1 className="font-cinzel text-[2.2rem] uppercase leading-[1.15] tracking-tight text-berry-dark sm:text-[2.8rem] lg:text-[3.2rem] xl:text-[3.6rem] break-words">
-              Kraamzorg Rotterdam
-              <span className="block mt-2 text-primary">
+            <h1 className="font-cinzel uppercase tracking-tight text-berry-dark">
+              <span className="block text-4xl leading-[1.1] sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem]">
+                Kraamzorg Rotterdam
+              </span>
+              <span className="mt-3 block text-[1.7rem] leading-[1.2] text-primary sm:text-3xl lg:text-[2.2rem] xl:text-[2.5rem]">
                 met één vaste kraamverzorgende
               </span>
             </h1>
@@ -41,21 +45,14 @@ function HomeHero() {
               <span className="text-primary text-sm">✦</span>
             </div>
 
-            {/* 
-              NIEUWE ALINEA: Geen herhaling van de H1. Focus op gevoel, 
-              vertrouwen en de persoon (Lisa).
-            */}
+            {/* NIEUWE ALINEA: Geen herhaling van de H1, focus op gevoel en conversie */}
             <p className="mb-10 font-sans text-base leading-relaxed text-berry-dark/80 sm:text-lg">
               Ik ben <strong className="font-semibold text-berry-dark">Lisa</strong>. 
               Geen wisselende gezichten, maar vertrouwde zorg van dag 1 voor jou, je baby en je gezin. 
               Zo ervaar je rust, continuïteit en deskundige begeleiding tijdens de eerste, bijzondere kraamweek.
             </p>
 
-            {/* 
-              DE CTA'S: Nu met een unieke bestemming.
-              1. Direct aanmelden in het externe portaal.
-              2. Contactformulier voor een kennismaking.
-            */}
+            {/* DE CTA'S: Unieke bestemmingen voor hogere conversie */}
             <div className="flex flex-col gap-4 sm:flex-row">
               <a
                 href="https://marleyskraamzorg.mijngeboortezorg.nl/Aanvragen/kraamzorg?mode=frame"
@@ -98,12 +95,10 @@ function HomeHero() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
               
-              {/* Gradient-overlays voor de High-End wegvloeiing in de witte achtergrond */}
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-40 mix-blend-overlay" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-berry-dark/10 via-transparent to-white/80" />
             </div>
 
-            {/* Decoratief element op de foto */}
             <div className="absolute -bottom-6 -left-6 flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-xl border border-berry-dark/5 z-30">
               <span className="text-primary text-2xl">✦</span>
             </div>
