@@ -26,9 +26,9 @@ function HomeHero() {
             </div>
 
             <h1 className="font-cinzel text-4xl uppercase leading-[1.05] tracking-tight text-berry-dark sm:text-5xl lg:text-6xl xl:text-[4rem]">
-              Kraamzorg in Rotterdam,
+              Kraamzorg Rotterdam
               <span className="block mt-3 text-primary">
-                met een vast gezicht
+                met één vaste kraamverzorgende
               </span>
             </h1>
 
@@ -38,13 +38,11 @@ function HomeHero() {
             </div>
 
             <p className="mb-6 font-sans text-lg leading-relaxed text-berry-dark/90">
-              Ik ben <strong className="font-semibold text-berry-dark">Lisa</strong>.
-              Persoonlijke kraamzorg met <strong className="font-semibold text-berry-dark">één vast gezicht</strong>.
-              Geen wisselende verzorgenden, maar een vertrouwd iemand van dag 1.
+              Bij <strong className="font-semibold text-berry-dark">Marley&apos;s Kraamzorg</strong> krijg je persoonlijke kraamzorg in Rotterdam en omgeving van één vaste kraamverzorgende. 
             </p>
 
             <p className="mb-10 font-sans text-base leading-relaxed text-berry-dark/80">
-              Met zorg voor jou, je baby en je hele gezin. In Rotterdam en omgeving.
+              Geen wisselende gezichten, maar vertrouwde zorg voor jou, je baby en je gezin tijdens de eerste dagen na de geboorte.
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
@@ -74,7 +72,6 @@ function HomeHero() {
               aria-hidden="true"
             />
 
-            {/* ✅ FIX: aspect-[9/11] reserveert direct de ruimte, fill zorgt dat de afbeelding past */}
             <div className="relative aspect-[9/11] w-full overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(74,26,61,0.35)]">
               <Image
                 src="/images/baby-portrait.webp"
