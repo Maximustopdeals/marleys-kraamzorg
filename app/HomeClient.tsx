@@ -25,6 +25,7 @@ function HomeHero() {
               </span>
             </div>
 
+            {/* H1 Perfect afgestemd op Title & Meta Description */}
             <h1 className="font-cinzel text-4xl uppercase leading-[1.1] tracking-tight text-berry-dark sm:text-5xl lg:text-6xl xl:text-[4.2rem]">
               Kraamzorg Rotterdam
               <span className="block mt-3 text-primary">
@@ -83,11 +84,7 @@ function HomeHero() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
               
-              {/* 
-                HIGH-END FIX: Deze gradient-overlays zorgen ervoor dat de foto 
-                onderaan prachtig wegvloeit in de witte achtergrond, 
-                waardoor de titel nooit in de foto valt. 
-              */}
+              {/* Gradient-overlays voor de High-End wegvloeiing in de witte achtergrond */}
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-40 mix-blend-overlay" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-berry-dark/10 via-transparent to-white/80" />
             </div>
