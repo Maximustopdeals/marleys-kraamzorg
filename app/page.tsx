@@ -3,12 +3,11 @@ import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
   // ═══════ BASIS SEO ═══════
-  // Titel: Zoekterm vooraan, gevolgd door USP. (Totaal: 59 tekens)
-  title: "Kraamzorg Rotterdam | Persoonlijke zorg met 1 vast gezicht",
+  title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
   
-  // Meta Description: Start exact met de zoekterm/H1, gevolgd door USP en CTA. (Totaal: 156 tekens)
+  // De meta omschrijving start nu EXACT met dezelfde tekst als de H1
   description:
-    "Kraamzorg Rotterdam met één vast gezicht. Bij Marley's Kraamzorg krijg je zorg van één vaste kraamverzorgende. KCKZ-gecertificeerd en 24/7 bereikbaar.",
+    "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
   
   keywords: [
     "kraamzorg Rotterdam",
@@ -46,9 +45,9 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     url: "https://www.marleyskraamzorg.nl/",
     siteName: "Marley's Kraamzorg",
-    title: "Kraamzorg Rotterdam | Persoonlijke zorg met 1 vast gezicht",
+    title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
     description:
-      "Kraamzorg Rotterdam met één vast gezicht. Bij Marley's Kraamzorg krijg je zorg van één vaste kraamverzorgende. KCKZ-gecertificeerd en 24/7 bereikbaar.",
+      "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
     images: [
       {
         url: "https://www.marleyskraamzorg.nl/images/og-image.jpg",
@@ -62,9 +61,9 @@ export const metadata: Metadata = {
   // ═══════ TWITTER CARD ═══════
   twitter: {
     card: "summary_large_image",
-    title: "Kraamzorg Rotterdam | Persoonlijke zorg met 1 vast gezicht",
+    title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
     description:
-      "Kraamzorg Rotterdam met één vast gezicht. Bij Marley's Kraamzorg krijg je zorg van één vaste kraamverzorgende. KCKZ-gecertificeerd en 24/7 bereikbaar.",
+      "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
     images: ["https://www.marleyskraamzorg.nl/images/og-image.jpg"],
   },
 
