@@ -31,9 +31,9 @@ function HomeHero() {
               break-words zorgt ervoor dat lange woorden netjes afbreken.
             */}
             <h1 className="font-cinzel text-[2.5rem] uppercase leading-[1.15] tracking-tight text-berry-dark sm:text-5xl lg:text-[3.2rem] xl:text-[3.6rem] break-words">
-              Kraamzorg Rotterdam
+              Kraamzorg Rotterdam |
               <span className="block mt-3 text-primary">
-                professionele kraamzorg
+               Kraamzorg in Rotterdam met één vaste kraamverzorgende
               </span>
             </h1>
 
