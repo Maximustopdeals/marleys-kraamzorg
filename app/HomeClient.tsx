@@ -2,50 +2,87 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
-/* ── Hero — Editorial Split-Screen ── */
+/* ── Hero — Editorial Split-Screen met Parallax ── */
 function HomeHero() {
+  const ref = useRef(null);
+  
+  // Framer Motion scroll tracking voor het "wegvloeien" van de foto
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const opacityImage = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const scaleImage = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
+
   return (
-    <section className="relative w-full overflow-hidden bg-white">
-      {/* Zeer subtiel decoratief element */}
+    <section ref={ref} className="relative w-full overflow-hidden bg-white">
+      {/* Subtiel decoratief element op de achtergrond */}
       <div
         className="pointer-events-none absolute -right-40 top-20 h-[600px] w-[600px] rounded-full bg-blush/20 blur-3xl"
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 pt-32 md:pt-40 pb-20 md:pb-28">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 pt-32 md:pt-40 pb-20 md:pb-32">
+        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-12 xl:gap-24">
 
-          {/* ─── TEKST LINKS ─── */}
+          {/* ─── TEKST LINKS (High-End Typografie) ─── */}
           <div className="max-w-xl">
-            <div className="mb-8 flex items-center gap-2">
-              <span className="text-primary text-xs">✦</span>
-              <span className="font-cinzel text-[11px] uppercase tracking-[0.28em] text-primary">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="mb-8 flex items-center gap-3"
+            >
+              <span className="h-px w-8 bg-primary/50" />
+              <span className="font-cinzel text-[11px] uppercase tracking-[0.3em] text-primary">
                 Marley&apos;s Kraamzorg
               </span>
-            </div>
+            </motion.div>
 
-            <h1 className="font-cinzel text-4xl uppercase leading-[1.05] tracking-tight text-berry-dark sm:text-5xl lg:text-6xl xl:text-[4rem]">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+              className="font-cinzel text-4xl uppercase leading-[1.1] tracking-tight text-berry-dark sm:text-5xl lg:text-6xl xl:text-[4.2rem]"
+            >
               Kraamzorg Rotterdam
               <span className="block mt-3 text-primary">
-                met één vaste kraamverzorgende
+                met één vast gezicht
               </span>
-            </h1>
+            </motion.h1>
 
-            <div className="my-8 flex items-center gap-3">
-              <span className="h-px w-12 bg-primary/40" />
-              <span className="text-primary text-xs">✦</span>
-            </div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className="my-8 flex items-center gap-4"
+            >
+              <span className="h-px w-16 bg-primary/30" />
+              <span className="text-primary text-sm">✦</span>
+            </motion.div>
 
-            <p className="mb-6 font-sans text-lg leading-relaxed text-berry-dark/90">
-              Bij <strong className="font-semibold text-berry-dark">Marley&apos;s Kraamzorg</strong> krijg je persoonlijke kraamzorg in Rotterdam en omgeving van één vaste kraamverzorgende. 
-            </p>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              className="mb-10 font-sans text-lg leading-relaxed text-berry-dark/80 sm:text-xl"
+            >
+              Ik ben <strong className="font-semibold text-berry-dark">Lisa</strong>.
+              Persoonlijke kraamzorg met <strong className="font-semibold text-berry-dark">één vast gezicht</strong>.
+              Geen wisselende verzorgenden, maar een vertrouwd iemand van dag 1 voor jou, je baby en je gezin.
+            </motion.p>
 
-            <p className="mb-10 font-sans text-base leading-relaxed text-berry-dark/80">
-              Geen wisselende gezichten, maar vertrouwde zorg voor jou, je baby en je gezin tijdens de eerste dagen na de geboorte.
-            </p>
-
-            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              className="flex flex-col gap-4 sm:flex-row"
+            >
               <Link
                 href="/contact/"
                 className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover"
@@ -58,37 +95,53 @@ function HomeHero() {
               >
                 Plan een kennismaking
               </Link>
-            </div>
+            </motion.div>
 
-            <p className="mt-8 font-sans text-xs uppercase tracking-[0.2em] text-berry-dark/80">
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="mt-10 font-sans text-xs uppercase tracking-[0.2em] text-berry-dark/50"
+            >
               KCKZ-gecertificeerd · 24/7 bereikbaar · 5.0 op Google
-            </p>
+            </motion.p>
           </div>
 
-          {/* ─── FOTO RECHTS ─── */}
-          <div className="relative">
+          {/* ─── FOTO RECHTS (Met Parallax & Fade) ─── */}
+          <div className="relative lg:ml-auto w-full max-w-lg lg:max-w-none">
+            {/* Zachte gloed achter de foto */}
             <div
-              className="absolute -inset-3 rounded-[2rem] bg-blush/30 blur-xl"
+              className="absolute -inset-4 rounded-[2.5rem] bg-blush/30 blur-2xl"
               aria-hidden="true"
             />
 
-            <div className="relative aspect-[9/11] w-full overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-30px_rgba(74,26,61,0.35)]">
+            <motion.div 
+              style={{ y: yImage, opacity: opacityImage, scale: scaleImage }}
+              className="relative aspect-[4/5] w-full overflow-hidden rounded-[2.5rem] shadow-[0_40px_80px_-30px_rgba(74,26,61,0.3)] sm:aspect-[9/11]"
+            >
               <Image
                 src="/images/baby-portrait.webp"
                 alt="Pasgeboren baby in een zachte witte omgeving - Marley's Kraamzorg Rotterdam"
                 fill
                 priority
                 fetchPriority="high"
-                quality={75}
+                quality={85}
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
 
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-berry-dark/5 via-transparent to-transparent" />
-            </div>
+              {/* 
+                HIGH-END FIX: Deze gradient zorgt ervoor dat de foto 
+                onderaan prachtig wegvloeit in de witte achtergrond, 
+                waardoor de titel nooit in de foto valt. 
+              */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-40 mix-blend-overlay" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-berry-dark/10 via-transparent to-white/80" />
+            </motion.div>
 
-            <div className="absolute -bottom-4 -right-4 flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-card">
-              <span className="text-primary text-lg">✦</span>
+            {/* Decoratief element op de foto */}
+            <div className="absolute -bottom-6 -left-6 flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-xl border border-berry-dark/5">
+              <span className="text-primary text-2xl">✦</span>
             </div>
           </div>
 
