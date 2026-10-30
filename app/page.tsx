@@ -3,10 +3,13 @@ import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
   // ═══════ BASIS SEO ═══════
-  // Titel is geoptimaliseerd: Primaire zoekterm vooraan + sterke USP
+  // Titel: Zoekterm vooraan, gevolgd door USP. (Totaal: 59 tekens)
   title: "Kraamzorg Rotterdam | Persoonlijke zorg met 1 vast gezicht",
+  
+  // Meta Description: Start exact met de zoekterm/H1, gevolgd door USP en CTA. (Totaal: 156 tekens)
   description:
-    "Op zoek naar kraamzorg in Rotterdam? Bij Marley's Kraamzorg krijg je één vaste kraamverzorgende. Persoonlijk, betrouwbaar & 24/7 bereikbaar. Plan een intake.",
+    "Kraamzorg Rotterdam met één vast gezicht. Bij Marley's Kraamzorg krijg je zorg van één vaste kraamverzorgende. KCKZ-gecertificeerd en 24/7 bereikbaar.",
+  
   keywords: [
     "kraamzorg Rotterdam",
     "kraamverzorgende Rotterdam",
@@ -45,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Marley's Kraamzorg",
     title: "Kraamzorg Rotterdam | Persoonlijke zorg met 1 vast gezicht",
     description:
-      "Bij Marley's Kraamzorg krijg je één vaste kraamverzorgende. Persoonlijk, betrouwbaar & 24/7 bereikbaar in Rotterdam.",
+      "Kraamzorg Rotterdam met één vast gezicht. Bij Marley's Kraamzorg krijg je zorg van één vaste kraamverzorgende. KCKZ-gecertificeerd en 24/7 bereikbaar.",
     images: [
       {
         url: "https://www.marleyskraamzorg.nl/images/og-image.jpg",
@@ -61,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kraamzorg Rotterdam | Persoonlijke zorg met 1 vast gezicht",
     description:
-      "Bij Marley's Kraamzorg krijg je één vaste kraamverzorgende. Persoonlijk, betrouwbaar & 24/7 bereikbaar in Rotterdam.",
+      "Kraamzorg Rotterdam met één vast gezicht. Bij Marley's Kraamzorg krijg je zorg van één vaste kraamverzorgende. KCKZ-gecertificeerd en 24/7 bereikbaar.",
     images: ["https://www.marleyskraamzorg.nl/images/og-image.jpg"],
   },
 
