@@ -25,11 +25,14 @@ function HomeHero() {
               </span>
             </div>
 
-            {/* H1 Perfect afgestemd op Title & Meta Description */}
+            {/* 
+              H1 NU 100% GELIJK AAN META DESCRIPTION EN TITLE
+              "Kraamzorg Rotterdam met één vaste kraamverzorgende"
+            */}
             <h1 className="font-cinzel text-4xl uppercase leading-[1.1] tracking-tight text-berry-dark sm:text-5xl lg:text-6xl xl:text-[4.2rem]">
               Kraamzorg Rotterdam
               <span className="block mt-3 text-primary">
-                met één vast gezicht
+                met één vaste kraamverzorgende
               </span>
             </h1>
 
@@ -38,10 +41,9 @@ function HomeHero() {
               <span className="text-primary text-sm">✦</span>
             </div>
 
+            {/* Eerste alinea die de H1 versterkt (zoals je eerder voorstelde) */}
             <p className="mb-10 font-sans text-lg leading-relaxed text-berry-dark/80 sm:text-xl">
-              Ik ben <strong className="font-semibold text-berry-dark">Lisa</strong>.
-              Persoonlijke kraamzorg met <strong className="font-semibold text-berry-dark">één vast gezicht</strong>.
-              Geen wisselende verzorgenden, maar een vertrouwd iemand van dag 1 voor jou, je baby en je gezin.
+              Bij <strong className="font-semibold text-berry-dark">Marley&apos;s Kraamzorg</strong> krijg je persoonlijke kraamzorg in Rotterdam en omgeving van één vaste kraamverzorgende. Geen wisselende gezichten, maar vertrouwde zorg voor jou, je baby en je gezin tijdens de eerste dagen na de geboorte.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
