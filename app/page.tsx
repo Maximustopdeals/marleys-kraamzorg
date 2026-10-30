@@ -3,15 +3,15 @@ import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
   // ═══════ BASIS SEO ═══════
-  // Titel: Exacte match met H1, zoekterm vooraan.
   title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
   
-  // Meta Description: Krachtig, leesbaar, bevat de USP en CTA. Geen onnodige herhaling.
+  // Uw nieuwe, perfect passende meta omschrijving (92 tekens)
   description:
-    "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg van Lisa voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
+    "Kraamzorg in Rotterdam met één vast gezicht. Persoonlijke zorg voor jou, je baby en je gezin.",
   
   keywords: [
     "kraamzorg Rotterdam",
+    "professionele kraamzorg",
     "kraamverzorgende Rotterdam",
     "persoonlijke kraamzorg",
     "kraamzorg met vast gezicht",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Marley's Kraamzorg",
     title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
     description:
-      "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg van Lisa voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
+      "Kraamzorg in Rotterdam met één vast gezicht. Persoonlijke zorg voor jou, je baby en je gezin.",
     images: [
       {
         url: "https://www.marleyskraamzorg.nl/images/og-image.jpg",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
     description:
-      "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg van Lisa voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
+      "Kraamzorg in Rotterdam met één vast gezicht. Persoonlijke zorg voor jou, je baby en je gezin.",
     images: ["https://www.marleyskraamzorg.nl/images/og-image.jpg"],
   },
 
