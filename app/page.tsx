@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     url: "https://www.marleyskraamzorg.nl/",
     siteName: "Marley's Kraamzorg",
-    title: "Kraamzorg Rotterdam | professionele kraamzorg",
+    title: "Kraamzorg in Rotterdam met één vaste kraamverzorgende",
     description:
       "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
     images: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   // ═══════ TWITTER CARD ═══════
   twitter: {
     card: "summary_large_image",
-    title: "Kraamzorg Rotterdam | professionele kraamzorg",
+    title: "Kraamzorg in Rotterdam met één vaste kraamverzorgende",
     description:
       "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
     images: ["https://www.marleyskraamzorg.nl/images/og-image.jpg"],
