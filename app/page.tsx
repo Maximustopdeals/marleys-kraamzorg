@@ -3,15 +3,15 @@ import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
   // ═══════ BASIS SEO ═══════
-  title: "Kraamzorg in Rotterdam met één vaste kraamverzorgende",
+  // Titel: Exacte match met H1, zoekterm vooraan.
+  title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
   
-  // De meta omschrijving start nu EXACT met dezelfde tekst als de H1
+  // Meta Description: Krachtig, leesbaar, bevat de USP en CTA. Geen onnodige herhaling.
   description:
-    "Bij Marley's Kraamzorg ontvang je persoonlijke en professionele kraamzorg in Rotterdam en omgeving. Je krijgt één vaste kraamverzorgende: Lisa. Geen wisselende gezichten, maar vertrouwde begeleiding en deskundige zorg voor jou, je baby en je gezin tijdens de eerste dagen na de geboorte.",
+    "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg van Lisa voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
   
   keywords: [
     "kraamzorg Rotterdam",
-    "professionele kraamzorg",
     "kraamverzorgende Rotterdam",
     "persoonlijke kraamzorg",
     "kraamzorg met vast gezicht",
@@ -40,15 +40,15 @@ export const metadata: Metadata = {
     },
   },
 
-  // ═══════ OPEN GRAPH (Facebook, WhatsApp, LinkedIn) ═══════
+  // ═══════ OPEN GRAPH ═══════
   openGraph: {
     type: "website",
     locale: "nl_NL",
     url: "https://www.marleyskraamzorg.nl/",
     siteName: "Marley's Kraamzorg",
-    title: "Kraamzorg in Rotterdam met één vaste kraamverzorgende",
+    title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
     description:
-      "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
+      "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg van Lisa voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
     images: [
       {
         url: "https://www.marleyskraamzorg.nl/images/og-image.jpg",
@@ -62,9 +62,9 @@ export const metadata: Metadata = {
   // ═══════ TWITTER CARD ═══════
   twitter: {
     card: "summary_large_image",
-    title: "Kraamzorg in Rotterdam met één vaste kraamverzorgende",
+    title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
     description:
-      "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
+      "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg van Lisa voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
     images: ["https://www.marleyskraamzorg.nl/images/og-image.jpg"],
   },
 
