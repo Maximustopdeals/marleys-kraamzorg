@@ -33,7 +33,7 @@ function HomeHero() {
             <h1 className="font-cinzel text-[2.5rem] uppercase leading-[1.15] tracking-tight text-berry-dark sm:text-5xl lg:text-[3.2rem] xl:text-[3.6rem] break-words">
               Kraamzorg Rotterdam
               <span className="block mt-3 text-primary">
-                met één vaste kraamverzorgende
+                professionele kraamzorg
               </span>
             </h1>
 
