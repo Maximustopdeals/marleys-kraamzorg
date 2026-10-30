@@ -40,30 +40,12 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-berry-dark text-cream">
       {/* Subtiele premium achtergrond gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-berry-dark to-berry-dark pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-primary/10 via-berry-dark to-berry-dark pointer-events-none" />
 
       <div className="relative z-10">
         
-        {/* ═══════ HIGH-END CTA SECTIE ═══════ */}
-        <div className="border-b border-cream/10">
-          <div className="container-main py-16 md:py-20 text-center">
-            <h2 className="font-cinzel text-2xl uppercase tracking-widest text-cream md:text-3xl">
-              Klaar om kennis te maken?
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl font-sans text-sm leading-relaxed text-cream/70">
-              Ik nodig je graag uit voor een vrijblijvend gesprek bij jou thuis, om te kijken of we een match zijn.
-            </p>
-            <Link
-              href="/contact/"
-              className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover"
-            >
-              Plan een kennismaking
-            </Link>
-          </div>
-        </div>
-
         {/* ═══════ HOOFD FOOTER GRID ═══════ */}
-        <div className="container-main pb-16 pt-16 md:pt-20">
+        <div className="container-main pb-12 pt-16 md:pt-20">
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             
             {/* Blok 1: Logo & bedrijfsgegevens */}
@@ -166,11 +148,11 @@ export default function Footer() {
 
         {/* ═══════ CERTIFICERINGEN & LEGAL (Premium Bottom Bar) ═══════ */}
         <div className="border-t border-cream/[0.08] bg-black/20">
-          <div className="container-main py-8">
-            <div className="flex flex-col items-center justify-between gap-8 lg:flex-row">
+          <div className="container-main py-6">
+            <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
               
               {/* Certificeringen */}
-              <div className="flex flex-wrap items-center justify-center gap-8 lg:justify-start">
+              <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-start">
                 {certificeringen.map((cert) => (
                   <ExternalLink key={cert.label} href={cert.href} className="group text-center lg:text-left">
                     <div className="font-cinzel text-xs uppercase tracking-wider text-cream/90 transition-colors group-hover:text-primary">
