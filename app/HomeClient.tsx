@@ -14,10 +14,11 @@ function HomeHero() {
       />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 pt-32 md:pt-40 pb-20 md:pb-32">
-        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-12 xl:gap-24">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8 xl:gap-16">
 
-          {/* ─── TEKST LINKS (High-End Typografie & SEO) ─── */}
-          <div className="max-w-xl">
+          {/* ─── TEKST LINKS ─── */}
+          {/* De pr-4 / lg:pr-8 zorgt voor een veilige marge tussen tekst en foto */}
+          <div className="relative z-20 max-w-xl pr-4 lg:pr-8">
             <div className="mb-8 flex items-center gap-3">
               <span className="h-px w-8 bg-primary/50" />
               <span className="font-cinzel text-[11px] uppercase tracking-[0.3em] text-primary">
@@ -26,10 +27,10 @@ function HomeHero() {
             </div>
 
             {/* 
-              H1 NU 100% GELIJK AAN META DESCRIPTION EN TITLE
-              "Kraamzorg Rotterdam met één vaste kraamverzorgende"
+              AANGEPAST: Kleinere lettergrootte om overlap te voorkomen. 
+              break-words zorgt ervoor dat lange woorden netjes afbreken.
             */}
-            <h1 className="font-cinzel text-4xl uppercase leading-[1.1] tracking-tight text-berry-dark sm:text-5xl lg:text-6xl xl:text-[4.2rem]">
+            <h1 className="font-cinzel text-[2.5rem] uppercase leading-[1.15] tracking-tight text-berry-dark sm:text-5xl lg:text-[3.2rem] xl:text-[3.6rem] break-words">
               Kraamzorg Rotterdam
               <span className="block mt-3 text-primary">
                 met één vaste kraamverzorgende
@@ -41,8 +42,7 @@ function HomeHero() {
               <span className="text-primary text-sm">✦</span>
             </div>
 
-            {/* Eerste alinea die de H1 versterkt (zoals je eerder voorstelde) */}
-            <p className="mb-10 font-sans text-lg leading-relaxed text-berry-dark/80 sm:text-xl">
+            <p className="mb-10 font-sans text-base leading-relaxed text-berry-dark/80 sm:text-lg">
               Bij <strong className="font-semibold text-berry-dark">Marley&apos;s Kraamzorg</strong> krijg je persoonlijke kraamzorg in Rotterdam en omgeving van één vaste kraamverzorgende. Geen wisselende gezichten, maar vertrouwde zorg voor jou, je baby en je gezin tijdens de eerste dagen na de geboorte.
             </p>
 
@@ -61,12 +61,12 @@ function HomeHero() {
               </Link>
             </div>
 
-            <p className="mt-10 font-sans text-xs uppercase tracking-[0.2em] text-berry-dark/50">
+            <p className="mt-10 font-sans text-[10px] sm:text-xs uppercase tracking-[0.2em] text-berry-dark/50">
               KCKZ-gecertificeerd · 24/7 bereikbaar · 5.0 op Google
             </p>
           </div>
 
-          {/* ─── FOTO RECHTS (Met CSS hover zoom & fade overlay) ─── */}
+          {/* ─── FOTO RECHTS ─── */}
           <div className="relative lg:ml-auto w-full max-w-lg lg:max-w-none">
             {/* Zachte gloed achter de foto */}
             <div
@@ -92,7 +92,7 @@ function HomeHero() {
             </div>
 
             {/* Decoratief element op de foto */}
-            <div className="absolute -bottom-6 -left-6 flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-xl border border-berry-dark/5">
+            <div className="absolute -bottom-6 -left-6 flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-xl border border-berry-dark/5 z-30">
               <span className="text-primary text-2xl">✦</span>
             </div>
           </div>
