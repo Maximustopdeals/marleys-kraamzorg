@@ -23,9 +23,9 @@ export default function KraamzorgClient() {
 
           {/* H1 */}
           <h1 className="font-cinzel text-4xl uppercase leading-[1.1] text-berry-dark sm:text-5xl lg:text-6xl">
-            Deskundige en{" "}
-            <span className="text-primary">persoonlijke zorg</span>
-            <span className="mt-3 block">in Rotterdam</span>
+            Kraamzorg Rotterdam{" "}
+            <span className="text-primary">voor een</span>
+            <span className="mt-3 block">zorgeloze kraamtijd</span>
           </h1>
 
           {/* Sierlijn */}
@@ -37,9 +37,7 @@ export default function KraamzorgClient() {
 
           {/* Subtitel */}
           <p className="mx-auto max-w-2xl font-sans text-lg leading-relaxed text-berry-dark/80 sm:text-xl">
-            Bij Marley&apos;s Kraamzorg ontvang je persoonlijke begeleiding en
-            professionele ondersteuning, zodat jij en je baby een ontspannen
-            en veilige start maken.
+            Kraamzorg in Rotterdam nodig? Bij Marley’s Kraamzorg krijg je persoonlijke zorg van één vaste kraamverzorgende voor een ontspannen en zorgeloze kraamtijd.
           </p>
 
           {/* CTA's */}
