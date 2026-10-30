@@ -3,9 +3,9 @@ import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
   // ═══════ BASIS SEO ═══════
-  title: "Kraamzorg Rotterdam | met een Vast Gezicht",
+  title: "Kraamzorg Rotterdam | Persoonlijke kraamzorg met één vast gezicht",
   description:
-    "Kraamzorg in Rotterdam, vernoemd naar dochtertje Marley. Persoonlijke zorg met één vast gezicht, 24/7 bereikbaar. Plan een intake.",
+    "Persoonlijke kraamzorg in Rotterdam van één vaste kraamverzorgende. Zorg voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
   keywords: [
     "kraamzorg Rotterdam",
     "kraamverzorgende Rotterdam",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     url: "https://www.marleyskraamzorg.nl/",
     siteName: "Marley's Kraamzorg",
-    title: "Kraamzorg Rotterdam | met een Vast Gezicht",
+    title: "Kraamzorg Rotterdam | Persoonlijke kraamzorg met één vast gezicht",
     description:
-      "Kraamzorg in Rotterdam, vernoemd naar dochtertje Marley. Persoonlijke zorg met één vast gezicht, 24/7 bereikbaar.",
+      "Persoonlijke kraamzorg in Rotterdam van één vaste kraamverzorgende. Zorg voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
     images: [
       {
         url: "https://www.marleyskraamzorg.nl/images/og-image.jpg",
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
   // ═══════ TWITTER CARD ═══════
   twitter: {
     card: "summary_large_image",
-    title: "Kraamzorg Rotterdam | met een Vast Gezicht",
+    title: "Kraamzorg Rotterdam | Persoonlijke kraamzorg met één vast gezicht",
     description:
-      "Kraamzorg in Rotterdam, vernoemd naar dochtertje Marley. Persoonlijke zorg met één vast gezicht, 24/7 bereikbaar.",
+      "Persoonlijke kraamzorg in Rotterdam van één vaste kraamverzorgende. Zorg voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
     images: ["https://www.marleyskraamzorg.nl/images/og-image.jpg"],
   },
 
@@ -73,11 +73,6 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-
-  // ═══════ VERIFICATIE (indien nodig) ═══════
-  // verification: {
-  //   google: "your-google-verification-code",
-  // },
 };
 
 export default function HomePage() {
