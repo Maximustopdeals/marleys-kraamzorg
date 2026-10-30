@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   experimental: {
     optimizePackageImports: ['lucide-react'],
-    nextScriptWorkers: true,
-    optimizeCss: true, // ✅ Activeert de CSS-optimalisatie
+    nextScriptWorkers: false, // ← Tijdelijk uitgezet
+    optimizeCss: false,       // ← Tijdelijk uitgezet
   },
   images: {
     formats: ["image/avif", "image/webp"],
