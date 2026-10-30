@@ -45,92 +45,11 @@ function HomeHero() {
               <span className="text-primary text-sm">✦</span>
             </div>
 
-            {/* NIEUWE ALINEA: Geen herhaling van de H1, focus op gevoel en conversie */}
+            {/* HIER WAS DE FOUT: De metadata stond in deze paragraaf. Nu hersteld! */}
             <p className="mb-10 font-sans text-base leading-relaxed text-berry-dark/80 sm:text-lg">
-              import type { Metadata } from "next";
-import HomeClient from "./HomeClient";
-
-export const metadata: Metadata = {
-  // ═══════ BASIS SEO ═══════
-  title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
-  
-  // Uw nieuwe, perfect passende meta omschrijving (92 tekens)
-  description:
-    "Kraamzorg in Rotterdam met één vast gezicht. Persoonlijke zorg voor jou, je baby en je gezin.",
-  
-  keywords: [
-    "kraamzorg Rotterdam",
-    "professionele kraamzorg",
-    "kraamverzorgende Rotterdam",
-    "persoonlijke kraamzorg",
-    "kraamzorg met vast gezicht",
-    "Marley's Kraamzorg",
-    "kraamzorg aanvragen Rotterdam",
-  ],
-  authors: [{ name: "Marley's Kraamzorg" }],
-  creator: "Marley's Kraamzorg",
-  publisher: "Marley's Kraamzorg",
-
-  // ═══════ CANONICAL ═══════
-  alternates: {
-    canonical: "https://www.marleyskraamzorg.nl/",
-  },
-
-  // ═══════ ROBOTS ═══════
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-snippet": -1,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
-    },
-  },
-
-  // ═══════ OPEN GRAPH ═══════
-  openGraph: {
-    type: "website",
-    locale: "nl_NL",
-    url: "https://www.marleyskraamzorg.nl/",
-    siteName: "Marley's Kraamzorg",
-    title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
-    description:
-      "Kraamzorg in Rotterdam met één vast gezicht. Persoonlijke zorg voor jou, je baby en je gezin.",
-    images: [
-      {
-        url: "https://www.marleyskraamzorg.nl/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Marley's Kraamzorg - Persoonlijke kraamzorg in Rotterdam",
-      },
-    ],
-  },
-
-  // ═══════ TWITTER CARD ═══════
-  twitter: {
-    card: "summary_large_image",
-    title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
-    description:
-      "Kraamzorg in Rotterdam met één vast gezicht. Persoonlijke zorg voor jou, je baby en je gezin.",
-    images: ["https://www.marleyskraamzorg.nl/images/og-image.jpg"],
-  },
-
-  // ═══════ METADATA BASE ═══════
-  metadataBase: new URL("https://www.marleyskraamzorg.nl"),
-
-  // ═══════ ICONS ═══════
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
-  },
-};
-
-export default function HomePage() {
-  return <HomeClient />;
-}
+              Ik ben <strong className="font-semibold text-berry-dark">Lisa</strong>. 
+              Geen wisselende gezichten, maar vertrouwde zorg van dag 1 voor jou, je baby en je gezin. 
+              Zo ervaar je rust, continuïteit en deskundige begeleiding tijdens de eerste, bijzondere kraamweek.
             </p>
 
             {/* DE CTA'S: Unieke bestemmingen voor hogere conversie */}
