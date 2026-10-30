@@ -3,7 +3,7 @@ import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
   // ═══════ BASIS SEO ═══════
-  title: "Kraamzorg Rotterdam | 1 vaste kraamverzorgende",
+  title: "Kraamzorg Rotterdam | professionele kraamzorg",
   
   // De meta omschrijving start nu EXACT met dezelfde tekst als de H1
   description:
