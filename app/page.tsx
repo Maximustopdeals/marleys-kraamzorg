@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   
   // De meta omschrijving start nu EXACT met dezelfde tekst als de H1
   description:
-    "Kraamzorg Rotterdam met één vaste kraamverzorgende. Persoonlijke zorg voor jou, je baby en je gezin. KCKZ-gecertificeerd en 24/7 bereikbaar.",
+    "Bij Marley’s Kraamzorg krijg je persoonlijke kraamzorg in Rotterdam en omgeving van één vaste kraamverzorgende. Geen wisselende gezichten, maar vertrouwde zorg voor jou, je baby en je gezin tijdens de eerste dagen na de geboorte.",
   
   keywords: [
     "kraamzorg Rotterdam",
