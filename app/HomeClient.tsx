@@ -17,7 +17,6 @@ function HomeHero() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8 xl:gap-16">
 
           {/* ─── TEKST LINKS ─── */}
-          {/* De pr-4 / lg:pr-8 zorgt voor een veilige marge tussen tekst en foto */}
           <div className="relative z-20 max-w-xl pr-4 lg:pr-8">
             <div className="mb-8 flex items-center gap-3">
               <span className="h-px w-8 bg-primary/50" />
@@ -27,13 +26,13 @@ function HomeHero() {
             </div>
 
             {/* 
-              AANGEPAST: Kleinere lettergrootte om overlap te voorkomen. 
-              break-words zorgt ervoor dat lange woorden netjes afbreken.
+              DE NIEUWE H1: Één vloeiende zin, geen pijpen, perfect voor SEO.
+              De class 'break-words' en de grootte zijn afgesteld op de kolom.
             */}
-            <h1 className="font-cinzel text-[2.5rem] uppercase leading-[1.15] tracking-tight text-berry-dark sm:text-5xl lg:text-[3.2rem] xl:text-[3.6rem] break-words">
-              Kraamzorg Rotterdam |
-              <span className="block mt-3 text-primary">
-               Kraamzorg in Rotterdam met één vaste kraamverzorgende
+            <h1 className="font-cinzel text-[2.2rem] uppercase leading-[1.15] tracking-tight text-berry-dark sm:text-[2.8rem] lg:text-[3.2rem] xl:text-[3.6rem] break-words">
+              Kraamzorg Rotterdam
+              <span className="block mt-2 text-primary">
+                met één vaste kraamverzorgende
               </span>
             </h1>
 
@@ -42,17 +41,30 @@ function HomeHero() {
               <span className="text-primary text-sm">✦</span>
             </div>
 
+            {/* 
+              NIEUWE ALINEA: Geen herhaling van de H1. Focus op gevoel, 
+              vertrouwen en de persoon (Lisa).
+            */}
             <p className="mb-10 font-sans text-base leading-relaxed text-berry-dark/80 sm:text-lg">
-              Bij <strong className="font-semibold text-berry-dark">Marley&apos;s Kraamzorg</strong> krijg je persoonlijke kraamzorg in Rotterdam en omgeving van één vaste kraamverzorgende. Geen wisselende gezichten, maar vertrouwde zorg voor jou, je baby en je gezin tijdens de eerste dagen na de geboorte.
+              Ik ben <strong className="font-semibold text-berry-dark">Lisa</strong>. 
+              Geen wisselende gezichten, maar vertrouwde zorg van dag 1 voor jou, je baby en je gezin. 
+              Zo ervaar je rust, continuïteit en deskundige begeleiding tijdens de eerste, bijzondere kraamweek.
             </p>
 
+            {/* 
+              DE CTA'S: Nu met een unieke bestemming.
+              1. Direct aanmelden in het externe portaal.
+              2. Contactformulier voor een kennismaking.
+            */}
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/contact/"
+              <a
+                href="https://marleyskraamzorg.mijngeboortezorg.nl/Aanvragen/kraamzorg?mode=frame"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover"
               >
                 Meld je aan
-              </Link>
+              </a>
               <Link
                 href="/contact/"
                 className="inline-flex h-14 items-center justify-center rounded-full border border-berry-dark/20 px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-berry-dark transition-all duration-300 hover:border-berry-dark hover:bg-berry-dark hover:text-white"
