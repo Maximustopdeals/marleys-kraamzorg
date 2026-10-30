@@ -74,7 +74,7 @@ export default function KraamzorgClient() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#FDFBFB] shadow-2xl">
                 {/* De daadwerkelijke afbeelding */}
                 <Image 
-                  src="/afbeelding-pasgeboren-baby.jpg" // <-- Zorg dat de bestandsnaam en extensie exact kloppen!
+                  src="/afbeelding-pasgeboren-baby.webp" // <-- Zorg dat de bestandsnaam en extensie exact kloppen!
                   alt="Pasgeboren baby'tje in een zachte witte doek" 
                   fill 
                   className="object-cover" 
