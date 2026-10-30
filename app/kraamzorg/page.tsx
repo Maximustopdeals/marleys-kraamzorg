@@ -35,7 +35,8 @@ export const metadata: Metadata = {
     images: [
       {
         /* ✅ AANGEPAST: 1200×630 = correcte OG-verhouding (1.91:1) */
-        url: "https://www.marleyskraamzorg.nl/images/hero-banner.jpg",
+        url: "https://www.marleyskraamzorg.nl/images/afbeelding-pasgeboren-baby.webp
+",
         width: 1200,
         height: 630,
         alt: "Kraamzorg Rotterdam - Marley's Kraamzorg",
