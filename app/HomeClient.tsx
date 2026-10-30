@@ -2,25 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 
-/* ── Hero — Editorial Split-Screen met Parallax ── */
+/* ── Hero — Editorial Split-Screen met CSS-effecten ── */
 function HomeHero() {
-  const ref = useRef(null);
-  
-  // Framer Motion scroll tracking voor het "wegvloeien" van de foto
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-  const opacityImage = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const scaleImage = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
-
   return (
-    <section ref={ref} className="relative w-full overflow-hidden bg-white">
+    <section className="relative w-full overflow-hidden bg-white">
       {/* Subtiel decoratief element op de achtergrond */}
       <div
         className="pointer-events-none absolute -right-40 top-20 h-[600px] w-[600px] rounded-full bg-blush/20 blur-3xl"
@@ -30,59 +16,34 @@ function HomeHero() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 pt-32 md:pt-40 pb-20 md:pb-32">
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-12 xl:gap-24">
 
-          {/* ─── TEKST LINKS (High-End Typografie) ─── */}
+          {/* ─── TEKST LINKS (High-End Typografie & SEO) ─── */}
           <div className="max-w-xl">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="mb-8 flex items-center gap-3"
-            >
+            <div className="mb-8 flex items-center gap-3">
               <span className="h-px w-8 bg-primary/50" />
               <span className="font-cinzel text-[11px] uppercase tracking-[0.3em] text-primary">
                 Marley&apos;s Kraamzorg
               </span>
-            </motion.div>
+            </div>
 
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-              className="font-cinzel text-4xl uppercase leading-[1.1] tracking-tight text-berry-dark sm:text-5xl lg:text-6xl xl:text-[4.2rem]"
-            >
+            <h1 className="font-cinzel text-4xl uppercase leading-[1.1] tracking-tight text-berry-dark sm:text-5xl lg:text-6xl xl:text-[4.2rem]">
               Kraamzorg Rotterdam
               <span className="block mt-3 text-primary">
                 met één vast gezicht
               </span>
-            </motion.h1>
+            </h1>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-              className="my-8 flex items-center gap-4"
-            >
+            <div className="my-8 flex items-center gap-4">
               <span className="h-px w-16 bg-primary/30" />
               <span className="text-primary text-sm">✦</span>
-            </motion.div>
+            </div>
 
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              className="mb-10 font-sans text-lg leading-relaxed text-berry-dark/80 sm:text-xl"
-            >
+            <p className="mb-10 font-sans text-lg leading-relaxed text-berry-dark/80 sm:text-xl">
               Ik ben <strong className="font-semibold text-berry-dark">Lisa</strong>.
               Persoonlijke kraamzorg met <strong className="font-semibold text-berry-dark">één vast gezicht</strong>.
               Geen wisselende verzorgenden, maar een vertrouwd iemand van dag 1 voor jou, je baby en je gezin.
-            </motion.p>
+            </p>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-              className="flex flex-col gap-4 sm:flex-row"
-            >
+            <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/contact/"
                 className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-8 font-cinzel text-xs uppercase tracking-[0.15em] text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-hover"
@@ -95,19 +56,14 @@ function HomeHero() {
               >
                 Plan een kennismaking
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="mt-10 font-sans text-xs uppercase tracking-[0.2em] text-berry-dark/50"
-            >
+            <p className="mt-10 font-sans text-xs uppercase tracking-[0.2em] text-berry-dark/50">
               KCKZ-gecertificeerd · 24/7 bereikbaar · 5.0 op Google
-            </motion.p>
+            </p>
           </div>
 
-          {/* ─── FOTO RECHTS (Met Parallax & Fade) ─── */}
+          {/* ─── FOTO RECHTS (Met CSS hover zoom & fade overlay) ─── */}
           <div className="relative lg:ml-auto w-full max-w-lg lg:max-w-none">
             {/* Zachte gloed achter de foto */}
             <div
@@ -115,10 +71,7 @@ function HomeHero() {
               aria-hidden="true"
             />
 
-            <motion.div 
-              style={{ y: yImage, opacity: opacityImage, scale: scaleImage }}
-              className="relative aspect-[4/5] w-full overflow-hidden rounded-[2.5rem] shadow-[0_40px_80px_-30px_rgba(74,26,61,0.3)] sm:aspect-[9/11]"
-            >
+            <div className="group relative aspect-[4/5] w-full overflow-hidden rounded-[2.5rem] shadow-[0_40px_80px_-30px_rgba(74,26,61,0.3)] sm:aspect-[9/11]">
               <Image
                 src="/images/baby-portrait.webp"
                 alt="Pasgeboren baby in een zachte witte omgeving - Marley's Kraamzorg Rotterdam"
@@ -127,17 +80,17 @@ function HomeHero() {
                 fetchPriority="high"
                 quality={85}
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
-
+              
               {/* 
-                HIGH-END FIX: Deze gradient zorgt ervoor dat de foto 
+                HIGH-END FIX: Deze gradient-overlays zorgen ervoor dat de foto 
                 onderaan prachtig wegvloeit in de witte achtergrond, 
                 waardoor de titel nooit in de foto valt. 
               */}
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-40 mix-blend-overlay" />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-berry-dark/10 via-transparent to-white/80" />
-            </motion.div>
+            </div>
 
             {/* Decoratief element op de foto */}
             <div className="absolute -bottom-6 -left-6 flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-xl border border-berry-dark/5">
