@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-// import Image from "next/image"; // Vergeet deze niet te importeren als je een afbeelding gebruikt
+import Image from "next/image"; // <-- Image component is nu geïmporteerd
 
 export default function KraamzorgClient() {
   return (
@@ -71,20 +71,16 @@ export default function KraamzorgClient() {
               <div className="absolute -inset-4 rounded-[2rem] border border-primary/20 translate-x-4 translate-y-4 -z-10"></div>
               
               {/* Afbeelding container met mooie afgeronde hoeken */}
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl">
-                {/* 
-                  VERVANG DEZE DIV DOOR EEN ECHTE FOTO:
-                  <Image 
-                    src="/pad/naar/jouw/foto.jpg" 
-                    alt="Kraamzorg" 
-                    fill 
-                    className="object-cover" 
-                    priority
-                  />
-                */}
-                <div className="absolute inset-0 flex items-center justify-center text-berry-dark/30 font-cinzel text-sm">
-                  [ Plaats hier een prachtige, warme foto ]
-                </div>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#FDFBFB] shadow-2xl">
+                {/* De daadwerkelijke afbeelding */}
+                <Image 
+                  src="/afbeelding-pasgeboren-baby.jpg" // <-- Zorg dat de bestandsnaam en extensie exact kloppen!
+                  alt="Pasgeboren baby'tje in een zachte witte doek" 
+                  fill 
+                  className="object-cover" 
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
 
@@ -92,7 +88,8 @@ export default function KraamzorgClient() {
         </div>
       </section>
       
-      {/* ... Rest van je secties ... */}
+      {/* ═══════ SECTIE 2: WAT KRAAMZORG IS ═══════ */}
+      {/* (De rest van je code blijft hier ongewijzigd...) */}
     </>
   );
 }
