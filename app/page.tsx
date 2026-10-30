@@ -3,11 +3,11 @@ import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
   // ═══════ BASIS SEO ═══════
-  title: "Kraamzorg Rotterdam | professionele kraamzorg",
+  title: "Kraamzorg in Rotterdam met één vaste kraamverzorgende",
   
   // De meta omschrijving start nu EXACT met dezelfde tekst als de H1
   description:
-    "Bij Marley’s Kraamzorg krijg je persoonlijke kraamzorg in Rotterdam en omgeving van één vaste kraamverzorgende. Geen wisselende gezichten, maar vertrouwde zorg voor jou, je baby en je gezin tijdens de eerste dagen na de geboorte.",
+    "Bij Marley's Kraamzorg ontvang je persoonlijke en professionele kraamzorg in Rotterdam en omgeving. Je krijgt één vaste kraamverzorgende: Lisa. Geen wisselende gezichten, maar vertrouwde begeleiding en deskundige zorg voor jou, je baby en je gezin tijdens de eerste dagen na de geboorte.",
   
   keywords: [
     "kraamzorg Rotterdam",
