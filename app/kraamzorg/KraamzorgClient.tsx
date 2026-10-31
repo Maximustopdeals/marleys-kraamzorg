@@ -1,21 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image"; // <-- Image component is nu geïmporteerd
+import Image from "next/image";
 
 export default function KraamzorgClient() {
   return (
     <>
-      {/* ═══════ SECTIE 1: HERO (HIGH-END SPLIT) ═══════ */}
       <section className="relative overflow-hidden bg-[#FDFBFB] pt-32 pb-20 lg:pt-40 lg:pb-32">
-        {/* Subtiele achtergrond elementen voor diepte */}
         <div className="pointer-events-none absolute -left-40 top-0 h-[800px] w-[800px] rounded-full bg-blush/10 blur-3xl" aria-hidden="true" />
         <div className="pointer-events-none absolute right-0 bottom-0 h-[600px] w-[600px] rounded-full bg-primary/5 blur-3xl" aria-hidden="true" />
 
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-12 items-center">
             
-            {/* LINKERKANT: Tekst */}
             <div className="max-w-2xl">
               <div className="mb-6 flex items-center gap-3">
                 <span className="h-px w-8 bg-primary/40"></span>
@@ -25,7 +22,6 @@ export default function KraamzorgClient() {
                 </span>
               </div>
 
-              {/* H1 met contrast in typografie. Niet alles in caps. */}
               <h1 className="font-cinzel text-4xl leading-[1.15] text-berry-dark sm:text-5xl lg:text-[3.5rem] text-balance">
                 Een zorgeloze kraamtijd, <br className="hidden sm:block" />
                 <span className="text-primary italic font-light tracking-wide mt-2 block">
@@ -39,7 +35,6 @@ export default function KraamzorgClient() {
                 ontspannen start met je gezin.
               </p>
 
-              {/* CTA's - Links uitgelijnd voor een strakke look */}
               <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <a
                   href="https://marleyskraamzorg.mijngeboortezorg.nl/Aanvragen/kraamzorg?mode=frame"
@@ -57,7 +52,6 @@ export default function KraamzorgClient() {
                 </a>
               </div>
 
-              {/* Trust-regel - strak en minimalistisch */}
               <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-berry-dark/10 pt-6 font-sans text-[11px] uppercase tracking-[0.15em] text-berry-dark/60">
                 <span className="flex items-center gap-2"><span className="text-primary">✦</span> KCKZ-gecertificeerd</span>
                 <span className="flex items-center gap-2"><span className="text-primary">✦</span> 24/7 bereikbaar</span>
@@ -65,16 +59,12 @@ export default function KraamzorgClient() {
               </div>
             </div>
 
-            {/* RECHTERKANT: Beeld (High-end uitstraling) */}
             <div className="relative hidden lg:block">
-              {/* Decoratieve offset border achter de afbeelding */}
               <div className="absolute -inset-4 rounded-[2rem] border border-primary/20 translate-x-4 translate-y-4 -z-10"></div>
               
-              {/* Afbeelding container met mooie afgeronde hoeken */}
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#FDFBFB] shadow-2xl">
-                {/* De daadwerkelijke afbeelding */}
                 <Image 
-                  src="afbeelding-pasgeboren-baby.webp" // <-- Zorg dat de bestandsnaam en extensie exact kloppen!
+                  src="/images/afbeelding-pasgeboren-baby.webp"
                   alt="Pasgeboren baby'tje in een zachte witte doek" 
                   fill 
                   className="object-cover" 
@@ -87,9 +77,6 @@ export default function KraamzorgClient() {
           </div>
         </div>
       </section>
-      
-      {/* ═══════ SECTIE 2: WAT KRAAMZORG IS ═══════ */}
-      {/* (De rest van je code blijft hier ongewijzigd...) */}
     </>
   );
 }
