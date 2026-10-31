@@ -59,10 +59,10 @@ export default function KraamzorgClient() {
               </div>
             </div>
 
-            <div className="relative hidden lg:block">
+            <div className="relative mt-12 lg:mt-0">
               <div className="absolute -inset-4 rounded-[2rem] border border-primary/20 translate-x-4 translate-y-4 -z-10"></div>
               
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#FDFBFB] shadow-2xl">
+              <div className="relative aspect-[4/3] lg:aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#FDFBFB] shadow-2xl">
                 <Image 
                   src="/images/afbeelding-pasgeboren-baby.webp"
                   alt="Pasgeboren baby in het ziekenhuis met zorgzame handen - Marley's Kraamzorg Rotterdam" 
