@@ -240,33 +240,33 @@ export default function ContactClient() {
 
                 <div>
                   <label className="mb-2 block font-cinzel text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Naam <span className="text-primary">*</span></label>
-                  <input type="text" name="name" placeholder="Vul hier uw voor- en achternaam in" className={inputClass("name")} onChange={() => clearError("name")} />
+                  <input type="text" name="name" placeholder="Vul hier uw voor- en achternaam in" className={inputClass("name")} onChange={() => clearError("name")} required />
                   {errors.name && <p className="mt-2 font-sans text-xs text-red-600">{errors.name}</p>}
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label className="mb-2 block font-cinzel text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">E-mail <span className="text-primary">*</span></label>
-                    <input type="email" name="email" placeholder="uw@email.nl" className={inputClass("email")} onChange={() => clearError("email")} />
+                    <input type="email" name="email" placeholder="uw@email.nl" className={inputClass("email")} onChange={() => clearError("email")} required />
                     {errors.email && <p className="mt-2 font-sans text-xs text-red-600">{errors.email}</p>}
                   </div>
                   <div>
                     <label className="mb-2 block font-cinzel text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Telefoonnummer <span className="text-primary">*</span></label>
-                    <input type="tel" name="phone" placeholder="06-12345678" className={inputClass("phone")} onChange={() => clearError("phone")} />
+                    <input type="tel" name="phone" placeholder="06-12345678" className={inputClass("phone")} onChange={() => clearError("phone")} required />
                     {errors.phone && <p className="mt-2 font-sans text-xs text-red-600">{errors.phone}</p>}
                   </div>
                 </div>
 
                 <div>
                   <label className="mb-2 block font-cinzel text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Postcode en woonplaats <span className="text-primary">*</span></label>
-                  <input type="text" name="postcode" placeholder="1234 AB, Rotterdam" className={inputClass("postcode")} onChange={() => clearError("postcode")} />
+                  <input type="text" name="postcode" placeholder="1234 AB, Rotterdam" className={inputClass("postcode")} onChange={() => clearError("postcode")} required />
                   {errors.postcode && <p className="mt-2 font-sans text-xs text-red-600">{errors.postcode}</p>}
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label className="mb-2 block font-cinzel text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Bevalling <span className="text-primary">*</span></label>
-                    <select name="bevalling" className={selectClass("bevalling")} onChange={() => clearError("bevalling")} defaultValue="" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239a1e61' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 18px center" }}>
+                    <select name="bevalling" className={selectClass("bevalling")} onChange={() => clearError("bevalling")} defaultValue="" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239a1e61' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 18px center" }} required>
                       <option value="" disabled>Selecteer keuze</option>
                       <option value="ziekenhuis-medisch">Ziekenhuis (medische indicatie)</option>
                       <option value="ziekenhuis-poliklinisch">Ziekenhuis (poliklinisch)</option>
@@ -276,7 +276,7 @@ export default function ContactClient() {
                   </div>
                   <div>
                     <label className="mb-2 block font-cinzel text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Baby verwacht op <span className="text-primary">*</span></label>
-                    <input type="date" name="dueDate" className={inputClass("dueDate")} onChange={() => clearError("dueDate")} />
+                    <input type="date" name="dueDate" className={inputClass("dueDate")} onChange={() => clearError("dueDate")} required />
                     {errors.dueDate && <p className="mt-2 font-sans text-xs text-red-600">{errors.dueDate}</p>}
                   </div>
                 </div>
@@ -300,9 +300,10 @@ export default function ContactClient() {
                 <div>
                   <label className="mb-3 block font-cinzel text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">Hoe heb je mij gevonden? <span className="text-primary">*</span></label>
                   <div className="flex flex-wrap gap-3">
-                    {[{ value: "google", label: "Google" }, { value: "familie-vrienden", label: "Familie en/of vrienden" }, { value: "anders", label: "Anders" }].map((option) => (
+                    {[{ value: "google", label: "Google" }, { value: "familie-vrienden", label: "Familie en/of vrienden" }, { value: "anders", label: "Anders" }].map((option, index) => (
                       <label key={option.value} className="flex cursor-pointer items-center gap-2 rounded-2xl border border-berry-dark/10 bg-white px-5 py-3 font-sans text-sm text-berry-dark/80 transition-all hover:border-primary hover:bg-primary/[0.03]">
-                        <input type="radio" name="gevonden" value={option.value} onChange={() => clearError("gevonden")} className="h-4 w-4 accent-primary" />
+                        {/* required op de eerste radio button zorgt ervoor dat de hele groep verplicht wordt in HTML5 */}
+                        <input type="radio" name="gevonden" value={option.value} onChange={() => clearError("gevonden")} className="h-4 w-4 accent-primary" required={index === 0} />
                         {option.label}
                       </label>
                     ))}
